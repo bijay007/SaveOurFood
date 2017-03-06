@@ -1,0 +1,34 @@
+{
+  "name": "saveOurFood",
+  "authors": [
+    "bijay timilsina <bjtimi.007@gmail.com>"
+  ],
+  "description": "this webapp helps people reminder when their food is going to expire in time",
+  "main": "",
+  "keywords": [
+    "javascript",
+    "event-reminder",
+    "express",
+    "node",
+    "angular",
+    "jQuery",
+    "html5",
+    "css3",
+    "bootstrap3",
+    "sass",
+    "pug",
+    "jasmine"
+  ],
+  "license": "MIT",
+  "homepage": "coming soon...",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "boostrap#^3.3.7"
+  }
+}
