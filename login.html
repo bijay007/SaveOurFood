@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--     <style>* {border: 1px solid red;}</style>
+ --></head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h4>Go <a href="index.html">Home</a></h4>
+        </div>
+        <div class="row">
+            <form action="/login" method="POST" role="form">
+                <legend>Login</legend>
+                <div class="form-group">
+                    <label for="">Username</label>
+                    <input type="text" placeholder="Enter your username..">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter your password..">
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Login</button>
+            </form>
+        </div>
+        <div class="row">
+            <p>Not yet registered? <a href="register.html">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>
