@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>user profile</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<style>
+			.show-on-hover:hover > ul.dropdown-menu {display: block;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Hi <span>Bijay</span>, Good <span>Monday</span>&nbsp;<span>morning</span> &#128516;</h2>
+					</div>
+					<div class="col-sm-4">
+						<div class="show-on-hover">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+							Notifications <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li class="list-unstyled"><a href="#">Expired Items..</a></li>
+								<li class="list-unstyled"><a href="#">Expiring soon..</a></li>
+							</ul>
+						</div>
+						<div class="logout">
+							<form action="/login" method="post">
+								<!-- logout can't be page redirect, should be some secure logout -->
+								<button><a href="/login">LogOut</a></button>
+							</form>
+						</div>
+					</div>
+				</div><!-- main header containing profile and notification bar -->
+			</header>
+			<aside>
+				<h3>
+					<span>Everthing's fresh &#128521; </span>/<span> Some food are expiring soon &#128531; 
+					</span>/<span> Some food have expired &#128546;</span>
+				</h3>
+				<p>Logic to be implemented depending on the the food condition in the inventory</p>
+				<p>Random <a href="index.html">Go Home</a> Link</p><!-- small paragraph showing current food condition -->
+			</aside>
+			<main><!-- food categories to add to your list -->
+				<div class="jumbotron">
+					<div class="row"><!-- first row -->
+						<div class="col-sm-4">
+							<figure class="figure">
+								<img src="images/fruits.png" alt="fruitsNvegetables">
+								<figcaption class="figure-caption">Fruits N Vegetables</figcaption>
+							</figure>
+						</div>
+						<div class="col-sm-4">
+							<figure class="figure">
+								<img src="images/breakfast.ico" alt="milkNeggproducts">
+								<figcaption class="figure-caption">Milk N Egg Products</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="row"><!-- second row-->
+						<div class="col-sm-4">
+							<figure class="figure">
+								<img src="images/fish.ico" alt="fishNmeatproducts">
+								<figcaption class="figure-caption">Fish N Meat Products</figcaption>
+							</figure>
+						</div>
+						<div class="col-sm-4">
+							<figure class="figure">
+								<img src="images/canned.ico" alt="cannedfood">
+								<figcaption class="figure-caption">Canned N Frozen Food</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<figure class="figure">
+								<img src="images/milk.ico" alt="drinks">
+								<figcaption class="figure-caption">Beverages and Drinks</figcaption>
+							</figure>
+						</div>
+						<div class="col-sm-4">
+							<figure class="figure">
+								<img src="images/other.ico" alt="others">
+								<figcaption class="figure-caption">Other Unspecified</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>				
+			</main>
+			<section><!-- you list of food items bought -->
+				<div class="jumbotron">
+				</div>
+			</section>
+			<footer>
+				<p>All rights reserved @ Bijay Timilsina 2017</p>
+			</footer>
+		</div>
+	</body>
+</html>
