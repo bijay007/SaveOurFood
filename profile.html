@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<header>
+			<header><!-- main header with greetings and logout-->
 				<div class="row">
 					<div class="col-sm-8">
 						<h2>Hi <span>Bijay</span>, Good <span>Monday</span>&nbsp;<span>morning</span> &#128516;</h2>
@@ -35,26 +35,26 @@
 					</div>
 				</div><!-- main header containing profile and notification bar -->
 			</header>
-			<aside>
+			<aside><!-- small paragraph showing current food condition -->
 				<h3>
 					<span>Everthing's fresh &#128521; </span>/<span> Some food are expiring soon &#128531; 
 					</span>/<span> Some food have expired &#128546;</span>
 				</h3>
 				<p>Logic to be implemented depending on the the food condition in the inventory</p>
-				<p>Random <a href="index.html">Go Home</a> Link</p><!-- small paragraph showing current food condition -->
+				<p>Random <a href="index.html">Go Home</a> Link</p>
 			</aside>
 			<main><!-- food categories to add to your list -->
 				<div class="jumbotron">
 					<div class="row"><!-- first row -->
 						<div class="col-sm-4">
 							<figure class="figure">
-								<img src="images/fruits.png" alt="fruitsNvegetables">
+								<img src="images/categories/fruitsvegs.png" alt="fruitsNvegetables">
 								<figcaption class="figure-caption">Fruits N Vegetables</figcaption>
 							</figure>
 						</div>
 						<div class="col-sm-4">
 							<figure class="figure">
-								<img src="images/breakfast.ico" alt="milkNeggproducts">
+								<img src="images/categories/milkegg.png" alt="milkNeggproducts">
 								<figcaption class="figure-caption">Milk N Egg Products</figcaption>
 							</figure>
 						</div>
@@ -62,35 +62,60 @@
 					<div class="row"><!-- second row-->
 						<div class="col-sm-4">
 							<figure class="figure">
-								<img src="images/fish.ico" alt="fishNmeatproducts">
+								<img src="images/categories/fishmeat.png" alt="fishNmeatproducts">
 								<figcaption class="figure-caption">Fish N Meat Products</figcaption>
 							</figure>
 						</div>
 						<div class="col-sm-4">
 							<figure class="figure">
-								<img src="images/canned.ico" alt="cannedfood">
+								<img src="images/categories/frozencanned.png" alt="cannedNfrozen">
 								<figcaption class="figure-caption">Canned N Frozen Food</figcaption>
 							</figure>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row"><!-- third row-->
 						<div class="col-sm-4">
 							<figure class="figure">
-								<img src="images/milk.ico" alt="drinks">
-								<figcaption class="figure-caption">Beverages and Drinks</figcaption>
+								<img src="images/categories/liquidproducts.png" alt="drinksNbeverages">
+								<figcaption class="figure-caption">Oils and Beverages</figcaption>
 							</figure>
 						</div>
 						<div class="col-sm-4">
 							<figure class="figure">
-								<img src="images/other.ico" alt="others">
+								<img src="images/categories/others.png" alt="others">
 								<figcaption class="figure-caption">Other Unspecified</figcaption>
 							</figure>
 						</div>
 					</div>
 				</div>				
 			</main>
-			<section><!-- you list of food items bought -->
-				<div class="jumbotron">
+			<section><!-- your list of food items -->
+				<div class="container">
+				    <div class="row col-md-10 col-md-offset-1">
+					    <table class="table table-striped">
+					    <thead>
+					    	<h3>Your current food list</h3>
+					        <tr>
+					            <th>Name</th>
+					            <th>Quantity</th>
+					            <th>Date Bought</th>
+					            <th>Your Expiry Date</th>
+					            <th>We Recommend</th>
+					            <th>Current State</th>
+					            <th class="text-center">Your Action</th>
+					        </tr>
+					    </thead>
+					            <tr>
+					            	<td>Apple</td>
+					                <td>5 pieces</td>
+					                <td>Mar 5 2017</td>
+					                <td>Apr 17 2017</td>
+					                <td>3 months</td>
+					                <td>Fresh</td>
+					                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Change date</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
+					            </tr>
+					    </table>
+				    </div>
 				</div>
 			</section>
 			<footer>
