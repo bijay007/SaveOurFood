@@ -22,7 +22,7 @@
     <!-- topmost navigation with logo and login -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
-        <div class="navbar-left col-xs-6"><img src="images/home/logo.png">
+        <div class="navbar-left col-xs-6"><img src="images/home/logo1.png" class="img-responsive">
         </div>
         <div class="col-xs-6">
           <ul class="navbar-right list-unstyled list-inline btn-group">
@@ -46,11 +46,11 @@
           </div>
         </div>
         <div class="row lower-row">
-          <div class="col-sm-offset-2 col-sm-4 tryit">
+          <div class="col-md-4 col-md-offset-1">
             <span>It only takes a minute </span><a href="register.html"><button class="btn btn-success"> Try it !!</button></a>
           </div>
-          <div class="col-sm-offset-1 col-sm-6">
-            <p>It's easy-to-use, user-friendly and free app that helps save your food and money. You'll love it</p>
+          <div class="col-md-6 col-md-offset-1">
+            <p>It's easy-to-use, user-friendly and FREE app that helps save your food and money. You'll love it</p>
           </div>
         </div>
       </div>
@@ -58,8 +58,8 @@
     <!-- user testimonials -->
     <blockquote class="blockquote">
       <div class="container-fluid">
-        <p class="mb-0">"This is the best app I've ever used in my whole goddamn life. This app is so fucking good that everyone in my whole family use it. If you don't like this app, you are basically a Trump supporter."</p>
-        <footer class="blockquote-footer" id="quotefooter">Some great guy from <cite>Google HQ</cite></footer>
+        <p class="mb-0">"This is hands-down the best app ever. It's so fucking good that everyone in my whole family use it. If you don't like this app, you are basically a Trump supporter."</p>
+        <div class="blockquote-footer">- Some great guy from <cite>Google HQ</cite></div>
       </div>
     </blockquote>
   <!-- how it works section -->
@@ -76,7 +76,7 @@
         <div class="col-xs-6 col-sm-3">
           <figure class="figure">
             <img src="images/home/list.svg" alt="reminder" class="figure-img img-responsive">
-            <figcaption class="figure-caption">Save the expiry date on app</br>(We set it for you if you forgot)</figcaption>
+            <figcaption class="figure-caption">Save the expiry date on app</br>(We set it for you if you forget)</figcaption>
           </figure>
         </div>
         <div class="col-xs-6 col-sm-3">
@@ -95,28 +95,26 @@
     </div>
   </section>
   <!-- twitter feed and hastags section-->
-  <article>
+ <!--  <article>
     <div class="container">
       <div class="row">
-        <twitter-feed></twitter-feed> <!-- component that displays new tweets -->
+        <twitter-feed></twitter-feed>
       </div>
     </div>
-  </article>
+  </article> -->
   <!-- footer section-->
   <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-6 api">
-          <button class="btn btn-default">API for Developers</button>
-          <p>Any questions or suggestions?&nbsp;Feel free to <a href="/contacts">contact us</a>
+        <div class="col-sm-6">
+          <button class="btn btn-success"><a href="/apidocs">API for Devs</a></button>
+          <p>Any questions or suggestions?&nbsp;Feel free to <a href="/contacts" class="contactus">contact us</a></p>
         </div>
-        <div class="col-sm-6 contact">
-          <span>You can visit us at:</span>
-          <p><img src="images/social/youtube.png" alt="youtube"></p>
-          <p><img src="images/social/facebook.png" alt="facebook"></p>
-          <p><img src="images/social/twitter.png" alt="twitter"></p>
+        <div class="col-sm-6">
+          <p>You can visit us at:</p>
+          <a href="#"><img src="images/social/youtube.png" alt="youtube"></a>
+          <a href="#"><img src="images/social/facebook.png" alt="facebook"></a>
+          <a href="#"><img src="images/social/twitter.png" alt="twitter"></a>
         </div>
-      </div>
     </div>
   </footer>
   <script src="app.module.js"></script>
