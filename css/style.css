@@ -41,7 +41,7 @@ main.jumbotron {
 /* line 8, /home/bijay007/SaveOurFood/sass/_main.sass */
 main.jumbotron .upper-row {
   display: flex;
-  justify-content: flex-start;
+  text-align: justify;
 }
 
 /* line 11, /home/bijay007/SaveOurFood/sass/_main.sass */
@@ -170,7 +170,13 @@ footer .container img {
   padding-right: 5px;
 }
 
-/* line 7, /home/bijay007/SaveOurFood/sass/style.sass */
+/* line 1, /home/bijay007/SaveOurFood/sass/_loginregister.sass */
+.container {
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* line 8, /home/bijay007/SaveOurFood/sass/style.sass */
 body {
   background-color: #CCE0DB;
 }
