@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Free Web tutorials">
@@ -8,7 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Save the Food</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
 <!--     <style>
       * {border:1px solid red;}
     </style> -->
@@ -20,12 +25,12 @@
         <div class="navbar-left col-xs-6"><img src="images/home/logo.png">
         </div>
         <div class="col-xs-6">
-          <ul class="navbar-right list-unstyled list-inline">
+          <ul class="navbar-right list-unstyled list-inline btn-group">
             <li class="active">
-              <button type="button" class="btn btn-default"><a href="login.html">Login</a></button>
+              <button type="button" class="btn btn-success"><a href="login.html">Login</a></button>
             </li>
             <li>
-              <button type="button" class="btn btn-default"><a href="register.html">Sign Up</a></button>
+              <button type="button" class="btn btn-primary"><a href="register.html">Sign Up</a></button>
             </li>
           </ul>
         </div>
@@ -34,18 +39,17 @@
     <!-- main banner section with headings and image -->
     <main class="jumbotron">
       <div class="container">
-        <div class="row">
-          <img src="images/home/bgimg.png" alt="banner" class="img-responsive">
-          <div class="col-md-6">
+        <div class="row upper-row">
+          <div class="col-sm-6">
             <h2>Never throw your food again</h2>
             <p>Are you one of the people who had to throw food sometimes just because they had expired. If you ever wished for some way to remind yourself of it, SaveTheFood is what you need</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <button>Takes less than a minute. <a href="register.html">Try it !!</a></button>
+        <div class="row lower-row">
+          <div class="col-sm-offset-2 col-sm-4 tryit">
+            <span>It only takes a minute </span><a href="register.html"><button class="btn btn-success"> Try it !!</button></a>
           </div>
-          <div class="col-md-8">
+          <div class="col-sm-offset-1 col-sm-6">
             <p>It's easy-to-use, user-friendly and free app that helps save your food and money. You'll love it</p>
           </div>
         </div>
@@ -54,37 +58,37 @@
     <!-- user testimonials -->
     <blockquote class="blockquote">
       <div class="container-fluid">
-        <p class="mb-0">This is the best app I've ever used in my whole goddamn life. This app is so fucking good that everyone in my whole family use it. If you don't like this app, you are basically a Trump supporter.</p>
-        <footer class="blockquote-footer">Some great guy from Google HQ</footer>
+        <p class="mb-0">"This is the best app I've ever used in my whole goddamn life. This app is so fucking good that everyone in my whole family use it. If you don't like this app, you are basically a Trump supporter."</p>
+        <footer class="blockquote-footer" id="quotefooter">Some great guy from <cite>Google HQ</cite></footer>
       </div>
     </blockquote>
   <!-- how it works section -->
   <section class="workflow">
     <div class="container-fluid">
-      <h4>See how SavetheFood helps in saving your food, money and the whole planet</h4>
-      <div class="container">
-        <div class="col-sm-3">
+      <h4>See how our app helps in saving your food, money and ultimately the whole planet</h4>
+      <div class="container categories">
+        <div class="col-xs-6 col-sm-3">
           <figure class="figure">
-            <img src="images/home/listfood.ico" alt="listfood" class="figure-img img-responsive">
-            <figcaption class="figure-caption">Save your grocery list in the app</figcaption>
+            <img src="images/home/groceries.svg" alt="listfood" class="figure-img img-responsive">
+            <figcaption class="figure-caption">Buy your groceries with no worries</figcaption>
           </figure>
         </div>
-        <div class="col-sm-3">
+        <div class="col-xs-6 col-sm-3">
           <figure class="figure">
-            <img src="images/home/notify.ico" alt="reminder" class="figure-img img-responsive">
-            <figcaption class="figure-caption">The app will periodically remind you</figcaption>
+            <img src="images/home/list.svg" alt="reminder" class="figure-img img-responsive">
+            <figcaption class="figure-caption">Save the expiry date on app</br>(We set it for you if you forgot)</figcaption>
           </figure>
         </div>
-        <div class="col-sm-3">
+        <div class="col-xs-6 col-sm-3">
           <figure class="figure">
-            <img src="images/home/savefood.ico" alt="savemoney" class="figure-img img-responsive">
-            <figcaption class="figure-caption">Save money and food</figcaption>
+            <img src="images/home/alert.svg" alt="savemoney" class="figure-img img-responsive">
+            <figcaption class="figure-caption">The app reminds you when expiry day draws near</figcaption>
           </figure>
         </div>
-        <div class="col-sm-3">
+        <div class="col-xs-6 col-sm-3">
           <figure class="figure">
-            <img src="images/home/saveplanet.ico" alt="savearth" class="figure-img img-responsive">
-            <figcaption class="figure-caption">Help save the planet by decreasing wastes</figcaption>
+            <img src="images/home/savemoney.svg" alt="savearth" class="figure-img img-responsive">
+            <figcaption class="figure-caption">You save food and money</figcaption>
           </figure>
         </div>
       </div>
@@ -94,61 +98,29 @@
   <article>
     <div class="container">
       <div class="row">
-        <div class="col-md-3 col-md-offset-1">
-          <h3>Bijay Timilsina</h3>
-          <i class="glyphicon glyphicon-thumbs-up"></i>
-          <span><a href="https://twitter.com/bjtimi_007/status/834878617117159424">Will GraphQL replace RESTful API Services one day?</a></span>
-        </div>
-        <div class="col-md-3 col-md-offset-1">
-          <h3>Bijay Timilsina</h3>
-          <i class="glyphicon glyphicon-thumbs-up"></i>
-          <span><a href="https://twitter.com/bjtimi_007/status/834878617117159424">Will GraphQL replace RESTful API Services one day?</a></span>
-        </div>
-        <div class="col-md-3 col-md-offset-1">
-          <h3>Bijay Timilsina</h3>
-          <i class="glyphicon glyphicon-thumbs-up"></i>
-          <span><a href="https://twitter.com/bjtimi_007/status/834878617117159424">Will GraphQL replace RESTful API Services one day?</a></span>
-        </div>
+        <twitter-feed></twitter-feed> <!-- component that displays new tweets -->
       </div>
     </div>
   </article>
   <!-- footer section-->
   <footer>
-    <div class="jumbotron">
-      <div class="container">
-        <div class="col-md-6">
-          <button class="btn btn-default">For Developers - Check our API</button>
-          <button class="btn btn-info">Any questions or suggestions?&nbsp;Feel free to <a href="/contacts">contact us </a><img src="images/social/email.png" alt="email"></button>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 api">
+          <button class="btn btn-default">API for Developers</button>
+          <p>Any questions or suggestions?&nbsp;Feel free to <a href="/contacts">contact us</a>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-6 contact">
           <span>You can visit us at:</span>
-          <div class="media">
-            <div class="media-body">
-              Youtube
-            </div>
-            <div class="media-right">
-              <img src="images/social/youtube.png" alt="youtube">
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-body">
-              Facebook
-            </div>
-            <div class="media-right">
-              <img src="images/social/facebook.png" alt="facebook">
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-body">
-              Twitter
-            </div>
-            <div class="media-right">
-              <img src="images/social/twitter.png" alt="twitter">
-            </div>
-          </div>
+          <p><img src="images/social/youtube.png" alt="youtube"></p>
+          <p><img src="images/social/facebook.png" alt="facebook"></p>
+          <p><img src="images/social/twitter.png" alt="twitter"></p>
         </div>
       </div>
     </div>
   </footer>
+  <script src="app.module.js"></script>
+  <script src="twitterFeed.module.js"></script>
+  <script src="twitterFeed.component.js"></script>
 </body>
 </html>

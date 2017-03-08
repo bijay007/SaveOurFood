@@ -1,0 +1,129 @@
+/* line 1, /home/bijay007/SaveOurFood/sass/_navbar.sass */
+.navbar {
+  padding: 2px;
+  background-color: #DC602B;
+}
+
+/* line 4, /home/bijay007/SaveOurFood/sass/_navbar.sass */
+.navbar .container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+/* line 8, /home/bijay007/SaveOurFood/sass/_navbar.sass */
+.navbar .container a {
+  color: white;
+}
+
+/* line 1, /home/bijay007/SaveOurFood/sass/_main.sass */
+main.jumbotron {
+  font-weight: bold;
+  background-image: url("../images/home/background.jpg");
+  background-size: content;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 9, /home/bijay007/SaveOurFood/sass/_main.sass */
+main.jumbotron .upper-row h2 {
+  text-align: center;
+  color: #ffe232;
+  font-weight: bolder;
+  text-shadow: 2px 2px #220022;
+}
+
+/* line 14, /home/bijay007/SaveOurFood/sass/_main.sass */
+main.jumbotron .upper-row p {
+  color: #90fcf9;
+}
+
+/* line 17, /home/bijay007/SaveOurFood/sass/_main.sass */
+main.jumbotron .lower-row {
+  color: #ff0f80;
+  display: flex;
+  align-content: center;
+}
+
+/* line 22, /home/bijay007/SaveOurFood/sass/_main.sass */
+main.jumbotron .lower-row .tryit {
+  padding: 5px;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+/* line 26, /home/bijay007/SaveOurFood/sass/_main.sass */
+main.jumbotron .lower-row .tryit button {
+  background-color: #ff7b10;
+  font-weight: bold;
+}
+
+/* line 1, /home/bijay007/SaveOurFood/sass/_blockquote.sass */
+blockquote {
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #ff7b10;
+  text-align: center;
+  font-style: oblique;
+}
+
+/* line 7, /home/bijay007/SaveOurFood/sass/_blockquote.sass */
+blockquote #quotefooter {
+  background-color: inherit;
+  font-style: normal;
+}
+
+/* line 1, /home/bijay007/SaveOurFood/sass/_howitworks.sass */
+.workflow {
+  background-color: #00c5d3;
+  margin-top: 10px;
+}
+
+/* line 5, /home/bijay007/SaveOurFood/sass/_howitworks.sass */
+.workflow h4 {
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* line 11, /home/bijay007/SaveOurFood/sass/_howitworks.sass */
+.workflow .categories {
+  padding: 10px auto;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+/* line 17, /home/bijay007/SaveOurFood/sass/_howitworks.sass */
+.workflow .categories img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* line 21, /home/bijay007/SaveOurFood/sass/_howitworks.sass */
+.workflow .categories figcaption {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+/* line 1, /home/bijay007/SaveOurFood/sass/_footer.sass */
+footer {
+  margin-top: 30px;
+  background-color: #505050;
+  text-align: center;
+  height: 100px;
+}
+
+/* line 7, /home/bijay007/SaveOurFood/sass/_footer.sass */
+footer .contact p {
+  display: inline-flex;
+}
+
+/* line 7, /home/bijay007/SaveOurFood/sass/style.sass */
+body {
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=../css/style.map */
