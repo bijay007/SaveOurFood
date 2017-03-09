@@ -144,36 +144,49 @@ footer {
   margin-top: 20px;
   background-color: #505050;
   text-align: center;
-  height: 100px;
+  height: 150px;
   color: #ffffff;
 }
 
 /* line 8, /home/bijay007/SaveOurFood/sass/_footer.sass */
 footer .container {
   display: flex;
+  justify-content: center;
   padding-top: 10px;
   font-size: 1.2em;
 }
 
-/* line 12, /home/bijay007/SaveOurFood/sass/_footer.sass */
+/* line 13, /home/bijay007/SaveOurFood/sass/_footer.sass */
 footer .container a {
   color: #ffffff;
 }
 
-/* line 14, /home/bijay007/SaveOurFood/sass/_footer.sass */
+/* line 15, /home/bijay007/SaveOurFood/sass/_footer.sass */
 footer .container .contactus {
   color: #ff0000;
 }
 
-/* line 16, /home/bijay007/SaveOurFood/sass/_footer.sass */
+/* line 17, /home/bijay007/SaveOurFood/sass/_footer.sass */
 footer .container img {
   padding-right: 5px;
 }
 
 /* line 1, /home/bijay007/SaveOurFood/sass/_loginregister.sass */
-.container {
-  margin: 50px auto;
+.loginContainer {
+  margin: 25px auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 8, /home/bijay007/SaveOurFood/sass/_loginregister.sass */
+.loginContainer form .form-group .row {
+  margin-bottom: 5px;
+}
+
+/* line 10, /home/bijay007/SaveOurFood/sass/_loginregister.sass */
+.loginContainer p {
+  margin-top: 5px;
 }
 
 /* line 8, /home/bijay007/SaveOurFood/sass/style.sass */
