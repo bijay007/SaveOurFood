@@ -1,35 +1,53 @@
+// $phone: "(min-width: 480px) and (max-width: 768px)"
+// $tablet: "(min-width: 768px) and (max-width: 1168px)"
+
 main.jumbotron
 	font-weight: bold
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/home/background.jpg')
+	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url('../images/home/background.jpg')
 	background-size: cover
 	background-position: right
 	background-repeat: no-repeat
-
+	height: 600px
 	.upper-row
-		display: flex
 		text-align: justify
-		h2
+		font-family: 'Amatic SC', cursive;
+
+		h2, p
 			text-align: center
-			color: #ffe232
-			font-weight: bolder
+			color: #fff
+			font-size: 50px
+		h2
+			font-weight: bolder;
 			text-shadow: 1px 1px #220022;
+			font-size: 100px;
+		.explain
+			font-family: 'Shadows Into Light', cursive;
+			font-size: 37px
 		p
-			color: #90fcf9
-	
-	.lower-row
-		display: flex
-		color: #ffe232
+			a
+				display: block;
+				button
+					font-size: 50px;
+					border-radius: 7px;
+					margin-top: 10px;
+					padding: 5px 25px;
 
-		div:first-child
-			justify-content: flex-start
-			padding: 5px
-			font-size: 1.5em
-			font-weight: bolder
-			button
-				background-color: #ff7b10
-				font-weight: bold
+
+		@media screen and (min-width: 320px) and (max-width: 768px)
+			h2, p
+				font-size: 35px
+			.explain
+				font-size: 28px
+				p
+					a
+						button
+							font-size: 35px
+		@media screen and (min-width: 768px) and (max-width: 1280px)
+			h2, p
+				font-size: 42px
+			.explain
+				font-size: 35px
 			p
-				justify-content: flex-end
-
-
-
+				a
+					button
+						font-size: 42px
