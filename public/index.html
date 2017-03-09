@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Food</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+  </head>
+
+  <body>
+    <div ng-view></div>
+      <!-- footer section-->
+    <footer>
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+              <div class="col-sm-3">
+                <button class="btn btn-success"><a href="/apidocs">API for Devs</a></button>
+              </div>
+              <div class="col-sm-9">
+                <p>Any queries or suggestions?&nbsp;Feel free to <a href="/contacts" class="contactus">contact us</a></p>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <p>You can visit us at:</p>
+              <a href="#"><img src="images/social/twitter.png" alt="https://twitter.com/bjtimi_007"></a>
+              <a href="#"><img src="images/social/youtube.png" alt="www.youtube.com"></a>
+              <a href="#"><img src="images/social/facebook.png" alt="www.facebook.com"></a>
+            </div>
+        </div>
+      </div>
+    </footer>
+  <script src="js/app.module.js"></script>
+  <!--   <script src="twitterFeed.module.js"></script>
+  <script src="twitterFeed.component.js"></script> -->
+  <script src="js/app.route.js"></script>
+
+</body>
+</html>

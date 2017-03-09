@@ -1,0 +1,37 @@
+{
+  "name": "savethefood",
+  "version": "1.0.0",
+  "description": "simple app that reminds you food expiry date",
+  "main": "app.js",
+  "scripts": {
+    "prestart": "npm install",
+    "dev": "nodemon app",
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bijay007/SaveOurFood.git"
+  },
+  "keywords": [
+    "express",
+    "angular",
+    "bootstrap",
+    "html5",
+    "css3",
+    "sass",
+    "mongodb"
+  ],
+  "author": "bijay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bijay007/SaveOurFood/issues"
+  },
+  "homepage": "https://github.com/bijay007/SaveOurFood#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
+  }
+}
