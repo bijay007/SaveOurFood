@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "simple app that reminds you food expiry date",
   "main": "app.js",
+  "engines": {
+    "node": "6.9.5"
+  },
   "scripts": {
     "prestart": "npm install",
     "dev": "nodemon app",
