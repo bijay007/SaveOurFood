@@ -1,34 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>login page</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-<!--     <style>* {border: 1px solid red;}</style>
- --></head>
-<body>
-    <div class="container loginContainer">
-        <div class="row">
-            <a href="/">Home <i class="glyphicon glyphicon-home"></i></a>
-            <form action="/login" method="POST" role="form">
-                <legend>Login</legend>
-                <div class="form-group">
-                    <div class="row">
-                        <label for="">Username </label>
-                        <input type="text" placeholder="Enter your username..">
-                    </div>
-                    <div class="row">
-                        <label for="">Password </label>
-                        <input type="password" placeholder="Enter your password..">
-                    </div>
+<div class="container loginContainer">
+    <div class="row">
+        <a href="/">Home <i class="glyphicon glyphicon-home"></i></a>
+        <form action="/login" method="POST" role="form">
+            <legend>Login</legend>
+            <div class="form-group">
+                <div class="row">
+                    <label for="">Username </label>
+                    <input type="text" placeholder="Enter your username..">
                 </div>
-                <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Login</button>
-            </form>
-            <p>Not yet registered? <a href="/register">Register here</a></p>
-        </div>
+                <div class="row">
+                    <label for="">Password </label>
+                    <input type="password" placeholder="Enter your password..">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Login</button>
+        </form>
+        <p>Not yet registered? <a href="/register">Register here</a></p>
     </div>
-</body>
-</html>
+</div>
