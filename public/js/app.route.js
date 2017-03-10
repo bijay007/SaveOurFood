@@ -6,7 +6,7 @@ angular.module('myApp')
         templateUrl: '../templates/home.html'
       })
       .when('/login', {
-        templateUrl: 'templates/login.html'
+        templateUrl: 'login.html'
       })
       .when('/register', {
         templateUrl: 'templates/register.html'
