@@ -6,13 +6,13 @@ angular.module('myApp')
         templateUrl: '../templates/home.html'
       })
       .when('/login', {
-        templateUrl: '../templates/login.html'
+        templateUrl: 'templates/login.html'
       })
       .when('/register', {
-        templateUrl: '../templates/register.html'
+        templateUrl: 'templates/register.html'
       })
       .when('/profile', {
-        templateUrl: '../templates/profile.html'
+        templateUrl: 'templates/profile.html'
       })
       .otherwise('/')
   })
