@@ -15,7 +15,7 @@
 
 	aside
 		padding: 10px
-	.main
+	main
 		padding: 5px
 		.row
 			display: flex
@@ -23,6 +23,19 @@
 		figcaption
 			text-align: left
 		img
-			height: 80px
-			width: 120px
-			padding: 10px
+			height: 100px
+			width: 140px
+			padding: 20px
+	.actions
+		display: flex
+		justify-content: space-between
+		padding: 20px
+	@media screen and (min-width: 320px) and (max-width: 768px)
+		main
+			.row
+				display: flex
+				justify-content: space-between
+			h4
+				text-align: center
+			figcaption
+				text-align: center
