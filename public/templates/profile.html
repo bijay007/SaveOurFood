@@ -41,8 +41,9 @@
 			<div class="row"><!-- second row-->
 				<div class="col-sm-6 col-md-offset-2 col-md-4">
 					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#fish"><img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeatproducts"></a>
-							<div class="modal fade" id="fish">
+						<a href="#fish" data-toogle="modal" class="fish"><img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeatproducts"></a>
+
+							<div class="modal fade" id="fishmodal">
 							  <div class="modal-dialog" role="document">
 							    <div class="modal-content">
 							      <div class="modal-header">
@@ -134,3 +135,10 @@
 		<button><a href="#!/login"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
 	</div>
 </div>
+<script>
+	$(document).ready(function () {
+    $('#fish').on('click', function () {
+      $('#fishmodal').modal()
+    })
+	})
+</script>
