@@ -3,16 +3,16 @@ angular.module('myApp')
     $routeProvider
 
       .when('/', {
-        templateUrl: '../templates/home.html'
+        templateUrl: '/templates/home.html'
       })
       .when('/login', {
-        templateUrl: 'login.html'
+        templateUrl: '/templates/login.html'
       })
       .when('/register', {
-        templateUrl: 'templates/register.html'
+        templateUrl: '/templates/register.html'
       })
       .when('/profile', {
-        templateUrl: 'templates/profile.html'
+        templateUrl: '/templates/profile.html'
       })
       .otherwise('/')
   })
