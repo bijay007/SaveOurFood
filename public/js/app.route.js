@@ -1,6 +1,7 @@
 angular.module('myApp')
   .config($routeProvider => {
     $routeProvider
+
       .when('/', {
         templateUrl: 'templates/home.html'
       })
