@@ -1,136 +1,138 @@
-<div class="container profileContainer">
-	<header><!-- main header with greetings and logout-->
-		<div class="row">
-			<div class="col-sm-7">
-				<h2>Hi <span>Bijay</span>, Good <span>Friday</span>&nbsp;<span>evening</span><i class="glyphicon glyphicon-apple"></i></h2>
+<div class="container-fluid showprofilepage">
+	<div class="container profileContainer">
+		<header><!-- main header with greetings and logout-->
+			<div class="row">
+				<div class="col-sm-7">
+					<h2>Hi <span>Bijay</span>, Good <span>Friday</span>&nbsp;<span>evening</span><i class="glyphicon glyphicon-apple"></i></h2>
+				</div>
+				<div class="col-sm-5 statusnav">
+					<ul class="nav nav-pills" role="tablist">
+						<li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Expiring soon <span class="badge">7</span></a></li>
+						<li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i> Expired <span class="badge">2</span></a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="col-sm-5 statusnav">
-				<ul class="nav nav-pills" role="tablist">
-					<li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Expiring soon <span class="badge">7</span></a></li>
-					<li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i> Expired <span class="badge">2</span></a></li>
-				</ul>
+		</header>
+
+		<aside><!-- small paragraph showing current food condition -->
+			<h3>
+				<span> Some food seem to be expiring soon <i class="glyphicon glyphicon-hand-up"></i>
+				</span>
+			</h3>
+		</aside>
+
+		<main><!-- food categories to add to your list -->
+			<div class="container">
+				<h4>Click on the items to add to list</h4>
+				<div class="row"><!-- first row -->
+					<div class="col-sm-6 col-md-offset-2 col-md-4">
+						<figure class="figure">
+							<a href="" data-toogle="modal" data-target="#fruits"><img src="../images/categories/fruitsvegs.png" class="img-responsive" alt="fruitsNvegetables"></a>
+							<figcaption class="figure-caption">Fruits N Vegetables</figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-6 col-md-offset-2 col-md-4">
+						<figure class="figure">
+							<a href="" data-toogle="modal" data-target="#milk"><img src="../images/categories/milkegg.png" class="img-responsive" alt="milkNeggproducts"></a>
+							<figcaption class="figure-caption">Milk N Egg Products</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="row"><!-- second row-->
+					<div class="col-sm-6 col-md-offset-2 col-md-4">
+						<figure class="figure">
+							<a href="#fish" data-toogle="modal" class="fish"><img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeatproducts"></a>
+
+								<div class="modal fade" id="fishmodal">
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <h5 class="modal-title">Add item below</h5>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+								      </div>
+								      <div class="modal-body">
+								        <p>Name : </p>
+								        <p>Date bought : </p>
+								        <p>Date Expiry : </p>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-primary">Save changes</button>
+								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+							<figcaption class="figure-caption">Fish N Meat Products</figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-6 col-md-offset-2 col-md-4">
+						<figure class="figure">
+							<a href="" data-toogle="modal" data-target="#canned"><img src="../images/categories/frozencanned.png" class="img-responsive" alt="cannedNfrozen"></a>
+							<figcaption class="figure-caption">Canned N Frozen Food</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="row"><!-- third row-->
+					<div class="col-sm-6 col-md-offset-2 col-md-4">
+						<figure class="figure">
+							<a href="" data-toogle="modal" data-target="#drinks"><img src="../images/categories/liquidproducts.png" class="img-responsive" alt="drinksNbeverages"></a>
+							<figcaption class="figure-caption">Oils and Beverages</figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-6 col-md-offset-2 col-md-4">
+						<figure class="figure">
+							<a href="" data-toogle="modal" data-target="#others"><img src="../images/categories/others.png" class="img-responsive" alt="others"></a>
+							<figcaption class="figure-caption">Other Unspecified</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>				
+		</main>
+
+		<section><!-- your list of food items -->
+			<div class="container">
+			    <div class="row col-sm-12">
+				    <table class="table table-striped">
+				    <thead>
+				    	<h3>Your current food list</h3>
+				        <tr>
+				            <th>Name</th>
+				            <th>Quantity</th>
+				            <th>Bought On</th>
+				            <th>Expiring in</th>
+				            <th>We Recommend</th>
+				            <th>Current State</th>
+				            <th class="text-center">Action</th>
+				        </tr>
+				    </thead>
+				            <tr>
+				            	<td>Banana</td>
+				                <td>5 pieces</td>
+				                <td>Mar 5 2017</td>
+				                <td>Apr 17 2017</td>
+				                <td>2 months</td>
+				                <td>Fresh <i class="fa fa-smile-o"></i></td>
+				                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
+				            </tr>
+				            <tr>
+				            	<td>Milk</td>
+				                <td>1 litre</td>
+				                <td>Mar 6 2017</td>
+				                <td>Mar 19 2017</td>
+				                <td>1 week</td>
+				                <td>Expiring <i class="fa fa-frown-o"></i></td>
+				                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
+				            </tr>				            
+				    </table>
+			    </div>
 			</div>
+		</section>
+		
+		<div class="container actions">
+			<button>Show me more</button>
+			<button><a href="#!/login"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
 		</div>
-	</header>
-
-	<aside><!-- small paragraph showing current food condition -->
-		<h3>
-			<span> Some food seem to be expiring soon <i class="glyphicon glyphicon-hand-up"></i>
-			</span>
-		</h3>
-	</aside>
-
-	<main><!-- food categories to add to your list -->
-		<div class="container">
-			<h4>Click on the items to add to list</h4>
-			<div class="row"><!-- first row -->
-				<div class="col-sm-6 col-md-offset-2 col-md-4">
-					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#fruits"><img src="../images/categories/fruitsvegs.png" class="img-responsive" alt="fruitsNvegetables"></a>
-						<figcaption class="figure-caption">Fruits N Vegetables</figcaption>
-					</figure>
-				</div>
-				<div class="col-sm-6 col-md-offset-2 col-md-4">
-					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#milk"><img src="../images/categories/milkegg.png" class="img-responsive" alt="milkNeggproducts"></a>
-						<figcaption class="figure-caption">Milk N Egg Products</figcaption>
-					</figure>
-				</div>
-			</div>
-			<div class="row"><!-- second row-->
-				<div class="col-sm-6 col-md-offset-2 col-md-4">
-					<figure class="figure">
-						<a href="#fish" data-toogle="modal" class="fish"><img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeatproducts"></a>
-
-							<div class="modal fade" id="fishmodal">
-							  <div class="modal-dialog" role="document">
-							    <div class="modal-content">
-							      <div class="modal-header">
-							        <h5 class="modal-title">Add item below</h5>
-							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							          <span aria-hidden="true">&times;</span>
-							        </button>
-							      </div>
-							      <div class="modal-body">
-							        <p>Name : </p>
-							        <p>Date bought : </p>
-							        <p>Date Expiry : </p>
-							      </div>
-							      <div class="modal-footer">
-							        <button type="button" class="btn btn-primary">Save changes</button>
-							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							      </div>
-							    </div>
-							  </div>
-							</div>
-						<figcaption class="figure-caption">Fish N Meat Products</figcaption>
-					</figure>
-				</div>
-				<div class="col-sm-6 col-md-offset-2 col-md-4">
-					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#canned"><img src="../images/categories/frozencanned.png" class="img-responsive" alt="cannedNfrozen"></a>
-						<figcaption class="figure-caption">Canned N Frozen Food</figcaption>
-					</figure>
-				</div>
-			</div>
-			<div class="row"><!-- third row-->
-				<div class="col-sm-6 col-md-offset-2 col-md-4">
-					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#drinks"><img src="../images/categories/liquidproducts.png" class="img-responsive" alt="drinksNbeverages"></a>
-						<figcaption class="figure-caption">Oils and Beverages</figcaption>
-					</figure>
-				</div>
-				<div class="col-sm-6 col-md-offset-2 col-md-4">
-					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#others"><img src="../images/categories/others.png" class="img-responsive" alt="others"></a>
-						<figcaption class="figure-caption">Other Unspecified</figcaption>
-					</figure>
-				</div>
-			</div>
-		</div>				
-	</main>
-
-	<section><!-- your list of food items -->
-		<div class="container">
-		    <div class="row col-sm-12">
-			    <table class="table table-striped">
-			    <thead>
-			    	<h3>Your current food list</h3>
-			        <tr>
-			            <th>Name</th>
-			            <th>Quantity</th>
-			            <th>Bought On</th>
-			            <th>Expiring in</th>
-			            <th>We Recommend</th>
-			            <th>Current State</th>
-			            <th class="text-center">Action</th>
-			        </tr>
-			    </thead>
-			            <tr>
-			            	<td>Banana</td>
-			                <td>5 pieces</td>
-			                <td>Mar 5 2017</td>
-			                <td>Apr 17 2017</td>
-			                <td>2 months</td>
-			                <td>Fresh <i class="fa fa-smile-o"></i></td>
-			                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
-			            </tr>
-			            <tr>
-			            	<td>Milk</td>
-			                <td>1 litre</td>
-			                <td>Mar 6 2017</td>
-			                <td>Mar 19 2017</td>
-			                <td>1 week</td>
-			                <td>Expiring <i class="fa fa-frown-o"></i></td>
-			                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
-			            </tr>				            
-			    </table>
-		    </div>
-		</div>
-	</section>
-	
-	<div class="container actions">
-		<button>Show me more</button>
-		<button><a href="#!/login"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
 	</div>
 </div>

@@ -1,73 +1,73 @@
-/* line 3, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 3, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main {
   font-weight: bold;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../images/home/background.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../images/home/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 620px;
 }
 
-/* line 9, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 9, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .navbar {
   background: transparent;
   border-bottom: 0px;
 }
 
-/* line 13, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 13, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .navbar .container img {
   display: inline-block;
   padding: 5px;
 }
 
-/* line 16, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 16, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .navbar .container ul {
   display: inline-block;
   font-size: 1.3em;
   padding: 10px;
 }
 
-/* line 20, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 20, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .navbar .container ul li {
   margin: 0 15px;
 }
 
-/* line 22, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 22, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .container .upper-row {
   text-align: justify;
   font-family: 'Amatic SC', cursive;
 }
 
-/* line 26, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 26, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .container .upper-row h2, main .container .upper-row p {
   text-align: center;
   color: #fff;
   font-size: 50px;
 }
 
-/* line 30, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 30, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .container .upper-row h2 {
   font-weight: bolder;
   text-shadow: 1px 1px #220022;
   font-size: 100px;
 }
 
-/* line 34, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 34, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .container .upper-row .explain {
   font-family: 'Shadows Into Light', cursive;
   font-size: 37px;
 }
 
-/* line 37, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 37, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .container .upper-row p {
   float: right;
 }
 
-/* line 39, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 39, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .container .upper-row p a {
   display: block;
 }
 
-/* line 41, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+/* line 41, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
 main .container .upper-row p a button {
   font-size: 50px;
   border-radius: 7px;
@@ -76,45 +76,45 @@ main .container .upper-row p a button {
 }
 
 @media screen and (min-width: 300px) and (max-width: 625px) {
-  /* line 48, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 48, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main {
     height: 480px;
   }
-  /* line 50, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 50, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar {
     background: transparent;
     border-bottom: 0px;
     margin-bottom: 0px;
   }
-  /* line 55, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 55, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container img {
     display: inline-block;
     height: 35px;
   }
-  /* line 58, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 58, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container ul {
     display: inline-block;
     font-size: 1.1em;
     padding: 5px;
   }
-  /* line 62, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 62, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container ul li {
     margin: 0 10px;
   }
-  /* line 65, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 65, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row h2, main .container .upper-row p {
     font-size: 30px;
     font-weight: bold;
   }
-  /* line 68, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 68, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row h2 {
     font-size: 40px;
   }
-  /* line 70, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 70, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row .explain {
     font-size: 25px;
   }
-  /* line 74, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 74, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row p a button {
     font-size: 30px;
     margin-top: 5px;
@@ -122,84 +122,84 @@ main .container .upper-row p a button {
 }
 
 @media screen and (min-width: 626px) and (max-width: 768px) {
-  /* line 78, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 78, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main {
     height: 530px;
   }
-  /* line 80, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 80, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar {
     background: transparent;
     border-bottom: 0px;
   }
-  /* line 84, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 84, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container img {
     display: inline-block;
   }
-  /* line 86, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 86, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container ul {
     display: inline-block;
     font-size: 1.2em;
     padding: 8px;
   }
-  /* line 90, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 90, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container ul li {
     margin: 0 10px;
   }
-  /* line 93, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 93, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row h2, main .container .upper-row p {
     font-size: 42px;
   }
-  /* line 95, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 95, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row h2 {
     font-size: 55px;
   }
-  /* line 97, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 97, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row .explain {
     font-size: 32px;
   }
-  /* line 101, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 101, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row .explain p a button {
     font-size: 40px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1185px) {
-  /* line 104, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 104, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main {
     height: 570px;
   }
-  /* line 106, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 106, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar {
     background: transparent;
     border-bottom: 0px;
   }
-  /* line 110, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 110, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container img {
     display: inline-block;
   }
-  /* line 112, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 112, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container ul {
     display: inline-block;
     font-size: 1.3em;
     padding: 10px;
   }
-  /* line 116, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 116, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .navbar .container ul li {
     margin: 0 15px;
   }
-  /* line 119, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 119, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row h2, main .container .upper-row p {
     font-size: 45px;
   }
-  /* line 121, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 121, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row h2 {
     font-size: 70px;
   }
-  /* line 123, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 123, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row .explain {
     font-size: 35px;
   }
-  /* line 127, /home/bijay007/SaveOurFood/public/sass/_main.sass */
+  /* line 127, /home/bijay007/SaveOurFood/public/sass/_banner.sass */
   main .container .upper-row .explain p a button {
     font-size: 45px;
   }
@@ -338,140 +338,187 @@ blockquote .blockquote-footer {
 
 /* line 1, /home/bijay007/SaveOurFood/public/sass/_login.sass */
 .loginContainer {
-  margin: 30px auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/home/loginregister.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 40px auto;
   text-align: center;
   display: flex;
   justify-content: center;
-}
-
-/* line 7, /home/bijay007/SaveOurFood/public/sass/_login.sass */
-.loginContainer form legend {
-  padding: 10px;
-  font-size: 1.5em;
-}
-
-/* line 11, /home/bijay007/SaveOurFood/public/sass/_login.sass */
-.loginContainer form .form-group .row {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+  font-weight: bold;
+  padding: 20px;
+  box-shadow: 8px 8px 4px grey;
+  border-radius: 20px 10px 10px 15px;
 }
 
 /* line 14, /home/bijay007/SaveOurFood/public/sass/_login.sass */
+.loginContainer form legend {
+  padding: 15px;
+  font-size: 2em;
+  color: #18edf5;
+  text-shadow: 0.5px 0.5px red;
+}
+
+/* line 20, /home/bijay007/SaveOurFood/public/sass/_login.sass */
+.loginContainer form .form-group .row {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+/* line 23, /home/bijay007/SaveOurFood/public/sass/_login.sass */
+.loginContainer form .form-group .row input {
+  border-radius: 5px;
+}
+
+/* line 25, /home/bijay007/SaveOurFood/public/sass/_login.sass */
+.loginContainer form .form-group .row label {
+  margin-right: 15px;
+  color: #fff;
+}
+
+/* line 28, /home/bijay007/SaveOurFood/public/sass/_login.sass */
 .loginContainer .row > p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-top: 10px;
+  color: rgba(243, 215, 30, 0.96);
 }
 
 /* line 1, /home/bijay007/SaveOurFood/public/sass/_register.sass */
 .registerContainer {
-  margin: 30px auto;
-  padding: 20px;
-  text-align: center;
-}
-
-/* line 5, /home/bijay007/SaveOurFood/public/sass/_register.sass */
-.registerContainer legend {
-  font-size: 1.5em;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/home/loginregister.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 40px auto;
   padding: 10px;
+  text-align: center;
+  box-shadow: 8px 8px 4px grey;
+  border-radius: 20px 10px 10px 15px;
+  font-weight: bold;
 }
 
-/* line 8, /home/bijay007/SaveOurFood/public/sass/_register.sass */
-.registerContainer .form-group .row {
-  margin-bottom: 5px;
+/* line 11, /home/bijay007/SaveOurFood/public/sass/_register.sass */
+.registerContainer form {
+  margin: 0px 40px;
 }
 
-/* line 10, /home/bijay007/SaveOurFood/public/sass/_register.sass */
-.registerContainer .form-group .row label {
+/* line 13, /home/bijay007/SaveOurFood/public/sass/_register.sass */
+.registerContainer form legend {
+  font-size: 1.7em;
+  border-bottom: 0px;
+  margin-top: 20px;
+  color: #18edf5;
+  text-shadow: 0.5px 0.5px red;
+}
+
+/* line 19, /home/bijay007/SaveOurFood/public/sass/_register.sass */
+.registerContainer form .form-group .row {
+  margin-bottom: 10px;
+}
+
+/* line 21, /home/bijay007/SaveOurFood/public/sass/_register.sass */
+.registerContainer form .form-group .row label {
   text-align: right;
-  padding-right: 10px;
-  font-size: 1.2em;
+  margin-right: 15px;
+  font-size: 1.3em;
+  color: #fff;
 }
 
-/* line 14, /home/bijay007/SaveOurFood/public/sass/_register.sass */
+/* line 26, /home/bijay007/SaveOurFood/public/sass/_register.sass */
+.registerContainer form .form-group .row input {
+  border-radius: 4px;
+}
+
+/* line 28, /home/bijay007/SaveOurFood/public/sass/_register.sass */
 .registerContainer p {
-  margin-top: 5px;
-  font-size: 1.2em;
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: rgba(243, 215, 30, 0.96);
 }
 
-/* line 2, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer header {
+/* line 1, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../images/categories/night.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* line 5, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer {
   text-align: center;
   color: white;
 }
 
-/* line 8, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer header .statusnav {
+/* line 9, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer header .statusnav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 20px;
 }
 
-/* line 13, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer header li {
+/* line 14, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer header li {
   padding-left: 5px;
 }
 
-/* line 15, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer header li form {
+/* line 16, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer header li form {
   padding-top: 10px;
 }
 
-/* line 18, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer aside {
+/* line 19, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer aside {
   padding: 10px;
 }
 
-/* line 20, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer main {
+/* line 21, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer main {
+  background: none;
   padding: 5px;
 }
 
-/* line 22, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer main .row {
+/* line 24, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer main .row {
   display: flex;
   justify-content: center;
 }
 
-/* line 25, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer main figcaption {
+/* line 27, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer main figcaption {
   text-align: left;
 }
 
-/* line 27, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer main img {
+/* line 29, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer main img {
   height: 100px;
   width: 140px;
   padding: 20px;
 }
 
-/* line 31, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer .actions {
+/* line 33, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer .actions {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 
-/* line 35, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-.profileContainer section {
+/* line 37, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+.showprofilepage .profileContainer section {
   padding: 5px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  /* line 39, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-  .profileContainer main .row {
+  /* line 41, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+  .showprofilepage .profileContainer main .row {
     display: flex;
     justify-content: space-between;
   }
-  /* line 42, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-  .profileContainer main h4 {
+  /* line 44, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+  .showprofilepage .profileContainer main h4 {
     text-align: center;
   }
-  /* line 44, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
-  .profileContainer main figcaption {
+  /* line 46, /home/bijay007/SaveOurFood/public/sass/_profileuser.sass */
+  .showprofilepage .profileContainer main figcaption {
     text-align: center;
   }
 }
