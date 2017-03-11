@@ -1,32 +1,21 @@
 /* line 1, /home/bijay007/SaveOurFood/public/sass/_navbar.sass */
 .navbar {
-  margin: 0;
-  padding: 2px;
-}
-
-/* line 4, /home/bijay007/SaveOurFood/public/sass/_navbar.sass */
-.navbar .container {
+  margin: 0 auto;
   display: flex;
   align-items: center;
 }
 
-/* line 7, /home/bijay007/SaveOurFood/public/sass/_navbar.sass */
-.navbar .container button {
-  margin-top: 8px;
+/* line 5, /home/bijay007/SaveOurFood/public/sass/_navbar.sass */
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /* line 9, /home/bijay007/SaveOurFood/public/sass/_navbar.sass */
-.navbar .container a {
-  color: white;
-  font-weight: bold;
-}
-
-/* line 12, /home/bijay007/SaveOurFood/public/sass/_navbar.sass */
-.navbar .container img {
-  width: 56px;
-  height: 32px;
-  max-width: 36%;
-  max-height: 36%;
+.navbar img {
+  width: 40px;
+  height: 25px;
 }
 
 /* line 4, /home/bijay007/SaveOurFood/public/sass/_main.sass */
