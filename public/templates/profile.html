@@ -21,7 +21,53 @@
 			</h3>
 		</aside>
 
-		<main><!-- food categories to add to your list -->
+		<section><!-- your list of saved food items -->
+			<div class="container" id="listsection">
+			    <div class="row col-sm-12">
+				    <table class="table table-striped">
+					    <thead>
+					    	<h3>Your current food list</h3>
+					        <tr>
+					            <th>Name</th>
+					            <th>Quantity</th>
+					            <th>Bought On</th>
+					            <th>Expiring in</th>
+					            <th>We Recommend</th>
+					            <th>Current State</th>
+					            <th class="text-center">Action</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					            <tr>
+					            	<td>Banana</td>
+					                <td>5 pieces</td>
+					                <td>Mar 5 2017</td>
+					                <td>Apr 17 2017</td>
+					                <td>2 months</td>
+					                <td>Fresh <i class="fa fa-smile-o"></i></td>
+					                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
+					            </tr>
+					            <tr>
+					            	<td>Milk</td>
+					                <td>1 litre</td>
+					                <td>Mar 6 2017</td>
+					                <td>Mar 19 2017</td>
+					                <td>1 week</td>
+					                <td>Expiring <i class="fa fa-frown-o"></i></td>
+					                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
+					            </tr>
+					    </tbody>			            
+				    </table>
+			    </div>
+			</div>
+		</section>
+		
+		<div class="container actions">
+			<button>Show me more</button>
+			<button><a href="#!/login"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
+		</div>
+
+		<main class="foodcategories"><!-- food categories to add to your list -->
 			<div class="container">
 				<h4>Click on the items to add to list</h4>
 				<div class="row"><!-- first row -->
@@ -90,49 +136,5 @@
 				</div>
 			</div>				
 		</main>
-
-		<section><!-- your list of food items -->
-			<div class="container">
-			    <div class="row col-sm-12">
-				    <table class="table table-striped">
-				    <thead>
-				    	<h3>Your current food list</h3>
-				        <tr>
-				            <th>Name</th>
-				            <th>Quantity</th>
-				            <th>Bought On</th>
-				            <th>Expiring in</th>
-				            <th>We Recommend</th>
-				            <th>Current State</th>
-				            <th class="text-center">Action</th>
-				        </tr>
-				    </thead>
-				            <tr>
-				            	<td>Banana</td>
-				                <td>5 pieces</td>
-				                <td>Mar 5 2017</td>
-				                <td>Apr 17 2017</td>
-				                <td>2 months</td>
-				                <td>Fresh <i class="fa fa-smile-o"></i></td>
-				                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
-				            </tr>
-				            <tr>
-				            	<td>Milk</td>
-				                <td>1 litre</td>
-				                <td>Mar 6 2017</td>
-				                <td>Mar 19 2017</td>
-				                <td>1 week</td>
-				                <td>Expiring <i class="fa fa-frown-o"></i></td>
-				                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> I've Eaten</a></td>
-				            </tr>				            
-				    </table>
-			    </div>
-			</div>
-		</section>
-		
-		<div class="container actions">
-			<button>Show me more</button>
-			<button><a href="#!/login"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
-		</div>
 	</div>
 </div>
