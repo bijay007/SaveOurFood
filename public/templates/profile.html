@@ -49,55 +49,19 @@
 	            <tr>
 	            	<td>Milk</td>
 	                <td>1 litre</td>
-	                <td>Mar 6 2017</td>
-	                <td>Mar 19 2017</td>
+	                <td>Jan 12 2017</td>
+	                <td>Mar 12 2017</td>
 	                <td>1 week</td>
-	                <td>Expiring <i class="fa fa-frown-o"></i></td>
+	                <td>Expired <i class="fa fa-frown-o"></i></td>
 	                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</a></td>
 	            </tr>
 	            <tr>
-	            	<td>Milk</td>
-	                <td>1 litre</td>
-	                <td>Mar 6 2017</td>
-	                <td>Mar 19 2017</td>
-	                <td>1 week</td>
-	                <td>Expiring <i class="fa fa-frown-o"></i></td>
-	                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</a></td>
-	            </tr>
-	            <tr>
-	            	<td>Milk</td>
-	                <td>1 litre</td>
-	                <td>Mar 6 2017</td>
-	                <td>Mar 19 2017</td>
-	                <td>1 week</td>
-	                <td>Expiring <i class="fa fa-frown-o"></i></td>
-	                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</a></td>
-	            </tr>
-	            <tr>
-	            	<td>Milk</td>
-	                <td>1 litre</td>
-	                <td>Mar 6 2017</td>
-	                <td>Mar 19 2017</td>
-	                <td>1 week</td>
-	                <td>Expiring <i class="fa fa-frown-o"></i></td>
-	                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</a></td>
-	            </tr>
-	            <tr>
-	            	<td>Milk</td>
-	                <td>1 litre</td>
-	                <td>Mar 6 2017</td>
-	                <td>Mar 19 2017</td>
-	                <td>1 week</td>
-	                <td>Expiring <i class="fa fa-frown-o"></i></td>
-	                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</a></td>
-	            </tr>
-	            <tr>
-	            	<td>Milk</td>
-	                <td>1 litre</td>
-	                <td>Mar 6 2017</td>
-	                <td>Mar 19 2017</td>
-	                <td>1 week</td>
-	                <td>Expiring <i class="fa fa-frown-o"></i></td>
+	            	<td>Sausages</td>
+	                <td>1 pack</td>
+	                <td>Mar 13 2017</td>
+	                <td>Mar 27 2017</td>
+	                <td>2 week</td>
+	                <td>Expiring <i class="fa fa-meh-o"></i></td>
 	                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</a></td>
 	            </tr>
 		    </tbody>			            
@@ -117,56 +81,164 @@
 		<h4>Click on the items to add to list</h4>
 		<div class="row"><!-- first row -->
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button>
+				<button type="button" data-toggle="modal" data-target=".fruitmodal">
 					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#fruits"><img src="../images/categories/fruitsvegs.png" class="img-responsive" alt="fruitsNvegetables"></a>
+						<img src="../images/categories/fruitsvegs.png" class="img-responsive" alt="fruitsNvegetables">
 						<figcaption class="figure-caption">Fruits N Vegetables</figcaption>
 					</figure>
 				</button>
+				<div class="modal fade fruitmodal" tabindex="-1" role="dialog">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"></button>
+				        <h4 class="modal-title">Add short description</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Article Name : <input type="text"></p>
+				        <p>Expiry Date (if available) : <input type="date"></p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 			</div>
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button>
+				<button type="button" data-toggle="modal" data-target=".milkmodal">
 					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#milk"><img src="../images/categories/milkegg.png" class="img-responsive" alt="milkNegg"></a>
-						<figcaption class="figure-caption">Milk N Egg Products</figcaption>
+						<img src="../images/categories/milkegg.png" class="img-responsive" alt="milkNegg">
+						<figcaption class="figure-caption">Milk N Egg</figcaption>
 					</figure>
 				</button>
+				<div class="modal fade milkmodal" tabindex="-1" role="dialog">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"></button>
+				        <h4 class="modal-title">Add short description</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Article Name : <input type="text"></p>
+				        <p>Expiry Date (if available) : <input type="date"></p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 			</div>
 		</div>
 		<div class="row"><!-- second row-->
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button>
-				<figure class="figure">
-					<a href="#fish" data-toogle="modal" class="fish"><img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeat"></a>
-					<figcaption class="figure-caption">Fish N Meat Products</figcaption>
-				</figure>
-
-			</div>
-			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button>
+				<button type="button" data-toggle="modal" data-target=".fishmodal">
 					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#canned"><img src="../images/categories/frozencanned.png" class="img-responsive" alt="cannedNfrozen"></a>
-						<figcaption class="figure-caption">Canned N Frozen Food</figcaption>
+						<img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeat">
+						<figcaption class="figure-caption">Fish N Meat</figcaption>
 					</figure>
 				</button>
+				<div class="modal fade fishmodal" tabindex="-1" role="dialog">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"></button>
+				        <h4 class="modal-title">Add short description</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Article Name : <input type="text"></p>
+				        <p>Expiry Date (if available) : <input type="date"></p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-offset-2 col-md-4">
+				<button type="button" data-toggle="modal" data-target=".cannedmodal">
+					<figure class="figure">
+						<img src="../images/categories/frozencanned.png" class="img-responsive" alt="cannedNfrozen">
+						<figcaption class="figure-caption">Canned N Frozen</figcaption>
+					</figure>
+				</button>
+				<div class="modal fade cannedmodal" tabindex="-1" role="dialog">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"></button>
+				        <h4 class="modal-title">Add short description</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Article Name : <input type="text"></p>
+				        <p>Expiry Date (if available) : <input type="date"></p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 			</div>
 		</div>
 		<div class="row"><!-- third row-->
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button>
+				<button type="button" data-toggle="modal" data-target=".oilsmodal">
 					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#drinks"><img src="../images/categories/liquidproducts.png" class="img-responsive" alt="drinksNbeverages"></a>
+						<img src="../images/categories/liquidproducts.png" class="img-responsive" alt="drinksNbeverages">
 						<figcaption class="figure-caption">Oils and Beverages</figcaption>
 					</figure>
 				</button>
+				<div class="modal fade oilsmodal" tabindex="-1" role="dialog">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"></button>
+				        <h4 class="modal-title">Add short description</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Article Name : <input type="text"></p>
+				        <p>Expiry Date (if available) : <input type="date"></p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 			</div>
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button>
+				<button type="button" data-toggle="modal" data-target=".othermodal">
 					<figure class="figure">
-						<a href="" data-toogle="modal" data-target="#others"><img src="../images/categories/others.png" class="img-responsive" alt="others"></a>
+						<img src="../images/categories/others.png" class="img-responsive" alt="others">
 						<figcaption class="figure-caption">Other Unspecified</figcaption>
 					</figure>
 				</button>
+				<div class="modal fade othermodal" tabindex="-1" role="dialog">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"></button>
+				        <h4 class="modal-title">Add short description</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Article Name : <input type="text"></p>
+				        <p>Expiry Date (if available) : <input type="date"></p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 			</div>
 		</div>
 	</div>				

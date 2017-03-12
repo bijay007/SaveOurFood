@@ -525,31 +525,40 @@ aside h3 {
 
 /* line 12, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
 #foodcategories button {
-  border-radius: 10%;
+  border-radius: 50%;
   margin: 10px auto;
   background-color: #fff;
+  padding: 25px;
 }
 
-/* line 16, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+/* line 17, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
 #foodcategories img {
   height: 80px;
   width: 120px;
   padding: 10px;
 }
 
-/* line 20, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+/* line 21, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
 #foodcategories figcaption {
   font-size: 1em;
 }
 
+/* line 23, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+#foodcategories .modal-content {
+  background-color: #DCD9CD;
+  color: #000;
+  font-size: 1em;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 300px) and (max-width: 768px) {
-  /* line 25, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-  #foodcategories figcaption ._foodcategories .row {
+  /* line 31, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+  #foodcategories .modal-content ._foodcategories .row {
     display: flex;
     justify-content: space-between;
   }
-  /* line 28, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-  #foodcategories figcaption ._foodcategories img {
+  /* line 34, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+  #foodcategories .modal-content ._foodcategories img {
     height: 55px;
     width: 95px;
     padding: 5px;
