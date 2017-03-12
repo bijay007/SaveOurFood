@@ -524,7 +524,7 @@ aside h3 {
 }
 
 /* line 12, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-#foodcategories button {
+#foodcategories .row .itembtn {
   border-radius: 50%;
   margin: 10px auto;
   background-color: #fff;
@@ -532,33 +532,47 @@ aside h3 {
 }
 
 /* line 17, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-#foodcategories img {
+#foodcategories .row img {
   height: 80px;
   width: 120px;
   padding: 10px;
 }
 
 /* line 21, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-#foodcategories figcaption {
+#foodcategories .row figcaption {
   font-size: 1em;
 }
 
 /* line 23, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-#foodcategories .modal-content {
+#foodcategories .row .modal-content {
   background-color: #DCD9CD;
-  color: #000;
   font-size: 1em;
   font-weight: bold;
 }
 
+/* line 27, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+#foodcategories .row .modal-content .modal-header, #foodcategories .row .modal-content .modal-footer {
+  padding: 5px;
+}
+
+/* line 29, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+#foodcategories .row .modal-content .modal-header button, #foodcategories .row .modal-content .modal-footer button {
+  border-radius: 2px;
+  padding: 5px auto;
+}
+
 @media screen and (min-width: 300px) and (max-width: 768px) {
-  /* line 31, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-  #foodcategories .modal-content ._foodcategories .row {
+  /* line 35, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+  #foodcategories .row .modal-content ._foodcategories .row {
     display: flex;
     justify-content: space-between;
   }
-  /* line 34, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-  #foodcategories .modal-content ._foodcategories img {
+  /* line 38, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+  #foodcategories .row .modal-content ._foodcategories button {
+    padding: 15px;
+  }
+  /* line 40, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
+  #foodcategories .row .modal-content ._foodcategories img {
     height: 55px;
     width: 95px;
     padding: 5px;

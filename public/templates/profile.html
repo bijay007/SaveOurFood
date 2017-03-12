@@ -81,7 +81,7 @@
 		<h4>Click on the items to add to list</h4>
 		<div class="row"><!-- first row -->
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button type="button" data-toggle="modal" data-target=".fruitmodal">
+				<button type="button" data-toggle="modal" class="itembtn" data-target=".fruitmodal">
 					<figure class="figure">
 						<img src="../images/categories/fruitsvegs.png" class="img-responsive" alt="fruitsNvegetables">
 						<figcaption class="figure-caption">Fruits N Vegetables</figcaption>
@@ -91,14 +91,15 @@
 				  <div class="modal-dialog modal-sm">
 				    <div class="modal-content">
 				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal"></button>
+				      <button type="button" class="close" data-dismiss="modal"></button>
 				        <h4 class="modal-title">Add short description</h4>
 				      </div>
 				      <div class="modal-body">
 				        <p>Article Name : <input type="text"></p>
+				        <p>Quantity bought : <input type="number"></p>
 				        <p>Expiry Date (if available) : <input type="date"></p>
 				      </div>
-				      <div class="modal-footer">
+				      <div class="modal-footer" id="footermodal">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				        <button type="button" class="btn btn-primary">Save changes</button>
 				      </div>
@@ -107,7 +108,7 @@
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button type="button" data-toggle="modal" data-target=".milkmodal">
+				<button type="button" data-toggle="modal" class="itembtn" data-target=".milkmodal">
 					<figure class="figure">
 						<img src="../images/categories/milkegg.png" class="img-responsive" alt="milkNegg">
 						<figcaption class="figure-caption">Milk N Egg</figcaption>
@@ -117,11 +118,12 @@
 				  <div class="modal-dialog modal-sm">
 				    <div class="modal-content">
 				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal"></button>
+				      <button type="button" class="close" data-dismiss="modal"></button>
 				        <h4 class="modal-title">Add short description</h4>
 				      </div>
 				      <div class="modal-body">
 				        <p>Article Name : <input type="text"></p>
+				        <p>Quantity bought : <input type="number"></p>
 				        <p>Expiry Date (if available) : <input type="date"></p>
 				      </div>
 				      <div class="modal-footer">
@@ -135,7 +137,7 @@
 		</div>
 		<div class="row"><!-- second row-->
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button type="button" data-toggle="modal" data-target=".fishmodal">
+				<button type="button" data-toggle="modal" class="itembtn" data-target=".fishmodal">
 					<figure class="figure">
 						<img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeat">
 						<figcaption class="figure-caption">Fish N Meat</figcaption>
@@ -145,11 +147,12 @@
 				  <div class="modal-dialog modal-sm">
 				    <div class="modal-content">
 				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal"></button>
+				      <button type="button" class="close" data-dismiss="modal"></button>
 				        <h4 class="modal-title">Add short description</h4>
 				      </div>
 				      <div class="modal-body">
 				        <p>Article Name : <input type="text"></p>
+				        <p>Quantity bought : <input type="number"></p>
 				        <p>Expiry Date (if available) : <input type="date"></p>
 				      </div>
 				      <div class="modal-footer">
@@ -161,7 +164,7 @@
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button type="button" data-toggle="modal" data-target=".cannedmodal">
+				<button type="button" data-toggle="modal" class="itembtn" data-target=".cannedmodal">
 					<figure class="figure">
 						<img src="../images/categories/frozencanned.png" class="img-responsive" alt="cannedNfrozen">
 						<figcaption class="figure-caption">Canned N Frozen</figcaption>
@@ -171,11 +174,12 @@
 				  <div class="modal-dialog modal-sm">
 				    <div class="modal-content">
 				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal"></button>
+				      <button type="button" class="close" data-dismiss="modal"></button>
 				        <h4 class="modal-title">Add short description</h4>
 				      </div>
 				      <div class="modal-body">
 				        <p>Article Name : <input type="text"></p>
+				        <p>Quantity bought : <input type="number"></p>
 				        <p>Expiry Date (if available) : <input type="date"></p>
 				      </div>
 				      <div class="modal-footer">
@@ -189,7 +193,7 @@
 		</div>
 		<div class="row"><!-- third row-->
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button type="button" data-toggle="modal" data-target=".oilsmodal">
+				<button type="button" data-toggle="modal" class="itembtn" data-target=".oilsmodal">
 					<figure class="figure">
 						<img src="../images/categories/liquidproducts.png" class="img-responsive" alt="drinksNbeverages">
 						<figcaption class="figure-caption">Oils and Beverages</figcaption>
@@ -199,11 +203,12 @@
 				  <div class="modal-dialog modal-sm">
 				    <div class="modal-content">
 				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal"></button>
+				      <button type="button" class="close" data-dismiss="modal"></button>
 				        <h4 class="modal-title">Add short description</h4>
 				      </div>
 				      <div class="modal-body">
 				        <p>Article Name : <input type="text"></p>
+				        <p>Quantity bought : <input type="number"></p>
 				        <p>Expiry Date (if available) : <input type="date"></p>
 				      </div>
 				      <div class="modal-footer">
@@ -215,7 +220,7 @@
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-offset-2 col-md-4">
-				<button type="button" data-toggle="modal" data-target=".othermodal">
+				<button type="button" data-toggle="modal" class="itembtn" data-target=".othermodal">
 					<figure class="figure">
 						<img src="../images/categories/others.png" class="img-responsive" alt="others">
 						<figcaption class="figure-caption">Other Unspecified</figcaption>
@@ -225,11 +230,12 @@
 				  <div class="modal-dialog modal-sm">
 				    <div class="modal-content">
 				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal"></button>
+				      <button type="button" class="close" data-dismiss="modal"></button>
 				        <h4 class="modal-title">Add short description</h4>
 				      </div>
 				      <div class="modal-body">
 				        <p>Article Name : <input type="text"></p>
+				        <p>Quantity bought : <input type="number"></p>
 				        <p>Expiry Date (if available) : <input type="date"></p>
 				      </div>
 				      <div class="modal-footer">

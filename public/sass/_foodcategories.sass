@@ -9,29 +9,35 @@
 	.row
 		display: flex
 		justify-content: center
-	button
-		border-radius: 50%
-		margin: 10px auto
-		background-color: #fff
-		padding: 25px
-	img
-		height: 80px
-		width: 120px
-		padding: 10px
-	figcaption
-		font-size: 1em
-	.modal-content
-		background-color: #DCD9CD
-		color: #000
-		font-size: 1em
-		font-weight: bold
+		.itembtn
+			border-radius: 50%
+			margin: 10px auto
+			background-color: #fff
+			padding: 25px
+		img
+			height: 80px
+			width: 120px
+			padding: 10px
+		figcaption
+			font-size: 1em
+		.modal-content
+			background-color: #DCD9CD
+			font-size: 1em
+			font-weight: bold
+			.modal-header, .modal-footer
+				padding: 5px
+				button
+					border-radius: 2px
+					padding: 5px auto
 
-		@media screen and (min-width: 300px) and (max-width: 768px)
-			._foodcategories
-				.row
-					display: flex
-					justify-content: space-between
-				img
-					height: 55px
-					width: 95px
-					padding: 5px
+			@media screen and (min-width: 300px) and (max-width: 768px)
+				._foodcategories
+					.row
+						display: flex
+						justify-content: space-between
+					button
+						padding: 15px
+					img
+						height: 55px
+						width: 95px
+						padding: 5px
