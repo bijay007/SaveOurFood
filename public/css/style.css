@@ -574,16 +574,28 @@ aside h3 {
   font-weight: bolder;
   font-size: 1.8em;
   text-shadow: 1px 1px #000;
+  margin-left: 50px;
 }
 
-/* line 12, /home/bijay007/SaveOurFood/public/sass/_userfoodlist.sass */
-.listitems #listsection th {
+/* line 13, /home/bijay007/SaveOurFood/public/sass/_userfoodlist.sass */
+.listitems #listsection table {
+  margin-left: 40px;
+  padding: 10px;
+}
+
+/* line 16, /home/bijay007/SaveOurFood/public/sass/_userfoodlist.sass */
+.listitems #listsection table th {
   font-weight: bolder;
   font-size: 1.2em;
   text-shadow: 1px 1px #E52D2D;
 }
 
-/* line 17, /home/bijay007/SaveOurFood/public/sass/_userfoodlist.sass */
+/* line 20, /home/bijay007/SaveOurFood/public/sass/_userfoodlist.sass */
+.listitems #listsection table td {
+  padding: 7px 5px;
+}
+
+/* line 22, /home/bijay007/SaveOurFood/public/sass/_userfoodlist.sass */
 .logoff {
   color: #000;
   font-weight: bold;
@@ -592,7 +604,7 @@ aside h3 {
   padding: 20px;
 }
 
-/* line 23, /home/bijay007/SaveOurFood/public/sass/_userfoodlist.sass */
+/* line 28, /home/bijay007/SaveOurFood/public/sass/_userfoodlist.sass */
 .logoff .glyphicon-off {
   color: #ff1111;
 }
