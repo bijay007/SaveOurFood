@@ -12,6 +12,7 @@
         </div>
     </div>
 </header>
+
 <aside>
     <!-- small paragraph showing current food condition -->
     <div class="container">
@@ -20,6 +21,7 @@
       </h3>
     </div>
 </aside>
+
 <section class="listitems">
     <!-- your list of saved food items -->
     <div class="container table-responsive" id="listsection">
@@ -50,18 +52,21 @@
         </table>
     </div>
 </section>
+
 <div class="actions">
     <div class="container logoff">
         <button>Show me more</button>
         <button><a href="#!/login"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
     </div>
 </div>
+
 <section id="foodcategories">
     <!-- food categories to add to your list -->
     <div class="container">
         <h4>Click on the items to add to list</h4>
+        <!-- first row -->
         <div class="row">
-            <!-- first row -->
+        <!-- fruits section -->
           <div class="col-sm-6 col-md-offset-2 col-md-4">
               <button type="button" data-toggle="modal" class="itembtn" data-target=".fruitmodal">
                   <figure class="figure">
@@ -70,6 +75,7 @@
                   </figure>
               </button>
           </div>
+        <!-- fruits modal -->
           <div class="modal fade fruitmodal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-sm">
               <div class="modal-content">
@@ -94,191 +100,239 @@
                     <p>Date bought (default today) :
                       <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
                     </p>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
                   </form>
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                  </div>
                 </div>
                 <!-- end of modal body and form -->
               </div> <!-- end of modal-content -->
             </div> <!-- end of modal-dialog -->
           </div> <!-- end of modal -->
-            <div class="col-sm-6 col-md-offset-2 col-md-4">
-                <button type="button" data-toggle="modal" class="itembtn" data-target=".milkmodal">
-                    <figure class="figure">
-                        <img src="../images/categories/milkegg.png" class="img-responsive" alt="milkNegg">
-                        <figcaption class="figure-caption">Milk N Egg</figcaption>
-                    </figure>
-                </button>
-                <div class="modal fade milkmodal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Add short description</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form action="/allitems" method="post">
-                                    <p>Article Name :
-                                        <input type="text">
-                                    </p>
-                                    <p>Quantity bought :
-                                        <input type="number">
-                                    </p>
-                                    <p>Expiry Date (if available) :
-                                        <input type="date">
-                                    </p>
-                                    <input type="submit" id="submit-form1" class="hidden" />
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">
-                                    <label for="submit-form1">Save changes</label>
-                                </button>
-                            </div>
+        <!-- milk section -->
+          <div class="col-sm-6 col-md-offset-2 col-md-4">
+              <button type="button" data-toggle="modal" class="itembtn" data-target=".milkmodal">
+                  <figure class="figure">
+                      <img src="../images/categories/milkegg.png" class="img-responsive" alt="milkNegg">
+                      <figcaption class="figure-caption">Milk N Egg</figcaption>
+                  </figure>
+              </button>
+          </div>
+        <!-- milk modal -->
+          <div class="modal fade milkmodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add short description</h4>
+                  </div>
+                  <div class="modal-body">
+                      <form action="/additems" method="POST"></form>
+                        <p>Article Name : <input type="text"></p>
+                        <p>Quantity bought :
+                          <input type="number" min="0">
+                            <select>
+                              <option value="kilos">kgs</option>
+                              <option value="pieces">pcs</option>
+                              <option value="litres">L</option>
+                            </select>
+                        </p>
+                        <p>Expiry Date (if available) :
+                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                        </p>
+                        <p>Date bought (default today) :
+                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                        </p>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
+                      </form>
                     </div>
-                </div>
-            </div>
-        </div>
+                  <!-- end of modal body and form -->
+                  </div> <!-- end of modal-content -->
+                </div> <!-- end of modal-dialog -->
+              </div> <!-- end of modal -->
+          </div>
+
+        <!-- second row-->
         <div class="row">
-            <!-- second row-->
+        <!-- fish section -->
             <div class="col-sm-6 col-md-offset-2 col-md-4">
-                <button type="button" data-toggle="modal" class="itembtn" data-target=".fishmodal">
-                    <figure class="figure">
-                        <img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeat">
-                        <figcaption class="figure-caption">Fish N Meat</figcaption>
-                    </figure>
-                </button>
-                <div class="modal fade fishmodal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Add short description</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form action="" method="post">
-                                    <p>Article Name :
-                                        <input type="text">
-                                    </p>
-                                    <p>Quantity bought :
-                                        <input type="number">
-                                    </p>
-                                    <p>Expiry Date (if available) :
-                                        <input type="date">
-                                    </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <button type="button" data-toggle="modal" class="itembtn" data-target=".fishmodal">
+                <figure class="figure">
+                  <img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeat">
+                  <figcaption class="figure-caption">Fish N Meat</figcaption>
+                </figure>
+              </button>
             </div>
+        <!-- fish modal -->
+            <div class="modal fade fishmodal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                          <h4 class="modal-title">Add short description</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form action="/additems" method="POST"></form>
+                          <p>Article Name : <input type="text"></p>
+                          <p>Quantity bought :
+                            <input type="number" min="0">
+                              <select>
+                                <option value="kilos">kgs</option>
+                                <option value="pieces">pcs</option>
+                                <option value="litres">L</option>
+                              </select>
+                          </p>
+                          <p>Expiry Date (if available) :
+                            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                          </p>
+                          <p>Date bought (default today) :
+                            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                          </p>
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- end of modal body and form -->
+                    </div> <!-- end of modal-content -->
+                </div> <!-- end of modal-dialog -->
+            </div> <!-- end of modal -->
+        <!-- canned section -->
             <div class="col-sm-6 col-md-offset-2 col-md-4">
-                <button type="button" data-toggle="modal" class="itembtn" data-target=".cannedmodal">
-                    <figure class="figure">
-                        <img src="../images/categories/frozencanned.png" class="img-responsive" alt="cannedNfrozen">
-                        <figcaption class="figure-caption">Canned N Frozen</figcaption>
-                    </figure>
-                </button>
-                <div class="modal fade cannedmodal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Add short description</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form action="" method="post">
-                                    <p>Article Name :
-                                        <input type="text">
-                                    </p>
-                                    <p>Quantity bought :
-                                        <input type="number">
-                                    </p>
-                                    <p>Expiry Date (if available) :
-                                        <input type="date">
-                                    </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <button type="button" data-toggle="modal" class="itembtn" data-target=".cannedmodal">
+                  <figure class="figure">
+                      <img src="../images/categories/frozencanned.png" class="img-responsive" alt="cannedNfrozen">
+                      <figcaption class="figure-caption">Canned N Frozen</figcaption>
+                  </figure>
+              </button>
             </div>
+        <!-- canned modal -->
+            <div class="modal fade cannedmodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add short description</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form action="/additems" method="POST"></form>
+                        <p>Article Name : <input type="text"></p>
+                        <p>Quantity bought :
+                          <input type="number" min="0">
+                            <select>
+                              <option value="kilos">kgs</option>
+                              <option value="pieces">pcs</option>
+                              <option value="litres">L</option>
+                            </select>
+                        </p>
+                        <p>Expiry Date (if available) :
+                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                        </p>
+                        <p>Date bought (default today) :
+                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                        </p>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </form>
+                    </div>
+                  <!-- end of modal body and form -->
+                </div> <!-- end of modal-content -->
+              </div> <!-- end of modal-dialog -->
+            </div> <!-- end of modal -->
         </div>
+
+        <!-- third row-->
         <div class="row">
-            <!-- third row-->
+        <!-- drinks section -->
             <div class="col-sm-6 col-md-offset-2 col-md-4">
-                <button type="button" data-toggle="modal" class="itembtn" data-target=".oilsmodal">
-                    <figure class="figure">
-                        <img src="../images/categories/liquidproducts.png" class="img-responsive" alt="drinksNbeverages">
-                        <figcaption class="figure-caption">Oils and Beverages</figcaption>
-                    </figure>
-                </button>
-                <div class="modal fade oilsmodal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Add short description</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form action="" method="post">
-                                    <p>Article Name :
-                                        <input type="text">
-                                    </p>
-                                    <p>Quantity bought :
-                                        <input type="number">
-                                    </p>
-                                    <p>Expiry Date (if available) :
-                                        <input type="date">
-                                    </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <button type="button" data-toggle="modal" class="itembtn" data-target=".oilsmodal">
+                  <figure class="figure">
+                      <img src="../images/categories/liquidproducts.png" class="img-responsive" alt="drinksNbeverages">
+                      <figcaption class="figure-caption">Oils and Beverages</figcaption>
+                  </figure>
+              </button>
             </div>
+        <!-- drinks modal -->
+            <div class="modal fade oilsmodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add short description</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form action="/additems" method="POST">
+                        <p>Article Name : <input type="text"></p>
+                        <p>Quantity bought :
+                          <input type="number" min="0">
+                            <select>
+                              <option value="kilos">kgs</option>
+                              <option value="pieces">pcs</option>
+                              <option value="litres">L</option>
+                            </select>
+                        </p>
+                        <p>Expiry Date (if available) :
+                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                        </p>
+                        <p>Date bought (default today) :
+                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                        </p>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- end of modal body and form -->
+                  </div> <!-- end of modal-content -->
+              </div> <!-- end of modal-dialog -->
+            </div> <!-- end of modal -->
+        <!-- others section -->
             <div class="col-sm-6 col-md-offset-2 col-md-4">
-                <button type="button" data-toggle="modal" class="itembtn" data-target=".othermodal">
-                    <figure class="figure">
-                        <img src="../images/categories/others.png" class="img-responsive" alt="others">
-                        <figcaption class="figure-caption">Other Unspecified</figcaption>
-                    </figure>
-                </button>
-                <div class="modal fade othermodal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Add short description</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form action="" method="post">
-                                    <p>Article Name :
-                                        <input type="text">
-                                    </p>
-                                    <p>Quantity bought :
-                                        <input type="number">
-                                    </p>
-                                    <p>Expiry Date (if available) :
-                                        <input type="date">
-                                    </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <button type="button" data-toggle="modal" class="itembtn" data-target=".othersmodal">
+                  <figure class="figure">
+                      <img src="../images/categories/others.png" class="img-responsive" alt="others">
+                      <figcaption class="figure-caption">Other Unspecified</figcaption>
+                  </figure>
+              </button>
             </div>
+        <!-- others modal -->
+          <div class="modal fade othersmodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add short description</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form action="/additems" method="POST">
+                        <p>Article Name : <input type="text"></p>
+                        <p>Quantity bought :
+                          <input type="number" min="0">
+                            <select>
+                              <option value="kilos">kgs</option>
+                              <option value="pieces">pcs</option>
+                              <option value="litres">L</option>
+                            </select>
+                        </p>
+                        <p>Expiry Date (if available) :
+                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                        </p>
+                        <p>Date bought (default today) :
+                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                        </p>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </form>
+                    </div>
+                  <!-- end of modal body and form -->
+                </div> <!-- end of modal-content -->
+              </div> <!-- end of modal-dialog -->
+          </div> <!-- end of modal -->
         </div>
     </div>
 </section>
