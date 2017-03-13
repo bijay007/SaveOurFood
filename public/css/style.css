@@ -551,14 +551,14 @@ aside h3 {
 }
 
 /* line 27, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-#foodcategories .row .modal-content .modal-header, #foodcategories .row .modal-content .modal-footer {
-  padding: 5px;
+#foodcategories .row .modal-content .modal-body {
+  padding: 15px;
 }
 
 /* line 29, /home/bijay007/SaveOurFood/public/sass/_foodcategories.sass */
-#foodcategories .row .modal-content .modal-header button, #foodcategories .row .modal-content .modal-footer button {
+#foodcategories .row .modal-content .modal-body .btn-group button {
   border-radius: 2px;
-  padding: 5px auto;
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
