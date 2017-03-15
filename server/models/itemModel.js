@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 const collection = 'foodlist'
 
 const FoodSchema = new mongoose.Schema({
-  foodName: {type: String, required: true},
+  foodName: { type: String },
   userId: String,
-  dateBought: {type: Number, default: Date.now()},
-  dateExpiring: Number,
+  dateBought: { type: Date, default: Date.now() },
+  dateExpiring: Date,
   quantity: Number,
   weRecommend: String,
   currentState: String

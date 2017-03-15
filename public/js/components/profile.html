@@ -12,7 +12,7 @@
         </div>
     </div>
 </header>
-
+<!-- small section that shows current overall condition -->
 <aside>
     <!-- small paragraph showing current food condition -->
     <div class="container">
@@ -21,7 +21,7 @@
       </h3>
     </div>
 </aside>
-
+<!-- table with list of food items you have -->
 <section class="listitems">
     <!-- your list of saved food items -->
     <div class="container table-responsive" id="listsection">
@@ -35,31 +35,31 @@
                     <th>Expiring in</th>
                     <th>We Recommend</th>
                     <th>Current State</th>
-                    <th class="text-center">Action</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Banana</td>
-                    <td>5 pieces</td>
-                    <td>Mar 5 2017</td>
-                    <td>Apr 17 2017</td>
-                    <td>2 months</td>
+                <tr ng-repeat="elem in vm.allFoodItems">
+                    <td>{{elem.foodName}}</td>
+                    <td>{{elem.quantity}}</td>
+                    <td>{{elem.dateBought}}</td>
+                    <td>{{elem.dateExpiring}}</td>
+                    <td>1 week</td>
                     <td>Fresh <i class="fa fa-smile-o"></i></td>
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</a></td>
+                    <td class="text-center"><a class="btn btn-info btn-xs" href=""><span class="glyphicon glyphicon-edit"></span> Edit</a> <a ng-click="vm.removeFood($event, elem._id)" class="btn btn-danger btn-xs" href=""><span class="glyphicon glyphicon-remove"></span> Remove</a></td> 
                 </tr>
             </tbody>
         </table>
     </div>
 </section>
-
+<!-- logoff and show more part-->
 <div class="actions">
     <div class="container logoff">
         <button>Show me more</button>
         <button><a href="#!/login"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
     </div>
 </div>
-
+<!-- select food from food-catergories-->
 <section id="foodcategories">
     <!-- food categories to add to your list -->
     <div class="container">
@@ -68,7 +68,7 @@
         <div class="row">
         <!-- fruits section -->
           <div class="col-sm-6 col-md-offset-2 col-md-4">
-              <button type="button" data-toggle="modal" class="itembtn" data-target=".fruitmodal">
+              <button type="button" data-toggle="modal" class="itembtn" data-target=".fruitmodal" ng-click="vm.clickedCategory($event, 'fruitClicked')">
                   <figure class="figure">
                       <img src="../images/categories/fruitsvegs.png" class="img-responsive" alt="fruitsNvegetables">
                       <figcaption class="figure-caption">Fruits N Vegetables</figcaption>
@@ -84,28 +84,28 @@
                 </div>
                 <!--modal footer with form -->
                 <div class="modal-body">
-                  <form action="/additems" method="POST"></form>
-                    <p>Article Name : <input type="text"></p>
-                    <p>Quantity bought :
-                      <input type="number" min="0">
-                        <select>
-                          <option value="kilos">kgs</option>
-                          <option value="pieces">pcs</option>
-                          <option value="litres">L</option>
-                        </select>
-                    </p>
-                    <p>Expiry Date (if available) :
-                      <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
-                    </p>
-                    <p>Date bought (default today) :
-                      <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
-                    </p>
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
+                  <form ng-submit="vm.addFood($event)" action="" method="">
+                      <p>Article Name : <input ng-model="vm.foodName" type="text" required></p>
+                      <p>Quantity bought :
+                        <input ng-model="vm.quantity" type="number" min="0">
+                          <select>
+                            <option value="kilos">kgs</option>
+                            <option value="pieces">pcs</option>
+                            <option value="litres">L</option>
+                          </select>
+                      </p>
+                      <p>Expiry Date (if available) :
+                        <input ng-model="vm.dateExpiring" type="date">
+                      </p>
+                      <p>Date bought (default today) :
+                        <input ng-model="vm.dateBought" type="date">
+                      </p>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                      </div>
                   </form>
-                </div>
+                  </div>
                 <!-- end of modal body and form -->
               </div> <!-- end of modal-content -->
             </div> <!-- end of modal-dialog -->
@@ -127,25 +127,27 @@
                     <h4 class="modal-title">Add short description</h4>
                   </div>
                   <div class="modal-body">
-                      <form action="/additems" method="POST"></form>
-                        <p>Article Name : <input type="text"></p>
-                        <p>Quantity bought :
-                          <input type="number" min="0">
-                            <select>
-                              <option value="kilos">kgs</option>
-                              <option value="pieces">pcs</option>
-                              <option value="litres">L</option>
-                            </select>
-                        </p>
-                        <p>Expiry Date (if available) :
-                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
-                        </p>
-                        <p>Date bought (default today) :
-                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
-                        </p>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save changes</button>
+                      <form name="addItem" action="/allitems" method="POST">
+                        <div class="form-group">
+                          <p>Article Name : <input name"foodName" type="text"></p>
+                          <p>Quantity bought :
+                            <input name="quantity" type="number" min="0">
+                              <select>
+                                <option value="kilos">kgs</option>
+                                <option value="pieces">pcs</option>
+                                <option value="litres">L</option>
+                              </select>
+                          </p>
+                          <p>Expiry Date (if available) :
+                            <input name="dateExpiring" type="date">
+                          </p>
+                          <p>Date bought (default today) :
+                            <input name="dateBought" type="date">
+                          </p>
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
                         </div>
                       </form>
                     </div>
@@ -174,10 +176,10 @@
                           <h4 class="modal-title">Add short description</h4>
                       </div>
                       <div class="modal-body">
-                        <form action="/additems" method="POST"></form>
-                          <p>Article Name : <input type="text"></p>
+                        <form ng-submit="addFood($event)" action="/allitems" method="POST">
+                          <p>Article Name : <input ng-model="foodName" type="text"></p>
                           <p>Quantity bought :
-                            <input type="number" min="0">
+                            <input ng-model="quantity" type="number" min="0">
                               <select>
                                 <option value="kilos">kgs</option>
                                 <option value="pieces">pcs</option>
@@ -185,10 +187,10 @@
                               </select>
                           </p>
                           <p>Expiry Date (if available) :
-                            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                            <input ng-model="dateExpiring" type="date">
                           </p>
                           <p>Date bought (default today) :
-                            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                            <input ng-model="dateBought" type="date">
                           </p>
                           <div class="btn-group">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -217,10 +219,10 @@
                         <h4 class="modal-title">Add short description</h4>
                     </div>
                     <div class="modal-body">
-                      <form action="/additems" method="POST"></form>
-                        <p>Article Name : <input type="text"></p>
+                      <form ng-submit="addFood($event)" action="/allitems" method="POST">
+                        <p>Article Name : <input ng-model="foodName" type="text"></p>
                         <p>Quantity bought :
-                          <input type="number" min="0">
+                          <input ng-model="quantity" type="number" min="0">
                             <select>
                               <option value="kilos">kgs</option>
                               <option value="pieces">pcs</option>
@@ -228,10 +230,10 @@
                             </select>
                         </p>
                         <p>Expiry Date (if available) :
-                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                          <input ng-model="dateExpiring" type="date">
                         </p>
                         <p>Date bought (default today) :
-                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                          <input ng-model="dateBought" type="date">
                         </p>
                         <div class="btn-group">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -264,10 +266,10 @@
                         <h4 class="modal-title">Add short description</h4>
                     </div>
                     <div class="modal-body">
-                      <form action="/additems" method="POST">
-                        <p>Article Name : <input type="text"></p>
+                      <form ng-submit="addFood($event)" action="/allitems" method="POST">
+                        <p>Article Name : <input ng-model="foodName" type="text"></p>
                         <p>Quantity bought :
-                          <input type="number" min="0">
+                          <input ng-model="quantity" type="number" min="0">
                             <select>
                               <option value="kilos">kgs</option>
                               <option value="pieces">pcs</option>
@@ -275,10 +277,10 @@
                             </select>
                         </p>
                         <p>Expiry Date (if available) :
-                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                          <input ng-model="dateExpiring" type="date">
                         </p>
                         <p>Date bought (default today) :
-                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                          <input ng-model="dateBought" type="date">
                         </p>
                         <div class="btn-group">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -307,10 +309,10 @@
                         <h4 class="modal-title">Add short description</h4>
                     </div>
                     <div class="modal-body">
-                      <form action="/additems" method="POST">
-                        <p>Article Name : <input type="text"></p>
+                      <form ng-submit="addFood($event)" action="/allitems" method="POST">
+                        <p>Article Name : <input ng-model="foodName" type="text"></p>
                         <p>Quantity bought :
-                          <input type="number" min="0">
+                          <input ng-model="quantity" type="number" min="0">
                             <select>
                               <option value="kilos">kgs</option>
                               <option value="pieces">pcs</option>
@@ -318,10 +320,10 @@
                             </select>
                         </p>
                         <p>Expiry Date (if available) :
-                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiry date..">
+                          <input ng-model="dateExpiring" type="date">
                         </p>
                         <p>Date bought (default today) :
-                          <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="date bought..">
+                          <input ng-model="dateBought" type="date">
                         </p>
                         <div class="btn-group">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

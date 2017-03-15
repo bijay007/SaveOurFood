@@ -12,7 +12,9 @@ angular.module('myApp')
         templateUrl: '/templates/register.html'
       })
       .when('/profile', {
-        templateUrl: '/templates/profile.html'
+        templateUrl: '/js/components/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'vm'
       })
       .otherwise('/')
   })

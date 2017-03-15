@@ -1,7 +1,7 @@
 // Importing installed dependencies
 const express = require('express')
 const path = require('path')
-const publicFolder = path.join(__dirname, 'public')
+const publicFolder = path.join(__dirname, '/public')
 const bodyParser = require('body-parser')
 const app = express()
 

@@ -14,17 +14,19 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
   </head>
 
   <body>
     <ng-view></ng-view>
-    <ng-include src="'templates/footer.html'" autoscroll="true"></ng-include>
 
     <script src="js/app.module.js"></script>
+    <script src="js/factories/SaveFoodFactory.js"></script>
+    <script src="js/components/ProfileController.js"></script>
     <script src="js/app.route.js"></script>
 
   </body>
