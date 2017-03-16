@@ -1,0 +1,21 @@
+<!-- select food from food-catergories-->
+<section id="foodcategories">
+  <!-- food categories to add to your list -->
+  <div class="container">
+    <h4>Click on the items to add to list</h4>
+
+    <!-- dynamic image-element  with modal window generator -->
+
+    <div class="row" ng-repeat="(key, value) in imgNmodals">
+      <!-- food category button -->
+      <div class="col-sm-6 col-md-offset-2 col-md-4">
+        <button type="button" ng-click="showModal(value)">
+          <figure class="figure">
+            <img src="../../../../images/categories/{{key}}.png" class="img-responsive" alt="{{key}}">
+            <figcaption class="figure-caption">{{key}}</figcaption>
+          </figure>
+        </button>
+      </div> 
+    </div> <!-- end of row -->
+  </div> <!-- end of container -->
+</section>

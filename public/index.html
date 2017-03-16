@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Bijay Timilsina">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Food</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  </head>
+
+  <body>
+    <div ui-view></div>
+
+    <script src="js/app.module.js"></script>
+    <script src="js/factories/SaveFoodFactory.js"></script>
+    <script src="js/components/foodCategories/foodCategoriesController.js"></script>
+<!--     <script src="js/components/profileNav/profileNavController.js"></script>
+    <script src="js/components/foodStatus/foodStatusController.js"></script>
+    <script src="js/components/foodList/foodListController.js"></script> -->
+    <script src="js/app.route.js"></script>
+  </body>
+</html>
