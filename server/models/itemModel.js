@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const collection = 'foodlist'
 
 const FoodSchema = new mongoose.Schema({
-  foodName: { type: String },
+  foodName: { type: String, required: true },
   userId: String,
   dateBought: { type: Date, default: Date.now() },
   dateExpiring: Date,

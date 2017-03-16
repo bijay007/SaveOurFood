@@ -33,9 +33,6 @@
     "bootstrap-sass": "^3.3.7",
     "angular": "^1.6.3",
     "angular-route": "^1.6.3",
-    "angular-bootstrap": "^2.5.0"
-  },
-  "resolutions": {
-    "angular-bootstrap": "^2.5.0"
+    "jQuery": "^3.1.1"
   }
 }

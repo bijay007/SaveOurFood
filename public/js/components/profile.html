@@ -101,8 +101,8 @@
                         <input ng-model="vm.dateBought" type="date">
                       </p>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                        <button type="button" class="btn btn-default" ng-click="cancel()">Close</button>
+                        <button type="submit" class="btn btn-primary" ng-click="close()">Save changes</button>
                       </div>
                   </form>
                   </div>
@@ -127,7 +127,7 @@
                     <h4 class="modal-title">Add short description</h4>
                   </div>
                   <div class="modal-body">
-                      <form name="addItem" action="/allitems" method="POST">
+                      <form ng-submit="vm.addFood($event)" action="" method="">
                         <div class="form-group">
                           <p>Article Name : <input name"foodName" type="text"></p>
                           <p>Quantity bought :
@@ -176,7 +176,7 @@
                           <h4 class="modal-title">Add short description</h4>
                       </div>
                       <div class="modal-body">
-                        <form ng-submit="addFood($event)" action="/allitems" method="POST">
+                        <form ng-submit="addFood($event)" action="" method="">
                           <p>Article Name : <input ng-model="foodName" type="text"></p>
                           <p>Quantity bought :
                             <input ng-model="quantity" type="number" min="0">
@@ -219,7 +219,7 @@
                         <h4 class="modal-title">Add short description</h4>
                     </div>
                     <div class="modal-body">
-                      <form ng-submit="addFood($event)" action="/allitems" method="POST">
+                      <form ng-submit="addFood($event)" action="" method="">
                         <p>Article Name : <input ng-model="foodName" type="text"></p>
                         <p>Quantity bought :
                           <input ng-model="quantity" type="number" min="0">
@@ -266,7 +266,7 @@
                         <h4 class="modal-title">Add short description</h4>
                     </div>
                     <div class="modal-body">
-                      <form ng-submit="addFood($event)" action="/allitems" method="POST">
+                      <form ng-submit="addFood($event)" action="" method="">
                         <p>Article Name : <input ng-model="foodName" type="text"></p>
                         <p>Quantity bought :
                           <input ng-model="quantity" type="number" min="0">
