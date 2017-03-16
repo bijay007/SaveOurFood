@@ -3,7 +3,7 @@
     .module('myApp')
     .controller('ProfileController', ProfileController)
 
-  function ProfileController ($routeParams, SaveFoodFactory, $route) {
+  function ProfileController ($routeParams, SaveFoodFactory, $route, moment) {
     let vm = this
 
     // vm.emitChange = function () {
@@ -14,7 +14,15 @@
 
     SaveFoodFactory.getAllItems()
       .then((allItems) => {
-        vm.allFoodItems = allItems
+        var formattedItems = allItems.map(function (elem) {
+          let dateExpiring = elem.dateExpiring.split('').splice(0, 10).join(' ')
+          let dateBought = elem.dateBought.split('').splice(0, 10).join(' ')
+          let foodName = elem.foodName
+          let quantity = elem.quantity
+          return { foodName, quantity, dateBought, dateExpiring }
+        })
+        console.log(formattedItems)
+        vm.allFoodItems = formattedItems
       })
 
     // vm.clickedCategory = (e, b) => {
