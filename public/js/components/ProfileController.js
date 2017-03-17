@@ -3,61 +3,47 @@
     .module('myApp')
     .controller('ProfileController', ProfileController)
 
-  function ProfileController ($routeParams, SaveFoodFactory, $route, moment) {
+  function ProfileController ($routeParams, SaveFoodFactory, $route, $scope) {
     let vm = this
 
-    // vm.emitChange = function () {
-    //   SaveFoodFactory.getAllItems()
-    //     .then(items => { vm.updatedFoodList = items })
-    // }
-    // vm.$on('foodChanged', vm.emitChange)
+    $scope.$on('foodChanged', function () {
+      SaveFoodFactory.getAllItems()
+        .then((allItems) => {
+          vm.allFoodItems = allItems
+        })
+    })
 
     SaveFoodFactory.getAllItems()
-      .then((allItems) => {
-        // var formattedItems = allItems.map(function (elem) {
-        //   let dateExpiring = elem.dateExpiring.split('').splice(0, 10).join(' ')
-        //   let dateBought = elem.dateBought.split('').splice(0, 10).join(' ')
-        //   let foodName = elem.foodName
-        //   let quantity = elem.quantity
-        //   return { foodName, quantity, dateBought, dateExpiring }
-        // })
-        vm.allFoodItems = allItems
+    .then((allItems) => {
+      var formattedItems = allItems.map(function (elem) {
+        let dateExpiring = (typeof (elem.dateExpiring) === Date) ? elem.dateExpiring.split('').splice(0, 10).join(' ') : new Date()
+        let dateBought = elem.dateBought.split('').splice(0, 10).join(' ')
+        let foodName = elem.foodName
+        let quantity = elem.quantity
+        return { foodName, quantity, dateBought, dateExpiring }
       })
-
-    // vm.clickedCategory = (e, b) => {
-    //   console.log(`${b} has been clicked`)
-    // }
+      vm.allFoodItems = formattedItems
+    })
 
     vm.addFood = function (e) {
       e.preventDefault()
       const { foodName, quantity, dateBought, dateExpiring } = vm
-      // console.log(`vm foodname is ${vm.foodName}`)
-
+      console.log(`vm foodname is ${vm.foodName}`)
       SaveFoodFactory.addItem({ foodName, quantity, dateBought, dateExpiring })
-        .then($route.reload())
     }
 
     vm.removeFood = function (e, elemId) {
       e.preventDefault()
-      // console.log(`id captured from a element is ${elemId}`)
+      console.log(`id captured from a element is ${elemId}`)
       SaveFoodFactory.removeItem(elemId)
-        .then($route.reload())
+        .then(vm.emitChange())
     }
 
-    vm.newField = {}
-    vm.editing = false
+    // vm.newField = {}
 
-    vm.editKeys = function (clickedField) {
-      vm.dataRow = vm.foodName.$parent.$index
-      vm.editing = vm.dataRow.indexOf(clickedField)
-      vm.newField = angular.copy(clickedField)
-      SaveFoodFactory.editItem(vm.newField.foodName, vm.newField.quantity, vm.newField.dateBought, vm.newField.dateExpiring, vm.newField._id)
-    }
-    vm.saveData = function (itemList) {
-      if (vm.editing !== false) {
-        vm.editKeys[vm.editing] = vm.newField
-        vm.editing = false
-      }
-    }
+    // vm.saveData = function (data) {
+    //   console.log(data)
+    //   SaveFoodFactory.editItem({data.foodName, data.dateBought, data.dateExpiring, data.quantity, data._id})
+    // }
   }
 })()
