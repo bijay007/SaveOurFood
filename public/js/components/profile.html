@@ -125,7 +125,7 @@
           </div> <!-- end of modal -->
         <!-- milk section -->
           <div class="col-sm-6 col-md-offset-2 col-md-4">
-              <button type="button" data-toggle="modal" class="itembtn" data-target=".milkmodal">
+              <button type="button" data-toggle="modal" class="itembtn" data-target=".milkmodal" ng-click="vm.clickedCategory($event, 'milkClicked')">
                   <figure class="figure">
                       <img src="../images/categories/milkegg.png" class="img-responsive" alt="milkNegg">
                       <figcaption class="figure-caption">Milk N Egg</figcaption>
@@ -174,7 +174,7 @@
         <div class="row">
         <!-- fish section -->
             <div class="col-sm-6 col-md-offset-2 col-md-4">
-              <button type="button" data-toggle="modal" class="itembtn" data-target=".fishmodal">
+              <button type="button" data-toggle="modal" ng-click="vm.clickedCategory($event)" class="itembtn" data-target=".fishmodal">
                 <figure class="figure">
                   <img src="../images/categories/fishmeat.png" class="img-responsive" alt="fishNmeat">
                   <figcaption class="figure-caption">Fish N Meat</figcaption>
@@ -217,7 +217,7 @@
             </div> <!-- end of modal -->
         <!-- canned section -->
             <div class="col-sm-6 col-md-offset-2 col-md-4">
-              <button type="button" data-toggle="modal" class="itembtn" data-target=".cannedmodal">
+              <button type="button" data-toggle="modal" ng-click="vm.clickedCategory($event)" class="itembtn" data-target=".cannedmodal">
                   <figure class="figure">
                       <img src="../images/categories/frozencanned.png" class="img-responsive" alt="cannedNfrozen">
                       <figcaption class="figure-caption">Canned N Frozen</figcaption>
@@ -264,7 +264,7 @@
         <div class="row">
         <!-- drinks section -->
             <div class="col-sm-6 col-md-offset-2 col-md-4">
-              <button type="button" data-toggle="modal" class="itembtn" data-target=".oilsmodal">
+              <button type="button" data-toggle="modal" ng-click="vm.clickedCategory($event)" class="itembtn" data-target=".oilsmodal">
                   <figure class="figure">
                       <img src="../images/categories/liquidproducts.png" class="img-responsive" alt="drinksNbeverages">
                       <figcaption class="figure-caption">Oils and Beverages</figcaption>
@@ -307,7 +307,7 @@
             </div> <!-- end of modal -->
         <!-- others section -->
             <div class="col-sm-6 col-md-offset-2 col-md-4">
-              <button type="button" data-toggle="modal" class="itembtn" data-target=".othersmodal">
+              <button type="button" data-toggle="modal" ng-click="vm.clickedCategory($event)" class="itembtn" data-target=".othersmodal">
                   <figure class="figure">
                       <img src="../images/categories/others.png" class="img-responsive" alt="others">
                       <figcaption class="figure-caption">Other Unspecified</figcaption>
