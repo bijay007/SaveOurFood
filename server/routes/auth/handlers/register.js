@@ -5,7 +5,7 @@ function register (req, res) {
   const name = username
   const account = new User({name, username, email})
 
-  User.register(account, password, err => {
+  User.register(account, password, email, err => {
     if (err) {
       return res.json({success: false, msg: 'Username already exists !!'})
     }
