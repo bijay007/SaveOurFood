@@ -1,1 +1,1 @@
-angular.module('myApp', ['ngRoute', 'angularMoment'])
+angular.module('myApp', ['ngRoute'])

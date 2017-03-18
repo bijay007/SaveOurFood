@@ -2,15 +2,15 @@
   "name": "savethefood",
   "version": "1.0.0",
   "description": "simple app that reminds you food expiry date",
-  "main": "app.js",
+  "main": "index.js",
   "engines": {
     "node": "6.9.5"
   },
   "scripts": {
     "prestart": "npm install",
-    "dev": "nodemon app",
+    "dev": "nodemon main",
     "postinstall": "./node_modules/bower/bin/bower install",
-    "start": "node app"
+    "start": "node main"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,12 @@
     "express",
     "angular",
     "bootstrap",
+    "mongodb",
     "html5",
     "css3",
     "sass",
-    "mongodb"
+    "jwt",
+    "passport"
   ],
   "author": "bijay",
   "license": "ISC",
@@ -34,9 +36,15 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "bower": "^1.8.0",
+    "dotenv": "^4.0.0",
     "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.8.7",
-    "nodemon": "^1.11.0",
-    "path": "^0.12.7"
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local-mongoose": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
