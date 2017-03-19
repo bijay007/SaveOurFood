@@ -1,5 +1,5 @@
 const express = require('express')
-const Router = express.Router()
+const router = express.Router()
 const passport = require(__base + 'config/passport')
 
 const getById = require('./handlers/getById')
@@ -8,12 +8,12 @@ const updateById = require('./handlers/updateById')
 const getAllItems = require('./handlers/getAllItems')
 const addItem = require('./handlers/addItem')
 
-Router.use(passport.authenticate('jwt', { session: false }))
+router.use(passport.authenticate('jwt', { session: false }))
 // now afer getting authorization, user can access the following endpoints
-Router.get('/:id', getById)
-Router.delete('/:id', deleteById)
-Router.put('/:id', updateById)
-Router.get('/', getAllItems)
-Router.post('/', addItem)
+router.get('/:id', getById)
+router.delete('/:id', deleteById)
+router.put('/:id', updateById)
+router.get('/', getAllItems)
+router.post('/', addItem)
 
-module.exports = Router
+module.exports = router

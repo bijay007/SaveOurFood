@@ -3,7 +3,7 @@
     .module('myApp')
     .controller('ProfileCtrl', ProfileController)
 
-  function ProfileController ($routeParams, SaveFoodFactory, $route, $scope) {
+  function ProfileController ($routeParams, SaveFoodFactory, $route, $scope, $rootScope) {
     let vm = this
     console.log(vm)
 

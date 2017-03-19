@@ -7,6 +7,6 @@ angular.module('myApp')
       const password = $scope.password
       AuthFactory.login({ username, password })
         .then(AuthFactory.setCredentials)
-        .then(() => $location.path('/foodApi/'))
+        .then(() => $location.path('/profile'))
     }
   })
