@@ -1,5 +1,5 @@
 angular.module('myApp')
-
+  // first checks if the user is logged-in before managing the url routes below
   .config(function ($httpProvider) {
     $httpProvider.interceptors.push('AuthInterceptor')
   })
@@ -18,9 +18,9 @@ angular.module('myApp')
         templateUrl: '/js/AuthSections/Register/register.html',
         controller: 'RegisterCtrl'
       })
-      .when('/foodApi', {
+      .when('/profile', {
         templateUrl: '/js/ProfileSection/profile.html',
-        controller: 'ProfileController',
+        controller: 'ProfileCtrl',
         controllerAs: 'vm',
         secure: true
       })

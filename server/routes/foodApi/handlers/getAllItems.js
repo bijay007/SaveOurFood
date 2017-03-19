@@ -1,4 +1,4 @@
-const FoodModel = require(__base + './models/ItemModel')
+const FoodModel = require(__base + 'models/ItemModel')
 
 module.exports = (req, res) => {
   FoodModel.find()

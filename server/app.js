@@ -10,9 +10,9 @@ const routesUser = require('./routes/foodApi')
 const app = express()
 
 app
+  .use(express.static(path.join(__dirname, '../public'))) // folder for client-side routing + rendering
   .use(bodyParser.urlencoded({ extended: false }))
   .use(bodyParser.json())
-  .use(express.static(path.join(__dirname, '../public'))) // folder for client-side routing + rendering
 
   .use('/auth', routesAuth)
   .use('/foodApi', routesUser)

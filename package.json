@@ -8,9 +8,9 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "dev": "nodemon main",
+    "dev": "nodemon index",
     "postinstall": "./node_modules/bower/bin/bower install",
-    "start": "node main"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,8 @@
   },
   "homepage": "https://github.com/bijay007/SaveOurFood#readme",
   "dependencies": {
+    "passport": "./server/config/passport",
+    "_User": "./server/models/User",
     "body-parser": "^1.17.1",
     "bower": "^1.8.0",
     "dotenv": "^4.0.0",

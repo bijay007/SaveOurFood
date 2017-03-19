@@ -1,7 +1,7 @@
 (function () {
   angular
     .module('myApp')
-    .controller('ProfileController', ProfileController)
+    .controller('ProfileCtrl', ProfileController)
 
   function ProfileController ($routeParams, SaveFoodFactory, $route, $scope) {
     let vm = this
@@ -26,7 +26,7 @@
       //   return { foodName, quantity, dateBought, dateExpiring }
       // })
       vm.allFoodItems = allItems
-      console.log(Date.parse(vm.allFoodItems[0].dateExpiring))
+      // console.log(Date.parse(vm.allFoodItems[0].dateExpiring))
     })
 
     vm.addFood = function (e) {
@@ -42,7 +42,7 @@
       SaveFoodFactory.removeItem(elemId)
     }
 
-    vm.saveData = function (data) {
+    vm.editFood = function (data) {
       console.log(data)
       // SaveFoodFactory.editItem({data.foodName, data.dateBought, data.dateExpiring, data.quantity, data._id})
     }

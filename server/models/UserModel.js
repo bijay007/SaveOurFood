@@ -8,8 +8,9 @@ const UserSchema = new mongoose.Schema({
   vegetarian: {type: Boolean}
 
 }, {collection})
+const options = {}
 
-UserSchema.plugin(passportLocalMongoose) // plugin for encrypting password with hash & salt
+UserSchema.plugin(passportLocalMongoose, options) // this plugin encrypts password with hash & salt
 
 module.exports = mongoose.model('User', UserSchema)
 

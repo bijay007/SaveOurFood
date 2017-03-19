@@ -28,6 +28,7 @@ angular.module('myApp')
     function isLoggedIn () {
       const token = StorageFactory.readToken()
       if (!token) return false
+      const tokenPayload = jwtHelper.decodeToken(token)
       return !(jwtHelper.isTokenExpired(token))
     }
   // decodes the token and adds it to rootScope object

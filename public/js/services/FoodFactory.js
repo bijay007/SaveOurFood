@@ -14,27 +14,28 @@
     }
 
     function getAllItems () {
-      const url = '/foodApi/getPost'
+      const url = '/foodApi/'
       return $http.get(url)
         .then(response => response.data)
     }
 
     function addItem ({ foodName, dateBought, dateExpiring, quantity }) {
-      const url = '/foodApi/getPost'
+      const url = '/foodApi/'
       console.log(`foodName send to server : ${foodName}`)
       return $http.post(url, { foodName, quantity, dateBought, dateExpiring })
       .then(broadcastChanges())
     }
 
     function removeItem (id) {
-      const url = '/foodApi/updateDel'
-      return $http.delete(url + `/${id}`)
+      const url = '/foodApi/'
+      return $http.delete(url + `${id}`)
       .then(broadcastChanges())
     }
 
     function editItem ({foodName, dateBought, dateExpiring, quantity, id}) {
-      const url = '/foodApi/updateDel'
-      return $http.put(url + `/${id}`, { foodName, dateBought, dateExpiring, quantity })
+      const url = '/foodApi/'
+      console.log(`id of item edited is ${id}`)
+      return $http.put(url + `${id}`, { foodName, dateBought, dateExpiring, quantity })
       .then(broadcastChanges())
     }
     return APIEndPoints
