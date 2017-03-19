@@ -6,11 +6,12 @@ const UserSchema = new mongoose.Schema({
   firstName: {type: String},
   email: {type: String},
   vegetarian: {type: Boolean}
+  // items: {type: mongoose.Schema.Types.ObjectId, ref: 'Item'}
 
 }, {collection})
 const options = {}
-
-UserSchema.plugin(passportLocalMongoose, options) // this plugin encrypts password with hash & salt
+// this plugin encrypts password with hash & salt (you can use bcrypto and others)
+UserSchema.plugin(passportLocalMongoose, options)
 
 module.exports = mongoose.model('User', UserSchema)
 

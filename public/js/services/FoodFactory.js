@@ -8,7 +8,7 @@
 
     // user-defined method in rootScope object that executes...
     // when we do ajax requests that adds, removes or updates item on DOM
-    // these can be listened by all controller via $on and do their stuffs later
+    // these can be listened by all controller via $on and do their own stuffs later
     function broadcastChanges () {
       $rootScope.$broadcast('foodChanged')
     }
@@ -27,15 +27,15 @@
     }
 
     function removeItem (id) {
-      const url = '/foodApi/'
-      return $http.delete(url + `${id}`)
+      const url = `/foodApi/${id}`
+      return $http.delete(url)
       .then(broadcastChanges())
     }
 
     function editItem ({foodName, dateBought, dateExpiring, quantity, id}) {
-      const url = '/foodApi/'
+      const url = `/foodApi/${id}`
       console.log(`id of item edited is ${id}`)
-      return $http.put(url + `${id}`, { foodName, dateBought, dateExpiring, quantity })
+      return $http.put(url, { foodName, dateBought, dateExpiring, quantity })
       .then(broadcastChanges())
     }
     return APIEndPoints

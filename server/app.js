@@ -4,7 +4,8 @@ const path = require('path')
 const bodyParser = require('body-parser')
 
 const routesAuth = require('./routes/auth')
-const routesUser = require('./routes/foodApi')
+const routesFood = require('./routes/foodApi')
+const routesUser = require('./routes/userApi')
 
 // Instantiating middlewares, api endpoints and private routes
 const app = express()
@@ -15,6 +16,7 @@ app
   .use(bodyParser.json())
 
   .use('/auth', routesAuth)
-  .use('/foodApi', routesUser)
+  .use('/foodApi', routesFood)
+  .use('/userApi', routesUser)
 
 module.exports = app
