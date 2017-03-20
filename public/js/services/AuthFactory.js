@@ -1,5 +1,5 @@
 angular.module('myApp')
-  .factory('AuthFactory', function ($http, $q, $rootScope, $location, StorageFactory, jwtHelper) {
+  .factory('AuthFactory', function ($http, $q, $rootScope, $state, StorageFactory, jwtHelper) {
   // AuthFactory returns an object with 5 methods
     return { login, register, logout, isLoggedIn, setCredentials }
 
@@ -17,7 +17,7 @@ angular.module('myApp')
     function register (credentials) {
       const url = '/auth/register'
       return $http.post(url, credentials)
-        .then($location.path('/login'))
+        .then($state.go('login'))
     }
   // removes user token from localStorage & rootScope
     function logout () {
