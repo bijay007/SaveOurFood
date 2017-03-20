@@ -6,8 +6,8 @@
         </div>
         <div class="col-sm-5" id="shownums">
             <ul class="nav nav-pills" role="tablist">
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Expiring soon <span class="badge">{{vm.counterExpiring}}</span></a></li>
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i> Expired <span class="badge">{{vm.counterExpired}}</span></a></li>
+                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Expiring soon <span class="badge">{{counterExpiring}}</span></a></li>
+                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i> Expired <span class="badge">{{counterExpired}}</span></a></li>
             </ul>
         </div>
     </div>
@@ -39,7 +39,7 @@
                 </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="elem in vm.allFoodItems">
+              <tr ng-repeat="elem in allFoodItems">
                   <td ng-hide="editMode">{{elem.foodName}}</td>
                   <td ng-hide="editMode">{{elem.quantity}}</td>
                   <td ng-hide="editMode">{{elem.dateBought}}</td>
@@ -58,7 +58,7 @@
 
                     <button ng-show="editMode" ng-click="editMode = false; saveData(elem)" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> Save</button>
 
-                    <button ng-click="vm.removeFood($event,elem._id)" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+                    <button ng-click="removeFood($event,elem._id)" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</button>
                   </td>
               </tr>
             </tbody>
@@ -69,7 +69,7 @@
 <div class="actions">
     <div class="container logoff">
         <button>Show me more</button>
-        <button><a href="#!/login" ng-click="$event.preventDefault(); vm.logout()"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
+        <button><a href="#!/login" ng-click="$event.preventDefault(); logout()"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
     </div>
 </div>
 <!-- select food from food-catergories-->
@@ -81,7 +81,7 @@
         <div class="row">
         <!-- fruits section -->
           <div class="col-sm-6 col-md-offset-2 col-md-4">
-              <button type="button" data-toggle="modal" class="itembtn" data-target=".fruitmodal" ng-click="vm.clickedCategory($event, 'fruitClicked')">
+              <button type="button" data-toggle="modal" class="itembtn" data-target=".fruitmodal" ng-click="clickedCategory($event, 'fruitClicked')">
                   <figure class="figure">
                       <img src="../images/categories/fruitsvegs.png" class="img-responsive" alt="fruitsNvegetables">
                       <figcaption class="figure-caption">Fruits N Vegetables</figcaption>
@@ -97,10 +97,10 @@
                 </div>
                 <!--modal footer with form -->
                 <div class="modal-body">
-                  <form ng-submit="vm.addFood($event)" action="" method="">
-                      <p>Article Name : <input ng-model="vm.foodName" type="text" required></p>
+                  <form ng-submit="addFood($event)" action="" method="">
+                      <p>Article Name : <input ng-model="foodName" type="text"></p>
                       <p>Quantity bought :
-                        <input ng-model="vm.quantity" type="number" min="0">
+                        <input ng-model="quantity" type="number" min="0">
                           <select>
                             <option value="kilos">kgs</option>
                             <option value="pieces">pcs</option>
@@ -108,10 +108,10 @@
                           </select>
                       </p>
                       <p>Expiry Date (if available) :
-                        <input ng-model="vm.dateExpiring" type="date">
+                        <input ng-model="dateExpiring" type="date">
                       </p>
                       <p>Date bought (default today) :
-                        <input ng-model="vm.dateBought" type="date">
+                        <input ng-model="dateBought" type="date">
                       </p>
                       <div class="btn-group">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
