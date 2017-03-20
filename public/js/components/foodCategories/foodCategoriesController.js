@@ -11,15 +11,24 @@ function FoodCategoriesController ($scope, $stateParams, $log, $uibModal) {
     'Drinks N Liquids': 'liquidmodal',
     'Other Unspecified': 'othersmodal'
   }
-  $log.log(`scope of main is ${$scope}`)
+
+  console.log('main' + $scope)
+  // const { foodName, quantity, dateBought, dateExpiring } = $scope
+
+  $log.log(`scope of main is ${$scope} & foodName is ${$scope.foodName}`)
+
     // opening modal window to trigger model instance controller to act
-  $scope.show = clickedItem => {
-    $log.log(`${clickedItem} button was clicked`)
+  $scope.show = (index, name) => {
+    $log.log(`${index} button with name ${name} was clicked`)
     var configModal = {
       animation: true,
       templateUrl: 'myModal.html',
       controller: 'FoodModalController',
       size: 'sm'
+      // $scope.$on('dataSend', () => {
+      //   resolve: { foodName, quantity, dateBought, dateExpiring }
+      // }
+      // resolve: { foodName, quantity, dateBought, dateExpiring }
     }
     $uibModal.open(configModal)
   }

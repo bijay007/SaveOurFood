@@ -4,8 +4,8 @@ const collection = 'foodlist'
 const FoodSchema = new mongoose.Schema({
   foodName: { type: String, required: true },
   userId: String,
-  dateBought: { type: Date, default: Date.now() },
-  dateExpiring: Date,
+  dateBought: { type: Number, default: Date.now() },
+  dateExpiring: Number,
   quantity: Number,
   weRecommend: String,
   currentState: String

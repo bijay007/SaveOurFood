@@ -6,7 +6,7 @@
     <div class="row" ng-repeat="(key, value) in imgNmodals">
       <div class="col-sm-6 col-md-offset-2 col-md-4">
 
-        <button type="button" ng-click="show(value)">
+        <button type="button" ng-click="show($index,value)">
           <figure class="figure">
             <img src="../../../../images/categories/{{key}}.png" class="img-responsive" alt="{{key}}">
             <figcaption class="figure-caption">{{key}}</figcaption>
