@@ -1,24 +1,14 @@
-(function () {
-  angular
+angular
     .module('myApp')
     .controller('FoodModalController', FoodModalController)
 
-  function FoodModalController ($scope, $uibModalInstance) {
-        // controller: ($scope, $modalInstance, $log, foodName, quantity, dateExpiring, dateBought) => {
-        //   const { foodName, quantity, dateBought, dateExpiring } = $scope
-        //   $log.log(`foodname captured from form was ${foodName}`)
-        //   $scope.addFood(e) = function {
-        //     e.preventDefault()
-        //     SaveFoodFactory.addItem({ foodName, quantity, dateBought, dateExpiring })
-        //     $log.log(`foodName passed to db is ${foodName}`)
-        //     $modalInstance.dismiss('cancel')
-        //   }
-
-      // modalInstance.result
-      // .then(
-      //   selectedItem => { $scope.selected = selectedItem },
-      //   () => { $log.info('Modal closed at: ' + new Date()) }
-      // )
-    $scope.cancel = () => { $uibModalInstance.dismiss('cancel') }
+function FoodModalController ($scope, $uibModalInstance, SaveFoodFactory, $log) {
+  const { foodName, quantity, dateBought, dateExpiring } = $scope
+  $log.log(`scope of modal is ${$scope}`)
+  $scope.ok = function () {
+    SaveFoodFactory.addItem({ foodName, quantity, dateBought, dateExpiring })
+    $log.log(`foodName passed to db is ${foodName}`)
+    $uibModalInstance.close('cancel')
   }
-})()
+  $scope.cancel = () => { $uibModalInstance.dismiss('cancel') }
+}

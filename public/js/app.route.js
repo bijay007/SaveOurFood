@@ -27,12 +27,12 @@ function statesManager ($stateProvider, $urlRouterProvider) {
         'foodCategories@profile': {
           templateUrl: '/js/components/foodCategories/foodCategories.html',
           controller: 'FoodCategoriesController'
-        },
-        'foodModal@profile': {
-          parent: 'foodCategories',
-          templateUrl: '/js/components/foodCategories/foodModal/foodModal.html',
-          controller: 'FoodModalController'
         }
+        // 'foodModal@profile': {
+        //   parent: 'foodCategories',
+        //   templateUrl: '/js/components/foodCategories/foodModal/foodModal.html',
+        //   controller: 'FoodModalController'
+        // }
       }
     })
 }

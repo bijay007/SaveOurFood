@@ -7,7 +7,7 @@
     let APIEndPoints = { getAllItems, addItem, removeItem, editItem }
 
     // function emitChanges () {
-    //   $scope.$emit('foodChanged')
+    //   $rootScope.$broadcast('foodChanged')
     // }
 
     function getAllItems () {
