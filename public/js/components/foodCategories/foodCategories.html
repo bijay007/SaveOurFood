@@ -1,0 +1,51 @@
+<section id="foodcategories">
+  <div class="container">
+    <h4>Click on the items to add to list</h4>
+
+    <!-- @image generator -->
+    <div class="row" ng-repeat="(key, value) in imgNmodals">
+      <div class="col-sm-6 col-md-offset-2 col-md-4">
+
+        <button type="button" ng-click="show($index,value)">
+          <figure class="figure">
+            <img src="../../../../images/categories/{{key}}.png" class="img-responsive" alt="{{key}}">
+            <figcaption class="figure-caption">{{key}}</figcaption>
+          </figure>
+        </button>
+      </div> 
+    </div>
+
+  <!-- @modal template start -->
+  <script type="text/ng-template" id="myModal.html">
+    <div class="modal-header">
+      <h3 class="modal-title">Add description</h3>
+    </div>
+    <form ng-submit="addFood($event)">
+      <div class="modal-body">
+        <p>Article Name :
+          <input ng-model="foodName" type="text">
+        </p>
+        <p>Quantity bought :
+          <input ng-model="quantity" type="number" min="0">
+          <select>
+            <option value="kilos">kgs</option>
+            <option value="pieces">pcs</option>
+            <option value="litres">L</option>
+          </select>
+        </p>
+        <p>Expiry Date (if available) :
+          <input ng-model="dateExpiring" type="date">
+        </p>
+        <p>Date Bought (default today) :
+          <input ng-model="dateBought" type="date">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+      </div>
+    </form>
+  </script>
+
+  </div> 
+</section>

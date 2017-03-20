@@ -1,1 +1,1 @@
-angular.module('myApp', ['ngRoute', 'angular-jwt'])
+angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-jwt'])
