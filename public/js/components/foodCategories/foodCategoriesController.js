@@ -13,11 +13,10 @@ function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFo
   }
 
   var afterDataCapture = ({ foodName, quantity, dateBought, dateExpiring }) => {
-    $log.log('below is whats added')
     dateExpiring = Date.parse('dateExpiring') || Date.parse(new Date()) + 8640000 // html5 date to timestamp
     dateBought = Date.parse('dateBought') || Date.now()
     quantity = quantity || 0
-    console.log(`Captured from modal ${foodName}, ${quantity}, ${dateBought}, ${dateExpiring}`)
+    $log.log(`Captured from modal ${foodName}, ${quantity}, ${dateBought}, ${dateExpiring}`)
     SaveFoodFactory.addItem({ foodName, quantity, dateBought, dateExpiring })
   }
 

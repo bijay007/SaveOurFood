@@ -3,13 +3,13 @@
     .module('myApp')
     .factory('SaveFoodFactory', SaveFoodFactory)
 
-  function SaveFoodFactory ($http, $rootScope) {
+  function SaveFoodFactory ($http, $rootScope, DateChanger, $state) {
     let APIEndPoints = { getAllItems, addItem, removeItem, editItem }
 
-    // user-defined method in rootScope object that executes...
-    // when we do ajax requests that adds, removes or updates item on DOM
-    // these can be listened by all controller via $on and do their own stuffs later
-    var broadcastChanges = () => $rootScope.$broadcast('foodChanged')
+    // broadcast changes from rootScope to all controllers when api methods are called
+    // var broadcastChanges = () => {
+    //   $rootScope.$broadcast('foodChanged', '')
+    // }
 
     function getAllItems (id) {
       const url = `/foodApi/${id}`
@@ -19,30 +19,28 @@
 
     function addItem ({ foodName, dateBought, dateExpiring, quantity }) {
       const url = '/foodApi/'
-      console.log(`${foodName} send to server to add`)
+      dateBought ? DateChanger.toTimeStamp(dateBought) : DateChanger.toToday()
+      dateExpiring ? DateChanger.toTimeStamp(dateBought) : DateChanger.toToday() + 8640000
       return $http.post(url, { foodName, quantity, dateBought, dateExpiring })
-      .then(broadcastChanges)
+      .then($state.go($state.$current, null, { reload: true }))
+      // .then(broadcastChanges)
     }
 
     function removeItem (id) {
-      console.log(`item with id ${id} was deleted`)
       const url = `/foodApi/${id}`
       return $http.delete(url)
-      .then(broadcastChanges)
+      .then($state.go($state.$current, null, { reload: true }))
+      // .then(broadcastChanges)
     }
 
-    function editItem ({foodName, dateBought, dateExpiring, quantity, id}) {
+    function editItem (foodName, dateBought, dateExpiring, quantity, id) {
       const url = `/foodApi/${id}`
-      console.log(`id of item edited is ${id}`)
+      dateBought ? DateChanger.toTimeStamp(dateBought) : DateChanger.toToday()
+      dateExpiring ? DateChanger.toTimeStamp(dateBought) : DateChanger.toToday() + 8640000
       return $http.put(url, { foodName, dateBought, dateExpiring, quantity, id })
-      .then(broadcastChanges)
+      .then($state.go($state.$current, null, { reload: true }))
+      // .then(broadcastChanges)
     }
-    // function getById (id) {
-    //   const url = `foodApi/${id}`
-    //   return $http.get(url)
-    //   .then(response => response.data)
-    // }
-
     return APIEndPoints
   }
 })()

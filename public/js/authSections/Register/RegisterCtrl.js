@@ -5,7 +5,6 @@ angular.module('myApp')
       const username = $scope.username
       const password = $scope.password
       const email = $scope.email || `anonymous${Math.random() * 100}@gmail.com`
-      console.log(`Client data registered with : ${username} => ${email}`)
       AuthFactory.register({ username, password, email })
     }
   })
