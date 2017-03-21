@@ -1,5 +1,5 @@
-<section class="listitems">
-    <div class="container table-responsive" id="listsection">
+<section >
+    <div class="container table-responsive">
         <table class="table table-hover table-responsive">
             <thead>
                 <h3>Your current food list</h3>
@@ -17,10 +17,10 @@
               <tr ng-repeat="elem in vm.allFoodItems">
                   <td ng-hide="editMode">{{elem.foodName}}</td>
                   <td ng-hide="editMode">{{elem.quantity}}</td>
-                  <td ng-hide="editMode">{{elem.dateBought | date:"longDate"}}</td>
-                  <td ng-hide="editMode">{{elem.dateExpiring | date:"longDate"}}</td>
+                  <td ng-hide="editMode">{{elem.dateBought}}</td>
+                  <td ng-hide="editMode">{{elem.dateExpiring}}</td>
 <!--                   <td>1 week</td>
- -->                  <td>Fresh <i class="fa fa-smile-o"></i></td> 
+ -->                  <td>Fresh <i class="fa fa-smile-o"></i></td>
                   <!-- shows when editmode activated-->
                   <td ng-show="editMode"><input type="text" ng-model="elem.foodName"/></td>
                   <td ng-show="editMode"><input type="number" ng-model="elem.quantity"/></td>
@@ -43,7 +43,9 @@
 <!-- logoff and show more part-->
 <div class="actions">
     <div class="container logoff">
-        <button>Show me more</button>
-        <button><a href="" ng-click="$event.preventDefault(); vm.logout()"><i class="glyphicon glyphicon-off"></i> I'm done</a></button>
+        <button class="btn btn-primary">Show me more</button>
+        <button class="btn btn-success">
+          <a style="color:white" href="" ng-click="$event.preventDefault(); vm.logout()"><i style="color:white" class="glyphicon glyphicon-off"></i>&nbsp; I'm done</a>
+        </button>
     </div>
 </div>

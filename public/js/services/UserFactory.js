@@ -11,6 +11,12 @@
         .then(response => response.data)
     }
 
+    // function getFoodItems (id) {
+    //   var url = `/userApi/${id}/foodApi/`
+    //   return $http.get(url)
+    //     .then(response => response.data)
+    // }
+
     return APIEndPoints
   }
 })()

@@ -4,7 +4,7 @@
 
     <!-- @image generator -->
     <div class="row" ng-repeat="(key, value) in imgNmodals">
-      <div class="col-sm-6 col-md-offset-2 col-md-4">
+      <div >
 
         <button type="button" ng-click="show($index,value)">
           <figure class="figure">
@@ -12,7 +12,7 @@
             <figcaption class="figure-caption">{{key}}</figcaption>
           </figure>
         </button>
-      </div> 
+      </div>
     </div>
 
   <!-- @modal template start -->
@@ -47,6 +47,6 @@
     </form>
   </script>
 
-  </div> 
+  </div>
 </section>
 <footer ng-include src="'../../../templates/footer.html'"></footer>

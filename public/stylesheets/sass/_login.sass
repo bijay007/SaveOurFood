@@ -1,0 +1,77 @@
+.loginContainer
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/home/loginregister.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	margin: 40px auto
+	text-align: center
+	display: flex
+	justify-content: center
+	font-weight: bold
+	padding: 20px
+	box-shadow: 8px 8px 4px grey
+	border-radius: 20px 10px 10px 15px
+	form
+		margin: 0 20px
+		legend
+			padding: 15px
+			font-size: 2em
+			color: rgb(24, 237, 245)
+			text-shadow: 0.5px 0.5px red
+		.form-group
+			.row
+				font-size: 1.3em
+				margin-bottom: 10px
+				input
+					border-radius: 5px
+				label
+					margin-right: 15px
+					color: #fff
+	.row > p
+		font-size: 1.5em
+		margin-top: 10px
+		color: rgba(243, 215, 30, 0.96)
+
+.login-form-new
+	margin-top: 30px
+
+.cover-login
+	background: url('../images/home/banner.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	height: 100vh
+	& > .container
+		background-color: rgba(0,0,0,0.7)
+		height: 100vh
+		width: 100vw
+		h1
+			font-family: 'Amatic SC', cursive
+			font-size: 80px
+			text-align: center
+			color: #fff
+
+.white
+	color: #000
+	background-color: #fff
+
+.btn-facebook
+	color: #ffffff
+	-webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+	background-color: #2b4b90
+	*background-color: #133783
+	background-image: -moz-linear-gradient(top, #3b5998, #133783)
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3b5998), to(#133783))
+	background-image: -webkit-linear-gradient(top, #3b5998, #133783)
+	background-image: -o-linear-gradient(top, #3b5998, #133783)
+	background-image: linear-gradient(to bottom, #3b5998, #133783)
+	background-repeat: repeat-x
+	border-color: #133783 #133783 #091b40
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b5998', endColorstr='#ff133783', GradientType=0)
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+	&:hover, &:focus, &:active, &.active, &.disabled, &[disabled]
+		color: #ffffff
+		background-color: #133783 !important
+		*background-color: #102e6d !important
+	&:active, &.active
+		background-color: #0d2456 \9 !important

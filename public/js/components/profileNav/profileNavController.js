@@ -3,30 +3,27 @@
     .module('myApp')
     .controller('ProfileNavCtrl', ProfileNavCtrl)
 
-  function ProfileNavCtrl ($state, $scope, UserFactory, SaveFoodFactory, DateChanger) {
+  function ProfileNavCtrl ($state, $scope, UserFactory, SaveFoodFactory) {
     let vm = this
 
     var userId = $scope.loggedUser.id
     UserFactory.getUser(userId).then(res => vm.userName = res.username)
     vm.day = new Date()
 
-    vm.greetings = DateChanger.toDayTime()
+    var date = new Date(Date.now()).getHours()
+    var greetTime = (current) => {
+      if (current < 12) {
+        return 'Morning'
+      } else if (current >= 12 && current < 17) {
+        return 'Afternoon'
+      } else if (current >= 17 && current < 21) {
+        return 'Evening'
+      } else { return 'Night' }
+    }
 
-    vm.counterExpiring = 0
-    vm.counterExpired = 0
-    vm.counterFresh = 0
+    vm.greetings = greetTime(date)
 
-    $scope.$on('foodChanged', SaveFoodFactory.getAllItems(userId))
-
-    SaveFoodFactory.getAllItems(userId)
-    .then(data => {
-      var today = Date.now()
-      var expiring = data.dateExpiring
-      if (today > expiring) {
-        vm.counterExpired += 1
-      } else if ((today < expiring) && (today + 8640000 > expiring)) {
-        vm.counterExpiring += 1
-      } else { vm.fresh += 1 }
-    })
+    vm.counterExpiring = 3 // just for now default
+    vm.counterExpired = 5
   }
 })()
