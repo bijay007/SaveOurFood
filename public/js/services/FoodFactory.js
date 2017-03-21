@@ -11,8 +11,8 @@
     // these can be listened by all controller via $on and do their own stuffs later
     var broadcastChanges = () => $rootScope.$broadcast('foodChanged')
 
-    function getAllItems () {
-      const url = '/foodApi/'
+    function getAllItems (id) {
+      const url = `/foodApi/${id}`
       return $http.get(url)
         .then(response => response.data)
     }
@@ -37,6 +37,12 @@
       return $http.put(url, { foodName, dateBought, dateExpiring, quantity, id })
       .then(broadcastChanges)
     }
+    // function getById (id) {
+    //   const url = `foodApi/${id}`
+    //   return $http.get(url)
+    //   .then(response => response.data)
+    // }
+
     return APIEndPoints
   }
 })()

@@ -12,8 +12,9 @@
       var date = new Date(timestamp)
       return [date.getDate(), date.getMonth() + 1, date.getFullYear()].join('/')
     }
+    const id = $scope.loggedUser.id
 
-    SaveFoodFactory.getAllItems()
+    SaveFoodFactory.getAllItems(id)
     .then((data) => {
       data.forEach(elem => {
         elem.dateBought = dateFormat(elem.dateBought)
