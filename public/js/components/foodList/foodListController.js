@@ -21,7 +21,6 @@
         elem.dateExpiring = dateFormat(elem.dateExpiring)
       })
       vm.allFoodItems = data
-      console.log(`Get request returned ${vm.allFoodItems.length} items`)
       return vm.allFoodItems
     })
 

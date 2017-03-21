@@ -25,7 +25,7 @@ function statesManager ($stateProvider, $urlRouterProvider) {
           '': { templateUrl: '/js/profileViews.html' },
           'profileNav@profile': {
             templateUrl: '/js/components/profileNav/profileNav.html',
-            controller: 'ProfileNavController',
+            controller: 'ProfileNavCtrl',
             controllerAs: 'vm'
           },
           'foodStatus@profile': {

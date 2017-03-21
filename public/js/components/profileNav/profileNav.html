@@ -2,12 +2,12 @@
     <!-- main header with greetings and logout-->
     <div class="row">
         <div class="col-sm-7">
-            <h2>Hi <span>Bijay</span>, Good <span>Friday</span>&nbsp;<span>evening</span><i class="glyphicon glyphicon-apple"></i></h2>
+            <h2>Hi <span>{{vm.userName}}</span>, Good <span>{{vm.day | date:'EEEE'}}</span>&nbsp;<span>{{vm.greetings}}</span><i class="glyphicon glyphicon-apple"></i></h2>
         </div>
         <div class="col-sm-5" id="shownums">
             <ul class="nav nav-pills" role="tablist">
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Expiring soon <span class="badge">{{counterExpiring}}</span></a></li>
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i> Expired <span class="badge">{{counterExpired}}</span></a></li>
+                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Expiring soon <span class="badge">{{vm.counterExpiring}}</span></a></li>
+                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i> Expired <span class="badge">{{vm.counterExpired}}</span></a></li>
             </ul>
         </div>
     </div>

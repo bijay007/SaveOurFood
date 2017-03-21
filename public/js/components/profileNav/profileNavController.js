@@ -1,24 +1,29 @@
 (function () {
   angular
     .module('myApp')
-    .controller('ProfileNavController', ProfileNavController)
+    .controller('ProfileNavCtrl', ProfileNavCtrl)
 
-  function ProfileNavController ($stateParams) {
-    let user = this
+  function ProfileNavCtrl ($state, $scope, UserFactory, SaveFoodFactory) {
+    let vm = this
 
-    user.userName = 'get name of user logged in'
+    var userId = $scope.loggedUser.id
+    UserFactory.getUser(userId).then(res => vm.userName = res.username)
+    vm.day = new Date()
 
-    user.counterExpiring = 0
-    user.counterExpired = 0
-
-    const checkExpired = function (allItems) {
-      for (var elem in allItems) {
-        if (Date.parse(elem.dateExpiring) < Date.now()) {
-          user.counterExpired += 1
-        } else if (Date.parse(elem.dateExpiring) > Date.now() && Date.parse(elem.dateExpiring) < Date.now() + 8640000) {
-          user.counterExpiring += 1
-        }
-      }
+    var date = new Date(Date.now()).getHours()
+    var greetTime = (current) => {
+      if (current < 12) {
+        return 'Morning'
+      } else if (current >= 12 && current < 17) {
+        return 'Afternoon'
+      } else if (current >= 17 && current < 21) {
+        return 'Evening'
+      } else { return 'Night' }
     }
+
+    vm.greetings = greetTime(date)
+
+    vm.counterExpiring = 3 // just for now default
+    vm.counterExpired = 5
   }
 })()

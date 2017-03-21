@@ -8,7 +8,7 @@
     function getUser (id) {
       const url = `/userApi/${id}`
       return $http.get(url)
-          .then(response => response.data)
+        .then(response => response.data)
     }
 
     // function getFoodItems (id) {
