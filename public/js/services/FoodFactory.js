@@ -3,7 +3,7 @@
     .module('myApp')
     .factory('SaveFoodFactory', SaveFoodFactory)
 
-  function SaveFoodFactory ($http, $q, $rootScope) {
+  function SaveFoodFactory ($http, $rootScope) {
     let APIEndPoints = { getAllItems, addItem, removeItem, editItem }
 
     // user-defined method in rootScope object that executes...

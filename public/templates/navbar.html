@@ -1,15 +1,17 @@
-<div class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class="navbar-left col-xs-3">
-    <img src="images/home/logo1.png" class="img-responsive">
-  </div>
-  <div class="col-xs-9">
-    <ul class="list-unstyled list-inline">
-      <li class="active">
-        <a href="#!/login"><i class="fa fa-sign-in"> Login</i></a>
-      </li>
-      <li>
-        <a href="#!/register"><i class="fa fa-sign-up"> Sign Up</i></a>
-      </li>
-    </ul>
+<div class="navbar navbar-default" id="homeNav" role="navigation">
+  <div class="row">
+    <div class="navbar-left col-xs-3">
+      <img src="images/home/logo.png" class="img-responsive">
+    </div>
+    <div class="col-xs-9 login">
+      <ul class="list-unstyled list-inline">
+        <li class="active">
+          <a ui-sref="login" class="unstyled"><i class="fa fa-sign-in"></i> Login</a>
+        </li>
+        <li>
+          <a ui-sref="register" class="unstyled"><i class="fa fa-user-plus"></i> Sign Up</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

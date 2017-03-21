@@ -8,16 +8,21 @@ function statesManager ($stateProvider, $urlRouterProvider) {
 
   $stateProvider
       .state('home', {url: '/', templateUrl: '/templates/home.html'})
-      .state('login', {url: '/login', templateUrl: '/js/AuthSections/Login/login.html'})
-      .state('register', {url: '/register', templateUrl: '/js/AuthSections/Register/register.html'})
+      .state('login', {
+        url: '/login',
+        templateUrl: '/js/authSections/Login/login.html',
+        controller: 'LoginCtrl'
+      })
+      .state('register', {
+        url: '/register',
+        templateUrl: '/js/authSections/Register/register.html',
+        controller: 'RegisterCtrl'
+      })
       .state('profile', {
         url: '/profile',
         secure: true,
         views: {
-          '': {
-            templateUrl: '/js/profileViews.html',
-            secure: true
-          },
+          '': { templateUrl: '/js/profileViews.html' },
           'profileNav@profile': {
             templateUrl: '/js/components/profileNav/profileNav.html',
             controller: 'ProfileNavController',

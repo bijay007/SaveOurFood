@@ -2,6 +2,7 @@
 const express = require('express')
 const router = express.Router()
 const UserModel = require(__base + 'models/UserModel')
+const FoodModel = require(__base + 'models/ItemModel')
 const passport = require(__base + 'config/passport')
 
 router.use(passport.authenticate('jwt', { session: false }))
@@ -13,5 +14,13 @@ router.get('/:id', (req, res) => {
     .then(user => res.json(user))
     .catch(err => { throw err })
 })
+
+// router.get('/:id/foodApi/', (req, res) => {
+//   const { id } = req.params
+
+//   FoodModel.find()
+//   .then(allUserItems => res.json(allUserItems))
+//   .catch(err => { throw (err) })
+// })
 
 module.exports = router

@@ -5,12 +5,14 @@ angular.module('myApp')
   .run(function ($rootScope, $state, StorageFactory, AuthFactory) {
     if (AuthFactory.isLoggedIn()) {
       const token = StorageFactory.readToken()
+      console.log(`@run.js reading token as ${token}`)
       AuthFactory.setCredentials(token)
     }
 
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
       if (next && next.secure) {
         if (!AuthFactory.isLoggedIn()) {
+          (`@run.js rootscope sees user not logged and redirects`)
           $state.go('login')
         }
       }

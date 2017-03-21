@@ -24,18 +24,22 @@
   </head>
 
   <body>
-    <div ui-view></div>
+    <ui-view></ui-view>
 
     <!-- local script files -->
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
     <script src="js/run.js"></script>
+
     <script src="js/services/AuthFactory.js"></script>
     <script src="js/services/FoodFactory.js"></script>
+    <script src="js/services/UserFactory.js"></script>
     <script src="js/services/StorageFactory.js"></script>
+
     <script src="js/interceptors/AuthInterceptor.js"></script>
-    <script src="js/AuthSections/Login/LoginCtrl.js"></script>
-    <script src="js/AuthSections/Register/RegisterCtrl.js"></script>
+    <script src="js/authSections/Login/LoginCtrl.js"></script>
+    <script src="js/authSections/Register/RegisterCtrl.js"></script>
+
     <script src="js/components/profileNav/profileNavController.js"></script>
     <script src="js/components/foodStatus/foodStatusController.js"></script>
     <script src="js/components/foodList/foodListController.js"></script>

@@ -1,8 +1,5 @@
 angular.module('myApp')
   .factory('AuthFactory', function ($http, $q, $rootScope, $state, StorageFactory, jwtHelper) {
-  // AuthFactory returns an object with 5 methods
-    return { login, register, logout, isLoggedIn, setCredentials }
-
   // passes user credentials to server endpoint '/login' & saves token in localStorage
     function login (credentials) {
       const url = '/auth/login'
@@ -36,4 +33,7 @@ angular.module('myApp')
       var tokenPayload = jwtHelper.decodeToken(token)
       $rootScope.loggedUser = tokenPayload
     }
+
+  // AuthFactory returns an object with 5 methods
+    return { login, register, logout, isLoggedIn, setCredentials }
   })
