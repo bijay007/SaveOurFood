@@ -1,4 +1,4 @@
-<section class="listitems">
+<section class="listitems" id="userlist">
     <div class="container table-responsive">
         <table class="table table-hover table-responsive">
             <thead>
@@ -8,8 +8,8 @@
                     <th>Quantity</th>
                     <th>Bought On</th>
                     <th>Expiring in</th>
-<!--                     <th>We Recommend</th>
- -->                    <th>Current State</th>
+                    <th>We Recommend</th>
+                    <th>Current State</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -19,8 +19,8 @@
                   <td ng-hide="editMode">{{elem.quantity}}</td>
                   <td ng-hide="editMode">{{elem.dateBought | date:"longDate"}}</td>
                   <td ng-hide="editMode">{{elem.dateExpiring | date:"longDate"}}</td>
-<!--                   <td>1 week</td>
- -->                  <td>Fresh <i class="fa fa-smile-o"></i></td>
+                  <td>1 week</td>
+                  <td>{{element.status}}</td>
                   <!-- shows when editmode activated-->
                   <td ng-show="editMode"><input type="text" ng-model="elem.foodName"/></td>
                   <td ng-show="editMode"><input type="number" ng-model="elem.quantity"/></td>
@@ -38,14 +38,7 @@
             </tbody>
         </table>
     </div>
-</section>
-
-<!-- logoff and show more part-->
-<div class="actions">
-    <div class="container logoff">
-        <button class="btn btn-primary">Show me more</button>
-        <button class="btn btn-success">
-          <a style="color:white" href="" ng-click="$event.preventDefault(); vm.logout()"><i style="color:white" class="glyphicon glyphicon-off"></i>&nbsp; I'm done</a>
-        </button>
+    <div class="container">
+      <button class="btn btn-primary">Show More</button>
     </div>
-</div>
+</section>

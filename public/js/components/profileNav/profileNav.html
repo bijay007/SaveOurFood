@@ -1,4 +1,4 @@
-<nav class="navbar navbar-findcond navbar-fixed-top">
+<nav class="navbar navbar-findcond navbar-fixed-top" id="usernavbar">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -7,9 +7,10 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;Expiring soon&nbsp;<span class="badge">{{vm.counterExpiring}}</span></a></li>
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i>&nbsp;Expired&nbsp;<span class="badge">{{vm.counterExpired}}</span></a></li>
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-leaf"></i>&nbsp;Fresh&nbsp;<span class="badge">{{vm.counterFresh}}</span></a></li>
+                <li role="presentation"><a href=""><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;Expiring&nbsp;<span class="badge">{{vm.counterExpiring}}</span></a></li>
+                <li role="presentation"><a href=""><i class="glyphicon glyphicon-trash"></i>&nbsp;Expired&nbsp;<span class="badge">{{vm.counterExpired}}</span></a></li>
+                <li role="presentation"><a href=""><i class="glyphicon glyphicon-leaf"></i>&nbsp;Fresh&nbsp;<span class="badge">{{vm.counterFresh}}</span></a></li>
+                <li><a href="" ng-click="$event.preventDefault(); vm.logout()"><i class="glyphicon glyphicon-off"></i>&nbsp;Logout</a>
             </ul>
         </div>
     </div>

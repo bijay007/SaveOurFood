@@ -3,8 +3,7 @@
     .module('myApp')
     .controller('FoodStatusController', FoodStatusController)
 
-  function FoodStatusController ($stateParams) {
-    // listens to changes on parent controller (foodlist) and changes its scope values likewise
+  function FoodStatusController ($state, $scope) {
     let state = this
 
     state.current = 'condition depending on parent controller'
