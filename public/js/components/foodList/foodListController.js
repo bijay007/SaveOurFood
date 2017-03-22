@@ -8,13 +8,13 @@
     const id = $scope.loggedUser.id
 
     $scope.$on('foodRemoved', (e, foodRemoved) => { vm.allFoodItems = vm.allFoodItems.filter(food => food._id !== foodRemoved._id) })
-    $scope.$on('foodAdded', (e, foodAdded) => {
-      // Object.defineProperty(foodAdded, 'dateBought', {value: new Date(dateBought)})
-      vm.allFoodItems.push(foodAdded)
+    $scope.$on('foodAdded', (e, foodAdded) => { vm.allFoodItems = vm.allFoodItems.concat(foodAdded) })
+    // Object.defineProperty(foodAdded, 'dateBought', {value: new Date(dateBought)})
+
+    $scope.$on('foodUpdated', (e, foodUpdated) => {
+      vm.allFoodItems = vm.allFoodItems.filter(food => food._id !== foodUpdated._id)
+      return vm.allFoodItems.concat(foodUpdated)
     })
-    // $scope.$on('foodUpdated', (e, new) => {
-    //   vm.allFoodItems.push(new).findIndex(index of old).splice(exclude old).join()
-    // })
 
     SaveFoodFactory.getAllItems(id)
       .then((data) => {

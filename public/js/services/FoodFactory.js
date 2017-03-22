@@ -18,10 +18,8 @@
 
     function addItem ({ foodName, dateBought, dateExpiring, quantity }) {
       const url = '/foodApi/'
-      console.log(`${foodName} send to server to add`)
       return $http.post(url, { foodName, dateBought, dateExpiring, quantity })
         .then(item => $rootScope.$broadcast('foodAdded', item.data))
-      // .then($state.go($state.$current, null, { reload: true }))
     }
 
     function removeItem (id) {
@@ -34,6 +32,7 @@
     function editItem ({foodName, dateBought, dateExpiring, quantity, id}) {
       const url = `/foodApi/${id}`
       return $http.put(url, { foodName, dateBought, dateExpiring, quantity, id })
+        // .then($state.go($state.$current, null, { reload: true }))
         .then(item => $rootScope.$broadcast('foodUpdated', item.data))
     }
 
