@@ -9,9 +9,7 @@
     var userId = $scope.loggedUser.id
     UserFactory.getUser(userId).then(res => vm.userName = res.username)
 
-    vm.counterExpired = 0
-    vm.counterExpiring = 0
-    vm.counterFresh = 0
+    vm.counterExpired = vm.counterExpiring = vm.counterFresh = 0 // testing initial value
 
     SaveFoodFactory.getAllItems(userId)
     // saving all expiry dates in an array

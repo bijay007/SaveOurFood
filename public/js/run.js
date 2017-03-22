@@ -5,7 +5,6 @@ angular.module('myApp')
   .run(function ($rootScope, $state, StorageFactory, AuthFactory) {
     if (AuthFactory.isLoggedIn()) {
       const token = StorageFactory.readToken()
-      console.log(`@run.js reading token as ${token}`)
       AuthFactory.setCredentials(token)
     }
 

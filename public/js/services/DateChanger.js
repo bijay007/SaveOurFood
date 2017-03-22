@@ -50,7 +50,7 @@
 
     function add24Hrs () {
       var today = new Date()
-      today.setHours(today.getHours() + 23)
+      today.setHours(today.getHours() + 24)
       return new Date(today)
     }
 
