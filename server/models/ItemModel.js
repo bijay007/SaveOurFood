@@ -3,9 +3,9 @@ const collection = 'foodlist'
 
 const FoodSchema = new mongoose.Schema({
   foodName: {type: String},
-  dateBought: {type: Number, default: Date.now()},
-  dateExpiring: {type: Number},
-  quantity: {type: Number},
+  dateBought: {type: Date, default: new Date()},
+  dateExpiring: {type: Date},
+  quantity: {type: Number, default: 0},
   // weRecommend: {type: String},
   currentState: {type: String},
   IdUser: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}

@@ -3,40 +3,30 @@
     .module('myApp')
     .controller('FoodListController', FoodListController)
 
-  function FoodListController (SaveFoodFactory, $state, $scope, $rootScope, AuthFactory) {
+  function FoodListController (SaveFoodFactory, $state, $scope, $rootScope, AuthFactory, DateChanger) {
     let vm = this
 
-    $scope.$on('foodChanged', ($event) => SaveFoodFactory.getAllItems())
+    // $scope.$on('foodChanged', ($event) => SaveFoodFactory.getAllItems())
 
-    const dateFormat = (timestamp) => {
-      var date = new Date(timestamp)
-      return [date.getDate(), date.getMonth() + 1, date.getFullYear()].join('/')
-    }
     const id = $scope.loggedUser.id
 
     SaveFoodFactory.getAllItems(id)
     .then((data) => {
-      data.forEach(elem => {
-        elem.dateBought = dateFormat(elem.dateBought)
-        elem.dateExpiring = dateFormat(elem.dateExpiring)
-      })
       vm.allFoodItems = data
       return vm.allFoodItems
     })
 
     vm.removeFood = function (e, elemId) {
       e.preventDefault()
-      console.log(`element id captured is ${elemId}`)
+      console.log(`element with ${elemId} was deleted`)
       SaveFoodFactory.removeItem(elemId)
-      $state.go($state.$current, null, { reload: true })
     }
 
-    vm.editFood = function (e, id, name, quantity, dB, dE) {
+    vm.editFood = function (e, id, foodName, quantity, dateBought, dateExpiring) {
       e.preventDefault()
-      console.log(name, quantity, dB, dE, id + typeof (dE) + typeof (name))
-      dE = Date.parse('dE').value || Date.now() + 8640000 // add 1 day
-      dB = Date.parse('dB').value || Date.now()
-      SaveFoodFactory.editItem({name, dB, dE, quantity, id})
+      if (!dateBought) dateBought = new Date()
+      if (!dateExpiring) dateExpiring = DateChanger.add24Hrs()
+      SaveFoodFactory.editItem({foodName, dateBought, dateExpiring, quantity, id})
     }
 
     vm.logout = function () {

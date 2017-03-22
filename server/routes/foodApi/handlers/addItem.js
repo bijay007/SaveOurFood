@@ -5,7 +5,7 @@ module.exports = (req, res) => {
   const { foodName, quantity, dateBought, dateExpiring } = req.body
   // add the validation code below if you want the user to atleast enter food name
   // if (!foodName) res.status(400).json({'Error': 'Invalid data!! Need food name.'})
-  const newItem = new FoodModel({ foodName, quantity, dateBought, dateExpiring, IdUser })
+  const newItem = new FoodModel({ foodName, dateBought, dateExpiring, quantity, IdUser })
 
   newItem.save()
     .then(item => res.status(200))

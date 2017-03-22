@@ -7,19 +7,15 @@
     .factory('DateChanger', DateChanger)
 
   function DateChanger () {
-    let allFormats = { toTimeStamp, toToday, toDateObj, toDayTime }
+    let allFormats = { toDayTime, add24Hrs, stateCheck }
 
-    function toTimeStamp (htmlDate) {     // converts html5 input date to timestamp
-      return Date.parse('' + htmlDate)
-    }
+    // function toTimeStamp (htmlDate) {     // converts html5 input date to timestamp
+    //   return Date.parse(htmlDate)
+    // }
 
-    function toToday () {  // saves current date to timestamp
-      return Date.now()
-    }
-
-    function toDateObj (timestamp) {  // converts timestamp to date object
-      return new Date(timestamp)
-    }
+    // function toDateObj (timestamp) {  // converts timestamp to date object
+    //   return new Date(timestamp)
+    // }
 
     function toDayTime () {
       var greet = ''
@@ -35,6 +31,42 @@
       }
       return greet
     }
+
+    // function toCompare (dateBought, dateExpiring) {
+    //   var today = toDateObj(Date.now())
+    //   var expireDate = toDateObj(dateExpiring)
+    //   var boughtDate = toDateObj(dateBought)
+    //   var expired, expiring, fresh
+
+    //   if (today > expireDate) {
+    //     expired += 1
+    //   } else if ((expireDate > today && expireDate < today.setHours(today.getHours() + 24)) || boughtDate < expireDate) {
+    //     expiring += 1
+    //   } else {
+    //     fresh += 1
+    //   }
+    //   return [expired, expiring, fresh]
+    // }
+
+    function add24Hrs () {
+      var today = new Date()
+      today.setHours(today.getHours() + 23)
+      return new Date(today)
+    }
+
+    function stateCheck (date) {
+      var state = ''
+      var jsDate = new Date(Date.parse(date))
+      if (new Date(Date.now()) > jsDate) {
+        state = 'Expired'
+      } else if ((jsDate > new Date(Date.now()) && (jsDate < add24Hrs()))) {
+        state = 'Expiring'
+      } else {
+        state = 'Fresh'
+      }
+      return state
+    }
+
     return allFormats  // returning factory object
   }
 })()

@@ -7,7 +7,7 @@ module.exports = (req, res) => {
   let newUpdatedItem = {}
   dateExpiring >= dateBought ? status = 'Fresh' : status = 'Expired'
 
-  Object.assign(newUpdatedItem, {foodName, quantity, dateBought, dateExpiring, status})
+  Object.assign(newUpdatedItem, {foodName, dateBought, dateExpiring, quantity, status})
 
   FoodModel.findByIdAndUpdate(id, newUpdatedItem)
     .then(updatedItem => {

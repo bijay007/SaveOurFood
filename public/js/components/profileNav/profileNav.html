@@ -1,41 +1,23 @@
-<!-- <header>
-    <div class="row">
-        <div class="col-sm-7">
-            <h2>Hi <span>{{vm.userName}}</span>, Good <span>{{vm.day | date:'EEEE'}}</span>&nbsp;<span>{{vm.greetings}}</span><i class="glyphicon glyphicon-apple"></i></h2>
-        </div>
-        <div class="col-sm-5" id="shownums">
-            <ul class="nav nav-pills" role="tablist">
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Expiring soon <span class="badge">{{vm.counterExpiring}}</span></a></li>
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i> Expired <span class="badge">{{vm.counterExpired}}</span></a></li>
-            </ul>
-        </div>
-    </div>
-</header> -->
 <nav class="navbar navbar-findcond navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">SaveFood</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Expiring soon <span class="badge">{{vm.counterExpiring}}</span></a></li>
-                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i> Expired <span class="badge">{{vm.counterExpired}}</span></a></li>
+                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;Expiring soon&nbsp;<span class="badge">{{vm.counterExpiring}}</span></a></li>
+                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-trash"></i>&nbsp;Expired&nbsp;<span class="badge">{{vm.counterExpired}}</span></a></li>
+                <li role="presentation"><a href="#"><i class="glyphicon glyphicon-leaf"></i>&nbsp;Fresh&nbsp;<span class="badge">{{vm.counterFresh}}</span></a></li>
             </ul>
-
         </div>
     </div>
 </nav>
 <div class="container">
-<div style="margin-top:80px; font-size: 30px; text-align: center;">
-            <h2>Hi <span>{{vm.userName}}</span>, Good <span>{{vm.day | date:'EEEE'}}</span>&nbsp;<span>{{vm.greetings}}</span><i class="glyphicon glyphicon-apple"></i></h2>
-        </div>
-
+    <div style="margin-top:80px; font-size: 30px; text-align: center;">
+        <h2>Hi&nbsp;<span>{{vm.userName}}</span>,&nbsp;Good&nbsp;<span>{{vm.day | date:'EEEE'}}</span>&nbsp;<span>{{vm.greetings}}</span><i class="glyphicon glyphicon-apple"></i></h2>
+    </div>
 </div>
 
 

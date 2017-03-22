@@ -17,8 +17,8 @@
               <tr ng-repeat="elem in vm.allFoodItems">
                   <td ng-hide="editMode">{{elem.foodName}}</td>
                   <td ng-hide="editMode">{{elem.quantity}}</td>
-                  <td ng-hide="editMode">{{elem.dateBought}}</td>
-                  <td ng-hide="editMode">{{elem.dateExpiring}}</td>
+                  <td ng-hide="editMode">{{elem.dateBought | date:"longDate"}}</td>
+                  <td ng-hide="editMode">{{elem.dateExpiring | date:"longDate"}}</td>
 <!--                   <td>1 week</td>
  -->                  <td>Fresh <i class="fa fa-smile-o"></i></td>
                   <!-- shows when editmode activated-->
@@ -30,7 +30,7 @@
                   <td class="text-center">
                     <button ng-hide="editMode" ng-click="editMode = true" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</button>
 
-                    <button ng-show="editMode" ng-click="editMode = false; vm.editFood($event, elem._id, elem.foodName,elem.quantity, elem.dateBought, elem.dateExpiring)" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> Save</button>
+                    <button ng-show="editMode" ng-click="editMode = false; vm.editFood($event,elem._id,elem.foodName,elem.quantity, elem.dateBought,elem.dateExpiring)" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> Save</button>
 
                     <button ng-click="vm.removeFood($event,elem._id)" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</button>
                   </td>
