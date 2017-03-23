@@ -15,7 +15,6 @@ function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFo
   var afterDataCapture = ({ foodName, quantity, dateBought, dateExpiring }) => {
     dateExpiring ? dateExpiring = new Date(dateExpiring) : dateExpiring = DateChanger.add24Hrs()
     dateBought ? dateBought = new Date(dateBought) : dateBought = new Date()
-    if (!foodName) foodName = $scope.ifNoName
     SaveFoodFactory.addItem({ foodName, quantity, dateBought, dateExpiring })
   }
 

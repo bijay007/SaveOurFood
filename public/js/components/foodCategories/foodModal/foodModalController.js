@@ -4,9 +4,9 @@ angular
 
 function FoodModalController ($scope, $uibModalInstance, $log, ifNoName) {
   $scope.ok = function () {
-  	console.log($scope)
-    // $scope.$emit('dataSend', () => {foodName, quantity, dateBought, dateExpiring})
+  	console.log(ifNoName)
     $log.log(`Modal data redirected back to parent scope with ${$scope.foodName}`)
+    if (!$scope.foodName) $scope.foodName = ifNoName
     $uibModalInstance.close($scope)
   }
   $scope.cancel = () => { $uibModalInstance.dismiss('cancel') }

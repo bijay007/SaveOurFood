@@ -10,46 +10,43 @@
 
             <div class="row main-login main-center">
                 <form class="form-horizontal" ng-submit="register()">
-                    
                     <div class="form-group">
                         <label for="name" class="cols-sm-2 control-label">Name</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" ng-model="username" id="name"  placeholder="Your Name"/>
+                                <input type="text" class="form-control" ng-model="username" id="name" placeholder="Your Name">
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="password" class="cols-sm-2 control-label required">Password</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-key aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" ng-model="passoword" id="password"  placeholder="Your Password"/>
+                                <input type="password" class="form-control" ng-model="password" id="password" placeholder="Your Password"/>
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="email" class="cols-sm-2 control-label">Email</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" ng-model="email" id="email"  placeholder="Your Email"/>
+                                <input type="email" class="form-control" ng-model="email" id="email" placeholder="Your Email"/>
                             </div>
                         </div>
                     </div>
-
-
                     <div class="form-group ">
                         <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Submit</button>
                     </div>
                 </form>
             </div>
+
             <div class="row checklogin">
                 <p>Already registered ?&nbsp;<a href="#!/login">&nbsp;Login now</a></p>
             </div>
+            
         </div>
     </div>
 </div>
