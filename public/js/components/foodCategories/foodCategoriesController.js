@@ -4,19 +4,18 @@ angular
 
 function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFoodFactory, DateChanger) {
   $scope.imgNmodals = {
-    'Fruits N Vegs': 'fruitsmodal',
-    'Milk N Eggs': 'milkmodal',
-    'Fish N Meat': 'fishmodal',
-    'Frozen N Canned': 'frozenmodal',
-    'Drinks N Liquids': 'liquidmodal',
-    'Other Unspecified': 'othersmodal'
+    'Fruits N Vegs': 'Fruits',
+    'Milk N Eggs': 'Milk',
+    'Fish N Meat': 'Meat',
+    'Frozen N Canned': 'Frozen',
+    'Drinks N Liquids': 'Drinks',
+    'Other Unspecified': 'Others'
   }
 
   var afterDataCapture = ({ foodName, quantity, dateBought, dateExpiring }) => {
     dateExpiring ? dateExpiring = new Date(dateExpiring) : dateExpiring = DateChanger.add24Hrs()
     dateBought ? dateBought = new Date(dateBought) : dateBought = new Date()
-    debugger
-    if (!foodName) foodName = $scope.imgNmodals.$index
+    if (!foodName) foodName = $scope.ifNoName
     SaveFoodFactory.addItem({ foodName, quantity, dateBought, dateExpiring })
   }
 
@@ -27,10 +26,10 @@ function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFo
       animation: true,
       templateUrl: 'myModal.html',
       controller: 'FoodModalController',
-      size: 'sm'
-      // $scope.$on('dataSend', () => {
-      //   resolve: { foodName, quantity, dateBought, dateExpiring }
-      // }
+      size: 'sm',
+      resolve: {
+        ifNoName: () => name
+      }
     }
     var modalInstance = $uibModal.open(configModal)
     modalInstance.result.then(afterDataCapture, console.log)

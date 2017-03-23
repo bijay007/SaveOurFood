@@ -16,9 +16,9 @@
         })
     }
 
-    function addItem ({ foodName, dateBought, dateExpiring, quantity }) {
+    function addItem ({ foodName, dateBought, dateExpiring, quantity, state }) {
       const url = '/foodApi/'
-      return $http.post(url, { foodName, dateBought, dateExpiring, quantity })
+      return $http.post(url, { foodName, dateBought, dateExpiring, quantity, state })
         .then(item => $rootScope.$broadcast('foodAdded', item.data))
     }
 

@@ -3,7 +3,7 @@
     <h4>Click on the items to add to list</h4>
 
     <!-- @image generator -->
-    <div class="row" ng-repeat="(key, value) in imgNmodals">
+    <div class="imagebtn" ng-repeat="(key, value) in imgNmodals">
       <div >
         <button type="button" ng-click="show($index,value)">
           <figure class="figure">
@@ -26,11 +26,6 @@
         </p>
         <p>Quantity bought :
           <input ng-model="quantity" type="number" min="0">
-          <select>
-            <option value="kilos">kgs</option>
-            <option value="pieces">pcs</option>
-            <option value="litres">L</option>
-          </select>
         </p>
         <p>Expiry Date (if available) :
           <input ng-model="dateExpiring" type="date">

@@ -7,7 +7,7 @@ const FoodSchema = new mongoose.Schema({
   dateExpiring: {type: Date},
   quantity: {type: Number, default: 0},
   // weRecommend: {type: String},
-  currentState: {type: String},
+  state: {type: String},
   IdUser: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 }, { collection })
 

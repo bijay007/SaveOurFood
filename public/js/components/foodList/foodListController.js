@@ -21,6 +21,7 @@
         data = data.map(food => {
           food.dateBought = new Date(food.dateBought) || new Date()
           food.dateExpiring = new Date(food.dateExpiring) || DateChanger.add24Hrs()
+          food.dateBought < food.dateExpiring ? food.state = 'Fresh ☺' : food.state = 'Expired ☹'
           return food
         })
         vm.allFoodItems = data

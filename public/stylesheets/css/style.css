@@ -50,12 +50,12 @@ main .darkify .container .upper-row .explain {
   text-shadow: 1px 1px #220022;
 }
 
-/* line 37, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+/* line 36, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
 main .darkify .container .upper-row p a {
   display: block;
 }
 
-/* line 39, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+/* line 38, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
 main .darkify .container .upper-row p a button {
   font-family: 'Signika Negative';
   font-size: 40px;
@@ -65,28 +65,28 @@ main .darkify .container .upper-row p a button {
 }
 
 @media screen and (min-width: 300px) and (max-width: 520px) {
-  /* line 47, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 46, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main {
     height: 480px;
   }
-  /* line 51, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 50, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row h1, main .darkify .container .upper-row h2, main .darkify .container .upper-row p {
     font-size: 30px;
   }
-  /* line 53, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 52, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row h1 {
     font-size: 45px;
     font-weight: bold;
   }
-  /* line 56, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 55, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row h2 {
     font-size: 35px;
   }
-  /* line 58, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 57, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row .explain {
     font-size: 25px;
   }
-  /* line 62, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 61, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row p a button {
     font-size: 30px;
     margin-top: 5px;
@@ -94,27 +94,27 @@ main .darkify .container .upper-row p a button {
 }
 
 @media screen and (min-width: 521px) and (max-width: 768px) {
-  /* line 66, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 65, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main {
     height: 530px;
   }
-  /* line 70, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 69, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row h1, main .darkify .container .upper-row h2, main .darkify .container .upper-row p {
     font-size: 35px;
   }
-  /* line 72, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 71, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row h1 {
     font-size: 55px;
   }
-  /* line 74, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 73, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row h2 {
     font-size: 40px;
   }
-  /* line 76, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 75, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row .explain {
     font-size: 30px;
   }
-  /* line 80, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
+  /* line 79, /home/bijay007/SaveOurFood/public/stylesheets/sass/_banner.sass */
   main .darkify .container .upper-row .explain p a button {
     font-size: 40px;
   }
@@ -422,19 +422,19 @@ blockquote .blockquote-footer {
 
 /* line 1, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform {
-  background: rgba(0, 0, 0, 0.7) url("../images/home/banner.jpg");
+  background: url("../images/home/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   margin: -20px;
 }
 
-/* line 7, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 10, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main {
   margin-top: 70px;
 }
 
-/* line 9, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 12, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .main-login {
   background-color: #9baaaa;
   border-radius: 2px;
@@ -445,7 +445,7 @@ blockquote .blockquote-footer {
   padding: 40px 40px;
 }
 
-/* line 17, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 20, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .title {
   font-size: 35px;
   font-weight: bolder;
@@ -453,29 +453,29 @@ blockquote .blockquote-footer {
   color: #fff;
 }
 
-/* line 22, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 25, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .form-group {
   margin-bottom: 15px;
 }
 
-/* line 24, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 27, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .form-group label {
   margin-bottom: 10px;
   font-size: 18px;
 }
 
-/* line 27, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 30, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .form-group input {
   font-size: 18px;
   padding: 5px;
 }
 
-/* line 30, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 33, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .form-group button {
   margin-top: 5px;
 }
 
-/* line 32, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 35, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .checklogin {
   font-family: 'Signika Negative';
   text-align: center;
@@ -485,12 +485,12 @@ blockquote .blockquote-footer {
   color: #fff;
 }
 
-/* line 39, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 42, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .checklogin a {
   font-weight: bold;
 }
 
-/* line 41, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
+/* line 44, /home/bijay007/SaveOurFood/public/stylesheets/sass/_register.sass */
 #registerform .main .checklogin a:hover {
   text-decoration: none;
   color: #ffa500;
@@ -504,18 +504,26 @@ aside h3 {
 }
 
 /* line 6, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+.greetings {
+  margin-top: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* line 10, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond {
   background: #fff;
   border-color: #ccc;
   box-shadow: 0 0 2px 0 #ccc;
+  font-size: 14px;
 }
 
-/* line 10, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 15, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond a {
   color: #0d1321;
 }
 
-/* line 12, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 17, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond ul.navbar-nav a {
   color: #0d1321;
   border-style: solid;
@@ -523,38 +531,38 @@ nav.navbar-findcond ul.navbar-nav a {
   border-color: #fff;
 }
 
-/* line 17, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 22, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond ul.navbar-nav a:hover, nav.navbar-findcond ul.navbar-nav a:visited, nav.navbar-findcond ul.navbar-nav a:focus, nav.navbar-findcond ul.navbar-nav a:active {
   background: #fff;
 }
 
-/* line 19, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 24, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond ul.navbar-nav a:hover {
   border-color: #0d1321;
 }
 
-/* line 21, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 26, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond li.divider {
   background: #ccc;
 }
 
-/* line 23, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 28, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond button.navbar-toggle {
   background: #0d1321;
   border-radius: 2px;
 }
 
-/* line 26, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 31, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond button.navbar-toggle:hover {
   background: #999;
 }
 
-/* line 28, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 33, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond button.navbar-toggle > span.icon-bar {
   background: #fff;
 }
 
-/* line 30, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 35, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond ul.dropdown-menu {
   border: 0;
   background: #fff;
@@ -563,32 +571,42 @@ nav.navbar-findcond ul.dropdown-menu {
   box-shadow: 0 0 4px 0 #ccc;
 }
 
-/* line 36, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 41, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond ul.dropdown-menu > li > a {
   color: #444;
 }
 
-/* line 38, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 43, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond ul.dropdown-menu > li > a:hover {
   background: #0d1321;
   color: #fff;
 }
 
-/* line 42, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 47, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond #navbar .badge {
   background: #0d1321;
   color: #fff;
   font-size: 0.9em;
 }
 
-/* line 46, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 51, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond #navbar .glyphicon-exclamation-sign {
   color: blue;
 }
 
-/* line 48, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+/* line 53, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
 nav.navbar-findcond #navbar .glyphicon-trash {
   color: #D31212;
+}
+
+/* line 55, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+nav.navbar-findcond #navbar .glyphicon-leaf {
+  color: green;
+}
+
+/* line 57, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilebanner.sass */
+nav.navbar-findcond #navbar .glyphicon-off {
+  color: red;
 }
 
 /* line 1, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
@@ -600,67 +618,68 @@ nav.navbar-findcond #navbar .glyphicon-trash {
 #foodcategories h4 {
   font-weight: bold;
   text-align: center;
-  font-size: 1.2em;
-  text-decoration: underline;
-  padding: 5px;
+  font-size: 20px;
+  padding: 15px;
 }
 
-/* line 9, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-#foodcategories .row {
-  display: flex;
-  justify-content: center;
+/* line 8, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+#foodcategories .imagebtn {
+  display: inline-block;
+  margin-left: 80px;
 }
 
-/* line 12, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-#foodcategories .row .itembtn {
+/* line 11, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+#foodcategories .imagebtn button {
   border-radius: 50%;
-  margin: 10px auto;
-  background-color: #fff;
-  padding: 25px;
+  margin: 20px;
+  background-color: #FFCC6F;
+  padding: 20px;
 }
 
-/* line 17, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-#foodcategories .row img {
+/* line 16, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+#foodcategories .imagebtn img {
   height: 80px;
   width: 120px;
   padding: 10px;
 }
 
-/* line 21, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-#foodcategories .row figcaption {
-  font-size: 1em;
+/* line 20, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+#foodcategories .imagebtn figcaption {
+  font-size: 1.2em;
 }
 
-/* line 23, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-#foodcategories .row .modal-content {
-  background-color: #DCD9CD;
-  font-size: 1em;
+/* line 22, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+#foodcategories .imagebtn .modal-header {
+  font-size: 1.2em;
   font-weight: bold;
 }
 
-/* line 27, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-#foodcategories .row .modal-content .modal-body {
+/* line 26, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+#foodcategories .imagebtn .modal-body p {
+  padding: 15px;
+  font-size: 1em;
+  line-height: 10px;
   padding: 15px;
 }
 
-/* line 29, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-#foodcategories .row .modal-content .modal-body .btn-group button {
+/* line 31, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+#foodcategories .imagebtn .btn-group button {
   border-radius: 2px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
-@media screen and (min-width: 300px) and (max-width: 768px) {
-  /* line 35, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-  #foodcategories .row .modal-content ._foodcategories .row {
-    display: flex;
-    justify-content: space-between;
+@media screen and (min-width: 300px) and (max-width: 771px) {
+  /* line 36, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+  #foodcategories .imagebtn {
+    margin-left: 10px;
   }
   /* line 38, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-  #foodcategories .row .modal-content ._foodcategories button {
-    padding: 15px;
+  #foodcategories .imagebtn button {
+    padding: 10px;
+    margin: 10px;
   }
-  /* line 40, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
-  #foodcategories .row .modal-content ._foodcategories img {
+  /* line 41, /home/bijay007/SaveOurFood/public/stylesheets/sass/_foodcategories.sass */
+  #foodcategories .imagebtn img {
     height: 55px;
     width: 95px;
     padding: 5px;
