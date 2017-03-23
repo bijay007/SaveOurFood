@@ -26,7 +26,7 @@ function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFo
       templateUrl: 'myModal.html',
       controller: 'FoodModalController',
       size: 'sm',
-      resolve: {
+      resolve: {  // we inject this stuff into the modal so modal can access button name
         ifNoName: () => name
       }
     }

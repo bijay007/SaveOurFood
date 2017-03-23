@@ -8,5 +8,8 @@ angular.module('myApp')
       AuthFactory.login({ username, password })
         .then(AuthFactory.setCredentials)
         .then(() => $state.go('profile'))
+        .catch(() => {
+          $scope.errorMessage = 'Sorry ! Username or password is incorrect'
+        })
     }
   })
