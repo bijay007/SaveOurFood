@@ -13,7 +13,7 @@
                 </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="elem in vm.allFoodItems | orderBy: 'dateExpiring'">
+              <tr ng-repeat="elem in vm.allFoodItems">
                   <td ng-hide="editMode" class="name">{{elem.foodName}}</td>
                   <td ng-hide="editMode">{{elem.quantity}}</td>
                   <td ng-hide="editMode">{{elem.dateBought | date:"longDate"}}</td>
