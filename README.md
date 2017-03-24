@@ -11,7 +11,7 @@ A web app that lets you save your food articles and alerts you the state of your
 
  1. `sudo apt-get install git -g`
  2. `sudo apt-get install npm -g`
-    For windows users consult the Git and Node documentations.
+For windows users consult the Git and Node documentations.
   
 ### Installing web-app
  It's super easy. Just takes two steps :
