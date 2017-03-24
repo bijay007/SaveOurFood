@@ -23,7 +23,8 @@ For windows users consult the Git and Node documentations.
 ### Accessing API Endpoints
 !! All API endpoints are protected. You need to login first to access them !!
 
-**FoodItem Endpoints**  
+**FoodItem Endpoints**
+
 GET `/foodApi/:id` - Gets the information of single item with the given id.  
 GET `/foodApi/` - Access all fooditems that the user has saved.  
 POST `/foodApi/` - Add a new item to the database.  
@@ -31,6 +32,7 @@ DELETE `/foodApi/:id` - Deletes a item containing the given id.
 PUT `/foodApi/:id` - Updates the item containing the given id.  
 
 **User Endpoints**  
+
 GET `/userApi/:id` - Gets the information of the logged user
 
 ----------
