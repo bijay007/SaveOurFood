@@ -2,7 +2,6 @@
 const express = require('express')
 const router = express.Router()
 const UserModel = require(__base + 'models/UserModel')
-const FoodModel = require(__base + 'models/ItemModel')
 const passport = require(__base + 'config/passport')
 
 router.use(passport.authenticate('jwt', { session: false }))

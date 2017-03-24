@@ -3,6 +3,7 @@ angular
     .controller('FoodCategoriesController', FoodCategoriesController)
 
 function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFoodFactory, DateChanger, $rootScope) {
+  // to assign name and imgFileName to generate button and images in HTML
   $scope.imgNmodals = {
     'Fruits N Vegs': 'Fruits',
     'Milk N Eggs': 'Milk',
@@ -12,6 +13,7 @@ function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFo
     'Unspecified': 'Others'
   }
 
+  // stuffs that we do after getting data from model controller
   var afterDataCapture = ({ foodName, quantity, dateBought, dateExpiring }) => {
     dateExpiring ? dateExpiring = new Date(dateExpiring) : dateExpiring = DateChanger.add24Hrs()
     dateBought ? dateBought = new Date(dateBought) : dateBought = new Date()
@@ -31,6 +33,6 @@ function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFo
       }
     }
     var modalInstance = $uibModal.open(configModal)
-    modalInstance.result.then(afterDataCapture, console.log)
+    modalInstance.result.then(afterDataCapture, console.log) // when data received, execute afterDataCapture function
   }
 }

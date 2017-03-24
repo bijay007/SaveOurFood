@@ -7,14 +7,14 @@
     let vm = this
     const userId = $scope.loggedUser.id
 
+    // greeting to user section
     UserFactory.getUser(userId)
       .then(res => { vm.userName = res.username })
     vm.day = new Date()
     vm.greetings = DateChanger.toDayTime()
     vm.counterExpired = vm.counterExpiring = vm.counterFresh = 0 // setting initial value
 
-    // broadcast message listeners after every http requests
-
+    // list of all broadcast message listeners (for every http requests)
     $scope.$on('dataReady', (e, items) => {
       const dateList = items.map(({ dateExpiring }) => dateExpiring)
       const stateList = dateList.map(date => DateChanger.stateCheck(date))

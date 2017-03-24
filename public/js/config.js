@@ -21,7 +21,7 @@ function statesManager ($stateProvider, $urlRouterProvider) {
       .state('profile', {
         url: '/profile',
         secure: true,
-        views: {
+        views: {  // all views inside the profile state (ie /profile route)
           '': { templateUrl: '/js/profileViews.html' },
           'profileNav@profile': {
             templateUrl: '/js/components/profileNav/profileNav.html',

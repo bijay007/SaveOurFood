@@ -7,6 +7,7 @@
     let vm = this
     const id = $scope.loggedUser.id
 
+    // get all items asynchronously that will get rendered on DOM
     SaveFoodFactory.getAllItems(id)
       .then((data) => {
         data = data.map(food => {
@@ -18,7 +19,7 @@
         vm.allFoodItems = data
       })
 
-    // listen to message broadcasted after doing http requests
+    // listen to messages broadcasted after doing http requests
 
     $scope.$on('foodRemoved', (e, foodRemoved) => { vm.allFoodItems = vm.allFoodItems.filter(food => food._id !== foodRemoved._id) })
     $scope.$on('foodAdded', (e, foodAdded) => {
@@ -30,8 +31,7 @@
       return vm.allFoodItems.concat(foodUpdated)
     })
 
-    // actions performed from DOM
-
+    // actions performed from DOM (ajax requests)
     vm.removeFood = function (e, elemId) {
       e.preventDefault()
       SaveFoodFactory.removeItem(elemId)

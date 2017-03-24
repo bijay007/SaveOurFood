@@ -2,6 +2,7 @@ const fs = require('fs')
 const thereIsDotEnv = fs.existsSync('.env')
 if (thereIsDotEnv) require('dotenv').config()
 
+// setting global pathname to search from. So we don't have to do stuffs like ../../../../  etc
 global.__base = __dirname + '/server/'
 
 const app = require('./server/app')
