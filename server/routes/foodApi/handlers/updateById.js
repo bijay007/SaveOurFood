@@ -5,8 +5,6 @@ module.exports = (req, res) => {
   let { foodName, quantity, dateBought, dateExpiring, status } = req.body
 
   let newUpdatedItem = {}
-  dateExpiring >= dateBought ? status = 'Fresh' : status = 'Expired'
-
   Object.assign(newUpdatedItem, {foodName, dateBought, dateExpiring, quantity, status})
 
   FoodModel.findByIdAndUpdate(id, newUpdatedItem)

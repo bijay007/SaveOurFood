@@ -2,14 +2,14 @@ angular
     .module('myApp')
     .controller('FoodCategoriesController', FoodCategoriesController)
 
-function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFoodFactory, DateChanger) {
+function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFoodFactory, DateChanger, $rootScope) {
   $scope.imgNmodals = {
     'Fruits N Vegs': 'Fruits',
     'Milk N Eggs': 'Milk',
     'Fish N Meat': 'Meat',
     'Frozen N Canned': 'Frozen',
     'Drinks N Liquids': 'Drinks',
-    'Other Unspecified': 'Others'
+    'Unspecified': 'Others'
   }
 
   var afterDataCapture = ({ foodName, quantity, dateBought, dateExpiring }) => {

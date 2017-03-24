@@ -32,8 +32,7 @@
     function editItem ({foodName, dateBought, dateExpiring, quantity, id}) {
       const url = `/foodApi/${id}`
       return $http.put(url, { foodName, dateBought, dateExpiring, quantity, id })
-        // .then($state.go($state.$current, null, { reload: true }))
-        .then(item => $rootScope.$broadcast('foodUpdated', item.data))
+        .then($state.go($state.$current, null, { reload: true }))
     }
 
     return APIEndPoints

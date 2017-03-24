@@ -4,14 +4,15 @@
 
     <!-- @image generator -->
     <div class="imagebtn" ng-repeat="(key, value) in imgNmodals">
-      <div >
-        <button type="button" ng-click="show($index,value)">
-          <figure class="figure">
-            <img ng-src="../../../stylesheets/images/categories/{{key}}.png" class="img-responsive" alt="{{key}}">
-            <figcaption class="figure-caption">{{key}}</figcaption>
-          </figure>
-        </button>
-      </div>
+      <div class="clearfix" ng-if="$index % 3 == 0"></div>
+        <div class="col-sm-4">
+          <button type="button" ng-click="show($index,value)">
+            <figure class="figure">
+              <img ng-src="../../../stylesheets/images/categories/{{key}}.png" class="img-responsive" alt="{{key}}">
+              <figcaption class="figure-caption">{{key}}</figcaption>
+            </figure>
+          </button>
+        </div>
     </div>
 
   <!-- @modal template start -->
