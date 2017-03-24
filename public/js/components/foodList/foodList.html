@@ -19,19 +19,19 @@
                   <td ng-hide="editMode">{{elem.dateBought | date:"longDate"}}</td>
                   <td ng-hide="editMode">{{elem.dateExpiring | date:"longDate"}}</td>
                   <td ng-hide="editMode">{{elem.state}}</td>
+
                   <!-- shows when editmode activated-->
                   <td ng-show="editMode"><input type="text" ng-model="elem.foodName"/></td>
                   <td ng-show="editMode"><input type="number" ng-model="elem.quantity"/></td>
                   <td ng-show="editMode"><input type="date" ng-model="elem.dateBought"/></td>
                   <td ng-show="editMode"><input type="date" ng-model="elem.dateExpiring"/></td>
-                  <td ng-show="editMode" ng-blur="elem.state"></td>
+                  <td ng-show="editMode" ng-blur="elem.state">{{elem.state}}</td>
 
                   <td class="text-center">
                     <button ng-hide="editMode" ng-click="editMode = true" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</button>
                     <button ng-show="editMode" ng-click="editMode = false; vm.editFood($event,elem._id,elem.foodName,elem.quantity, elem.dateBought,elem.dateExpiring)" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> Save</button>
                     <button ng-click="vm.removeFood($event,elem._id)" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove</button>
                   </td>
-                  <td class="ng-hide">{{}}</td>
               </tr>
             </tbody>
         </table>
