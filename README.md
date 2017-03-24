@@ -6,14 +6,14 @@ A web app that lets you save your food articles and alerts you the state of your
 
 ----------
 
-###Prerequisites :
+### Prerequisites :
     You need to have git and node installled on your machine. To install them go to your terminal then type:
 
  1. `sudo apt-get install git -g`
  2. `sudo apt-get install npm -g`
     For windows users consult the Git and Node documentations.
   
-###Installing web-app
+### Installing web-app
  It's super easy. Just takes two steps :
  
  1. Download the zip file or clone the repository
@@ -21,7 +21,7 @@ A web app that lets you save your food articles and alerts you the state of your
 
 ----------
 
-###Accessing API Endpoints**
+### Accessing API Endpoints**
 !! All API endpoints are protected. You need to login first to access them !!
 
 **FoodItem Endpoints**
