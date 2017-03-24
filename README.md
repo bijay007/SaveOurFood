@@ -21,7 +21,7 @@ For windows users consult the Git and Node documentations.
 
 ----------
 
-### Accessing API Endpoints**
+### Accessing API Endpoints
 !! All API endpoints are protected. You need to login first to access them !!
 
 **FoodItem Endpoints**
