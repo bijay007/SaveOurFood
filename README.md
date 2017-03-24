@@ -10,6 +10,7 @@ A web app that lets you save your food articles and alerts you the state of your
 
  1. `sudo apt-get install git -g`
  2. `sudo apt-get install node -g`  
+ 
 For windows users consult the Git and Node documentations.
   
 ### Installing the web-app in your local machine
