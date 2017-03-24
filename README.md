@@ -14,7 +14,7 @@ For windows users consult the Git and Node documentations.
   
 ### Installing the web-app in your local machine
 
- *It's super easy. Just takes two steps :*
+    It's super easy. Just takes two steps :
  1. Download the zip file or clone the repository
  2. Open your terminal inside the downloaded folder and type `npm install`
 
