@@ -20,7 +20,7 @@
     <div class="modal-header">
       <h3 class="modal-title">Add description ... <i class="fa fa-pencil"></i></h3>
     </div>
-    <form ng-submit="addFood($event)">
+    <form ng-submit="addFood($event.preventDefault())">
       <div class="modal-body" id="modalbody">
         <p>Article Name :
           <input ng-model="foodName" type="text">

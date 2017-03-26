@@ -5,7 +5,7 @@
     .factory('DateChanger', DateChanger)
 
   function DateChanger () {
-    let allFormats = { toDayTime, add24Hrs, stateCheck }
+    let allFormats = { toDayTime, add48Hrs, stateCheck }
 
     function toDayTime () {
       var greet = ''
@@ -17,19 +17,19 @@
       return greet
     }
 
-    function add24Hrs () {
+    function add48Hrs () {
       var today = new Date()
-      today.setHours(today.getHours() + 24)
-      return new Date(today)
+      return today.setHours(today.getHours() + 48)
     }
 
-    function stateCheck (date) {
-      var state = ''
-      var jsDate = new Date(Date.parse(date))
-      if (new Date(Date.now()) > jsDate) state = 'Expired'
-      else if ((jsDate > new Date(Date.now()) && (jsDate < add24Hrs()))) state = 'Expiring'
-      else state = 'Fresh'
-      return state
+    function stateCheck (foodObj) {
+      if (!foodObj.state) foodObj.state = ''
+      foodObj.dateBought = new Date(foodObj.dateBought)
+      foodObj.dateExpiring = new Date(foodObj.dateExpiring)
+      if (foodObj.dateExpiring < new Date()) foodObj.state = 'Expired 😭'
+      else if ((foodObj.dateExpiring > new Date()) && (foodObj.dateExpiring < add48Hrs())) foodObj.state = 'Expiring 😓'
+      else if ((foodObj.dateExpiring > foodObj.dateBought) && (foodObj.dateExpiring > new Date())) foodObj.state = 'Fresh 😍'
+      else foodObj.state = 'Fresh 😍'
     }
     return allFormats  // returning factory object
   }

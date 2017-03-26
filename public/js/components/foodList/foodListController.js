@@ -11,17 +11,7 @@
     SaveFoodFactory.getAllItems(id)
       .then((data) => {
         data = data.map(food => {
-          food.dateBought = new Date(food.dateBought)
-          food.dateExpiring = new Date(food.dateExpiring)
-          if (food.dateExpiring < new Date()) {
-            food.state = 'Expired 😭'
-          } else if ((food.dateExpiring > new Date()) && (food.dateExpiring < DateChanger.add24Hrs())) {
-            food.state = 'Expiring 😓'
-          } else if ((food.dateExpiring > food.dateBought) && (food.dateExpiring > new Date())) {
-            food.state = 'Fresh 😍'
-          } else {
-            food.state = 'Fresh 😍'
-          }
+          DateChanger.stateCheck(food)
           return food
         })
         vm.allFoodItems = data
@@ -29,14 +19,14 @@
 
     // listen to messages broadcasted after doing http requests
 
-    $scope.$on('foodRemoved', (e, foodRemoved) => { vm.allFoodItems = vm.allFoodItems.filter(food => food._id !== foodRemoved._id) })
     $scope.$on('foodAdded', (e, foodAdded) => {
-      foodAdded.dateBought < foodAdded.dateExpiring ? foodAdded.state = 'Fresh ☺' : foodAdded.state = 'Expired ☹'
+      DateChanger.stateCheck(foodAdded)
       return vm.allFoodItems = vm.allFoodItems.concat(foodAdded)
     })
+    $scope.$on('foodRemoved', (e, foodRemoved) => { vm.allFoodItems = vm.allFoodItems.filter(food => food._id !== foodRemoved._id) })
     $scope.$on('foodUpdated', (e, foodUpdated) => {
-      vm.allFoodItems = vm.allFoodItems.filter(food => food._id !== foodUpdated._id)
-      return vm.allFoodItems.concat(foodUpdated)
+      vm.allFoodItems = vm.allFoodItems.filter(food => food._id !== foodUpdated._id).concat(foodUpdated)
+      return vm.allFoodItems
     })
 
     // actions performed from DOM (ajax requests)

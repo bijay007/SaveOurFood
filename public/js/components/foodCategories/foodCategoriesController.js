@@ -8,15 +8,16 @@ function FoodCategoriesController ($scope, $stateParams, $log, $uibModal, SaveFo
     'Fruits N Vegs': 'Fruits',
     'Milk N Eggs': 'Milk',
     'Fish N Meat': 'Meat',
-    'Frozen N Canned': 'Frozen',
-    'Drinks N Liquids': 'Drinks',
+    'Frozen N Cans': 'Frozen',
+    'Liquid Items': 'Drinks',
     'Unspecified': 'Others'
   }
 
   // stuffs that we do after getting data from model controller
   var afterDataCapture = ({ foodName, quantity, dateBought, dateExpiring }) => {
-    dateExpiring ? dateExpiring = new Date(dateExpiring) : dateExpiring = DateChanger.add24Hrs()
-    dateBought ? dateBought = new Date(dateBought) : dateBought = new Date()
+    console.log(foodName)
+    if (dateExpiring === undefined) dateExpiring = DateChanger.add48Hrs()
+    if (dateBought === undefined) dateBought = new Date()
     SaveFoodFactory.addItem({ foodName, quantity, dateBought, dateExpiring })
   }
 
