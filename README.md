@@ -1,5 +1,8 @@
-# Save Our Food
-===================
+# :cherries: [Save Our Food](http://save-da-food.herokuapp.com/) :cherries:
+
+***A simple web-app that lets you save your food articles and alerts you the state of your food ( fresh, expiring or expired ) automatically.***
+
+---
 
 [![MongoDB](https://github.com/bijay007/SaveOurFood/blob/master/public/stylesheets/logos/mongodb.png)](https://www.mongodb.com/)
 [![ExpressJS](https://github.com/bijay007/SaveOurFood/blob/master/public/stylesheets/logos/expressjs.png)](http://expressjs.com/)
@@ -11,8 +14,6 @@
 [![SASS](https://github.com/bijay007/SaveOurFood/blob/master/public/stylesheets/logos/sass.png)](http://sass-lang.com/) 
 [![Bower](https://github.com/bijay007/SaveOurFood/blob/master/public/stylesheets/logos/bower.png)](https://bower.io//) 
 [![Skylab](https://github.com/bijay007/SaveOurFood/blob/master/public/stylesheets/logos/skylab-56.png)](http://www.skylabcoders.com/)
-
-A web app that lets you save your food articles and alerts you the state of your food ( fresh, expiring or expired ) automatically.
 
 ----------
 
