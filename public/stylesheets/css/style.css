@@ -535,28 +535,25 @@ aside h3 {
 
 /* line 21, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar button.navbar-toggle {
-  margin-top: 15px;
-  background: #000;
   border-radius: 2px;
-  border: 2px solid #fff;
 }
 
-/* line 26, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 22, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+#usernavbar button.navbar-toggle i {
+  color: #fff;
+}
+
+/* line 25, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar button.navbar-toggle:hover {
   background: #008b46;
 }
 
 /* line 28, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
-#usernavbar button.navbar-toggle > span.icon-bar {
-  background: #fff;
-}
-
-/* line 31, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar ul {
   margin-bottom: 0;
 }
 
-/* line 33, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 30, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar ul a {
   color: yellow;
   border-style: solid;
@@ -564,45 +561,45 @@ aside h3 {
   border-color: #fff;
 }
 
-/* line 38, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 35, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar ul a:hover {
   background: #fff;
   color: #000;
 }
 
-/* line 41, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 38, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar ul a:hover {
   border-color: #f00;
 }
 
-/* line 43, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 40, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar li.divider {
   background: #ccc;
 }
 
-/* line 45, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 42, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar .badge {
   background: #0d1321;
   color: #fff;
   font-size: 0.9em;
 }
 
-/* line 49, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 46, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar .glyphicon-exclamation-sign {
   color: blue;
 }
 
-/* line 51, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 48, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar .glyphicon-trash {
   color: #D31212;
 }
 
-/* line 53, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 50, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar .glyphicon-leaf {
   color: green;
 }
 
-/* line 55, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
+/* line 52, /home/bijay007/SaveOurFood/public/stylesheets/sass/_userprofilenavbar.sass */
 #usernavbar #navbar .glyphicon-off {
   color: red;
 }
