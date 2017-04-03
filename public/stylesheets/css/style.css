@@ -1,0 +1,208 @@
+main { font-weight: bold; background: url("../images/home/banner.jpg"); background-size: cover; background-repeat: no-repeat; height: 620px; }
+
+main .darkify { height: 620px; background-color: rgba(0, 0, 0, 0.7); }
+
+main .darkify .container .upper-row { text-align: justify; font-family: 'Signika Negative'; }
+
+main .darkify .container .upper-row h1, main .darkify .container .upper-row h2, main .darkify .container .upper-row p { text-align: center; color: #fff; font-size: 40px; font-weight: bold; margin-top: 10px; }
+
+main .darkify .container .upper-row h1 { font-family: 'Shadows Into Light', cursive; font-size: 80px; font-weight: bolder; text-shadow: 2px 2px #220022; padding: 20px; }
+
+main .darkify .container .upper-row h2 { font-family: 'Signika Negative'; font-size: 50px; }
+
+main .darkify .container .upper-row .explain { font-family: 'Shadows Into Light', cursive; font-size: 35px; text-shadow: 1px 1px #220022; }
+
+main .darkify .container .upper-row p a { display: block; }
+
+main .darkify .container .upper-row p a button { font-family: 'Signika Negative'; font-size: 40px; border-radius: 7px; margin-top: 20px; padding: 5px 25px; }
+
+@media screen and (max-width: 520px) { main { height: 480px; }
+  main .darkify .container .upper-row h1, main .darkify .container .upper-row h2, main .darkify .container .upper-row p { font-size: 30px; }
+  main .darkify .container .upper-row h1 { font-size: 45px; font-weight: bold; }
+  main .darkify .container .upper-row h2 { font-size: 35px; }
+  main .darkify .container .upper-row .explain { font-size: 25px; }
+  main .darkify .container .upper-row p a button { font-size: 30px; margin-top: 5px; } }
+
+@media screen and (min-width: 521px) and (max-width: 768px) { main { height: 530px; }
+  main .darkify .container .upper-row h1, main .darkify .container .upper-row h2, main .darkify .container .upper-row p { font-size: 35px; }
+  main .darkify .container .upper-row h1 { font-size: 55px; }
+  main .darkify .container .upper-row h2 { font-size: 40px; }
+  main .darkify .container .upper-row .explain { font-size: 30px; }
+  main .darkify .container .upper-row .explain p a button { font-size: 40px; } }
+
+#homeNav { background: #000; border: 0; margin: 0; font-family: sans serif; }
+
+#homeNav .container img { display: inline-block; padding: 8px; }
+
+#homeNav .container .login { text-align: right; display: inline-block; font-size: 1.5em; padding: 20px; margin: 0 auto; }
+
+#homeNav .container .login li { margin: 0 20px; }
+
+#homeNav .container .login li a { color: #FFA500; }
+
+#homeNav .container .login li a:hover { font-size: 1.025em; color: #337ab7; text-decoration: none; }
+
+@media screen and (min-width: 300px) and (max-width: 520px) { #homeNav .container img { height: 45px; }
+  #homeNav .container .login { font-size: 0.9em; padding: 12px; }
+  #homeNav .container .login li { margin: 0 10px; } }
+
+@media screen and (min-width: 521px) and (max-width: 768px) { #homeNav .row img { height: 50px; }
+  #homeNav .row .login { font-size: 1.1em; padding: 15px; }
+  #homeNav .row .login li { margin: 0 13px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1185px) { #homeNav .row img { height: 60px; }
+  #homeNav .row .login { font-size: 1.3em; padding: 18px; }
+  #homeNav .row .login li { margin: 0 15px; } }
+
+blockquote { font-weight: bolder; text-align: center; background: #fff; padding: 50px 0; }
+
+blockquote p { font-size: 1.8em; font-style: oblique; font-family: 'Shadows Into Light', cursive; padding: 0 95px; }
+
+blockquote .blockquote-footer { color: #60594D; font-size: normal; }
+
+@media screen and (max-width: 640px) { blockquote p { font-size: 1em; padding: 0 20px; } }
+
+@media screen and (min-width: 641px) and (max-width: 1280px) { blockquote p { font-size: 1.3em; padding: 0 30px; } }
+
+.workflow { background-color: #7EBDC2; margin: 0 auto; padding: 30px; }
+
+.workflow h4 { text-align: center; font-weight: bolder; font-size: 2em; margin: 15px auto 40px; font-family: 'Shadows Into Light', cursive; }
+
+.workflow .categories { display: flex; text-align: center; flex-wrap: wrap; align-items: baseline; }
+
+.workflow .categories img { height: 90px; margin: 5px auto; }
+
+.workflow .categories figcaption { font-family: 'Signika Negative'; font-weight: bolder; font-size: 1.2em; padding: 10px; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) { .workflow h4 { font-size: 1.4em; margin: 8px auto; }
+  .workflow .categories img { height: 45px; }
+  .workflow .categories figcaption { font-size: 1em; padding: 5px; } }
+
+@media screen and (min-width: 769px) and (max-width: 1280px) { .workflow h4 { font-size: 1.7em; margin: 12px auto; }
+  .workflow .categories img { height: 70px; }
+  .workflow .categories figcaption { font-size: 1.1em; padding: 8px; } }
+
+.footerContainer { margin-top: auto; width: 100%; background-color: #0D1321; text-align: center; color: #ffffff; font-size: 18px; padding: 10px; }
+
+.footerContainer p, .footerContainer i { display: inline-block; padding: 5px; margin-left: 15px; }
+
+.cover-login { background: url("../images/home/banner.jpg"); background-size: cover; background-repeat: no-repeat; height: 100vh; }
+
+.cover-login i:hover { color: #0000ff; }
+
+.cover-login h2 { font-family: 'Shadows Into Light', cursive; font-size: 40px; font-weight: bolder; text-align: center; color: #fff; margin: 50px auto; }
+
+.cover-login > .container { background-color: rgba(0, 0, 0, 0.8); height: 100vh; width: 100vw; }
+
+.cover-login #loginpanel { padding: 10px; }
+
+.cover-login #loginpanel h3 { font-size: 20px; font-weight: bold; padding: 5px; margin: 10px 10px; text-shadow: 1px 1px #000; }
+
+.cover-login #loginpanel .form-group { margin-bottom: 20px; }
+
+.cover-login #loginpanel .form-group .form-control { padding: 5px 10px; font-size: 20px; }
+
+.cover-login #loginpanel .btn { padding: 10px; font-size: 20px; font-weight: bold; }
+
+.cover-login #loginpanel p { text-align: center; font-size: 18px; margin-top: 10px; }
+
+.cover-login #loginpanel p a { font-weight: bold; }
+
+.cover-login #loginpanel p a:hover { text-decoration: none; color: #ffa500; }
+
+#registerform { height: 100vh; margin: -20px; }
+
+#registerform .main { text-shadow: 1px 1px #000; margin-top: 70px; }
+
+#registerform .main .panel-heading { text-align: center; color: #fff; }
+
+#registerform .main .panel-heading a:hover { color: blue; }
+
+#registerform .main .panel-heading h2 { font-size: 40px; font-weight: bolder; font-family: 'Philosopher'; }
+
+#registerform .main .main-login { background-color: #9e6500; border-radius: 2px; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); margin-top: 30px; margin: 0 auto; max-width: 350px; padding: 40px 40px; }
+
+#registerform .main .form-group { margin-bottom: 15px; }
+
+#registerform .main .form-group label { margin-bottom: 10px; font-size: 20px; color: #fff; }
+
+#registerform .main .form-group input { font-size: 18px; padding: 5px; }
+
+#registerform .main .form-group button { margin-top: 5px; font-weight: bold; }
+
+#registerform .main .checklogin { font-family: 'Philosopher'; text-align: center; margin: 20px auto; font-size: 25px; font-weight: bolder; color: #fff; }
+
+#registerform .main .checklogin a { font-weight: bolder; font-size: 15px; color: #000; text-shadow: none; }
+
+#registerform .main .checklogin a:hover { text-decoration: none; }
+
+aside h3 { text-align: center; font-weight: bold; font-size: 1.5em; }
+
+#greetings h2 { font-family: 'Russo One'; margin-top: 80px; font-size: 30px; text-align: center; }
+
+#usernavbar { box-shadow: 0 0 2px 0 #ccc; font-size: 16px; font-weight: bold; background-color: #0d1321; }
+
+#usernavbar img { height: 35px; margin-top: -5px; }
+
+#usernavbar button.navbar-toggle { border-radius: 2px; }
+
+#usernavbar button.navbar-toggle i { color: #fff; }
+
+#usernavbar button.navbar-toggle:hover { background: #008b46; }
+
+#usernavbar #navbar ul { margin-bottom: 0; }
+
+#usernavbar #navbar ul a { color: yellow; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
+
+#usernavbar #navbar ul a:hover { background: #fff; color: #000; }
+
+#usernavbar #navbar ul a:hover { border-color: #f00; }
+
+#usernavbar #navbar li.divider { background: #ccc; }
+
+#usernavbar #navbar .badge { background: #0d1321; color: #fff; font-size: 0.9em; }
+
+#usernavbar #navbar .glyphicon-exclamation-sign { color: blue; }
+
+#usernavbar #navbar .glyphicon-trash { color: #D31212; }
+
+#usernavbar #navbar .glyphicon-leaf { color: green; }
+
+#usernavbar #navbar .glyphicon-off { color: red; }
+
+#foodcategories { padding: 20px; }
+
+#foodcategories h4 { font-family: 'Fredoka One'; text-align: center; font-size: 25px; padding: 15px; }
+
+#foodcategories .imagebtn button { border-radius: 5px; margin: 20px; background-color: #FFCC6F; padding: 5px; }
+
+#foodcategories .imagebtn img { height: 80px; width: 120px; padding: 10px; }
+
+#foodcategories .imagebtn figcaption { font-size: 1.2em; }
+
+#foodcategories .imagebtn .modal-header { font-size: 1.2em; font-weight: bold; }
+
+#foodcategories .imagebtn #modalbody p { padding: 15px; font-size: 16px; }
+
+#foodcategories .imagebtn #modalbody .btn-group button { margin-right: 15px; }
+
+@media screen and (min-width: 300px) and (max-width: 768px) { #foodcategories .imagebtn { display: flex; flex-direction: column; align-items: center; }
+  #foodcategories .imagebtn button { padding: 10px; margin: 10px; }
+  #foodcategories .imagebtn img { height: 55px; width: 95px; padding: 5px; } }
+
+#userlist { font-weight: bold; }
+
+#userlist h3 { color: #FFA500; font-weight: bolder; font-size: 25px; text-shadow: 1px 1px #000; padding: 10px; }
+
+#userlist table { text-align: center; padding: 10px; }
+
+#userlist table th { font-weight: bolder; font-size: 18px; text-shadow: 1px 1px #E52D2D; text-align: center; }
+
+#userlist table td { padding: 7px 5px; font-size: 1.1em; }
+
+@media screen and (max-width: 768px) { #userlist h3 { text-align: center; }
+  #userlist table { width: 80%; margin: 0 auto; }
+  #userlist table thead { display: none; }
+  #userlist table tbody td { display: block; text-align: center; }
+  #userlist table tbody td:before { content: attr(data-th); display: block; text-align: center; }
+  #userlist table .name { background-color: grey; } }
