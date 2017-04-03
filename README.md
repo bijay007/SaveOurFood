@@ -1,6 +1,6 @@
-# :cherries: [Save Our Food](http://save-da-food.herokuapp.com/) :cherries:
+# :point_right: [Save Our Food](http://save-da-food.herokuapp.com/) :point_left:
 
-***A simple web-app that lets you save your food articles and alerts you the state of your food ( fresh, expiring or expired ) automatically.***
+**A simple web-app that lets you save your food articles and alerts you the state of your food ( fresh, expiring or expired ) automatically.**
 
 ---
 
@@ -27,9 +27,15 @@ For windows users consult the Git and Node documentations.
   
 ### Installing the web-app in your local machine
 
-    It's super easy. Just takes two steps :
+    It's not very hard. Just takes few steps :
  1. Download the zip file or clone the repository
- 2. Open your terminal inside the downloaded folder and type `npm install`
+ 2. Open your terminal inside the downloaded folder and type `npm start`. This installs all dependencies for npm and bower
+ 3. Create a database(foodlistdb) with two collections(foodlist and user) locally. To do that, you need to run mongo first in terminal `mongod --dbpath ~/data/db` (/data/db is default, you can change it). Now you can create collections using monogo CLI in another termial (type `mongo`) or use 'RoboMongo' for a visual GUI.
+ 4. Create a .env file and add the following environment variable (or set them via terminal)
+    SECRET=yoursupersecretcode
+    PORT=3000
+    DB_URI=mongodb://localhost:27017/foodlistdb
+ 5. Open your browser and type 'localhost:3000'
 
 ----------
 
