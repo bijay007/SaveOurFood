@@ -32,9 +32,9 @@ For windows users consult the Git and Node documentations.
  2. Open your terminal inside the downloaded folder and type `npm start`. This installs all dependencies for npm and bower
  3. Create a database(foodlistdb) with two collections(foodlist and user) locally. To do that, you need to run mongo first in terminal `mongod --dbpath ~/data/db` (/data/db is default, you can change it). Now you can create collections using monogo CLI in another termial (type `mongo`) or use 'RoboMongo' for a visual GUI.
  4. Create a .env file and add the following environment variable (or set them via terminal)  
-    `SECRET=yoursupersecretcode`  
-    `PORT=3000`  
-    `DB_URI=mongodb://localhost:27017/foodlistdb`  
+    `SECRET=yoursupersecretcode`  
+    `PORT=3000`  
+    `DB_URI=mongodb://localhost:27017/foodlistdb`  
  5. Open your browser and type 'localhost:3000'
 
 ----------
